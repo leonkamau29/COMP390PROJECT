@@ -1,1 +1,11 @@
-task_id,coder1_label,coder2_label,agreement,source
+task_id,coder1_label,coder2_label,agreement,source,kappa
+Draft and revise academic application essays and materials,C05,C05,True,Handa et al. (2025) -- Anthropic Economic Index,1.0
+"Create, grade, and evaluate educational assessments and student work",C05,C05,True,Handa et al. (2025) -- Anthropic Economic Index,1.0
+"Help with networking configuration, troubleshooting, and protocol programming",C02,C02,True,Handa et al. (2025) -- Anthropic Economic Index,1.0
+"Assist with data analysis, statistical computing, and programming tasks",C07,C07,True,Handa et al. (2025) -- Anthropic Economic Index,1.0
+"Research government, political, educational, and defense information and policies",C03,C03,True,Handa et al. (2025) -- Anthropic Economic Index,1.0
+"Provide relationship, dating, parenting, and family advice",C03,C03,True,Handa et al. (2025) -- Anthropic Economic Index,1.0
+Assist with database administration and data engineering tasks,C02,C02,True,Handa et al. (2025) -- Anthropic Economic Index,1.0
+Get technical help with AI identification and software configuration,C02,C02,True,Handa et al. (2025) -- Anthropic Economic Index,1.0
+"Troubleshoot technical issues with hardware, software, and system configuration",C02,C02,True,Handa et al. (2025) -- Anthropic Economic Index,1.0
+Complete academic assignments and create educational materials across all subjects,C01,C01,True,Handa et al. (2025) -- Anthropic Economic Index,1.0
