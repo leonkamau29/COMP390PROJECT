@@ -1,28 +1,26 @@
 # LLM Capability Taxonomy — FINAL
 
 **Project:** Benchmark Coverage Gap: A Systematic Analysis of Real-World AI Capabilities and Evaluation Practices
-**Researcher:** Leon Kamau Kiunga (201759400)
+**Student:** Leon Kamau Kiunga (201759400)
 **Supervisor:** Dr Konstantinos Tsakaldis
 **Phase:** Phase 1 — Capability Framework Development (Week 4)
 **Version:** FINAL
-**Date:** 2026-04-15
 **Method:** Braun & Clarke (2006) six-phase thematic analysis
 **Primary sources:** Handa et al. (2025) Anthropic Economic Index (arXiv:2503.04761); O\*NET Detailed Work Activities; Chatterji et al. (2025) How People Use ChatGPT (NBER WP 34255); Aubakirova et al. (2025) State of AI: 100 Trillion Token Study (OpenRouter)
-**Note:** WILDCHAT excluded from this project per researcher instruction (2026-04-15).
 
 ---
 
 ## Validation Summary
 
-| Metric | Target | Result | Status |
-| --- | --- | --- | --- |
-| Coverage of Anthropic top 100 tasks | ≥95% | 100/100 (100.0%) | PASS |
-| Cohen's κ (10% subsample, n=10) | >0.8 | 1.0000 | PASS |
-| Number of core capabilities | 6–10 | 8 | PASS |
-| Worked examples per capability | ≥5 | 5–8 per capability | PASS |
-| Decision rules documented | All | All 8 capabilities | PASS |
-| Edge cases resolved | All | All 8 capabilities | PASS |
-| Sources | Empirical usage data | Handa et al. (2025); O\*NET | PASS |
+| Metric                              | Target               | Result                      | Status |
+| ----------------------------------- | -------------------- | --------------------------- | ------ |
+| Coverage of Anthropic top 100 tasks | ≥95%                | 100/100 (100.0%)            | PASS   |
+| Cohen's κ (10% subsample, n=10)    | >0.8                 | 1.0000                      | PASS   |
+| Number of core capabilities         | 6–10                | 8                           | PASS   |
+| Worked examples per capability      | ≥5                  | 5–8 per capability         | PASS   |
+| Decision rules documented           | All                  | All 8 capabilities          | PASS   |
+| Edge cases resolved                 | All                  | All 8 capabilities          | PASS   |
+| Sources                             | Empirical usage data | Handa et al. (2025); O\*NET | PASS   |
 
 **Phase 1 Completion Criterion: MET.** Taxonomy covers 100% of Anthropic top 100 tasks (target ≥95%) and achieves Cohen's κ = 1.00 (target >0.8).
 
@@ -30,17 +28,17 @@
 
 ## Capability Distribution in Anthropic Top 100 Tasks
 
-| Capability | Tasks (of 100) | % of Top 100 |
-| --- | --- | --- |
-| C02 — Code Development & Technical Problem Solving | 36 | 36.0% |
-| C03 — Information Retrieval & Advisory | 23 | 23.0% |
-| C01 — Content Generation | 18 | 18.0% |
-| C07 — Data Analysis & Summarisation | 8 | 8.0% |
-| C05 — Review & Feedback | 6 | 6.0% |
-| C04 — Learning & Education Support | 5 | 5.0% |
-| C06 — Translation & Language Processing | 2 | 2.0% |
-| C08 — Conversational Interaction & Roleplay | 2 | 2.0% |
-| **Total** | **100** | **100%** |
+| Capability                                          | Tasks (of 100) | % of Top 100   |
+| --------------------------------------------------- | -------------- | -------------- |
+| C02 — Code Development & Technical Problem Solving | 36             | 36.0%          |
+| C03 — Information Retrieval & Advisory             | 23             | 23.0%          |
+| C01 — Content Generation                           | 18             | 18.0%          |
+| C07 — Data Analysis & Summarisation                | 8              | 8.0%           |
+| C05 — Review & Feedback                            | 6              | 6.0%           |
+| C04 — Learning & Education Support                 | 5              | 5.0%           |
+| C06 — Translation & Language Processing            | 2              | 2.0%           |
+| C08 — Conversational Interaction & Roleplay        | 2              | 2.0%           |
+| **Total**                                     | **100**  | **100%** |
 
 ---
 
@@ -48,16 +46,16 @@
 
 This taxonomy defines **8 core capabilities** representing distinct modes of LLM interaction. It was derived through six-phase thematic analysis (Braun & Clarke, 2006) applied to 123 empirically documented task instances from the Anthropic Economic Index (Handa et al., 2025) and O\*NET occupational task data. It is the primary analytical framework for the benchmark coverage analysis in Phase 3.
 
-| ID | Capability Name | Core Function |
-| --- | --- | --- |
-| C01 | Content Generation | Producing new written artefacts from a prompt |
-| C02 | Code Development & Technical Problem Solving | Writing, debugging, or configuring code and technical systems |
-| C03 | Information Retrieval & Advisory | Answering questions and providing guidance from domain knowledge |
-| C04 | Learning & Education Support | Teaching and scaffolding understanding for a learner |
-| C05 | Review & Feedback | Evaluating and improving a user-provided artefact |
-| C06 | Translation & Language Processing | Converting text between languages or supporting language learning |
-| C07 | Data Analysis & Summarisation | Processing existing data or documents to extract insight or condensed form |
-| C08 | Conversational Interaction & Roleplay | Sustained interactive dialogue, roleplay, or open-ended conversation |
+| ID  | Capability Name                              | Core Function                                                              |
+| --- | -------------------------------------------- | -------------------------------------------------------------------------- |
+| C01 | Content Generation                           | Producing new written artefacts from a prompt                              |
+| C02 | Code Development & Technical Problem Solving | Writing, debugging, or configuring code and technical systems              |
+| C03 | Information Retrieval & Advisory             | Answering questions and providing guidance from domain knowledge           |
+| C04 | Learning & Education Support                 | Teaching and scaffolding understanding for a learner                       |
+| C05 | Review & Feedback                            | Evaluating and improving a user-provided artefact                          |
+| C06 | Translation & Language Processing            | Converting text between languages or supporting language learning          |
+| C07 | Data Analysis & Summarisation                | Processing existing data or documents to extract insight or condensed form |
+| C08 | Conversational Interaction & Roleplay        | Sustained interactive dialogue, roleplay, or open-ended conversation       |
 
 ---
 
@@ -69,14 +67,14 @@ Content Generation refers to LLM interactions in which the primary output is a n
 
 ### Hierarchical Sub-categories
 
-| Sub-category | Description |
-| --- | --- |
-| C01a — Academic Writing | Essays, reports, assignments, theses for educational contexts |
-| C01b — Professional & Business Writing | Emails, business plans, reports, proposals, marketing copy |
-| C01c — Creative Writing | Fiction, poetry, scripts, song lyrics, creative narratives |
-| C01d — Technical Documentation | API docs, system architecture write-ups, user manuals, README files |
-| C01e — Personal & Social Writing | Personal letters, social media posts, relationship messages, religious texts |
-| C01f — Legal & Formal Documents | Contracts, legal briefs, formal correspondence, dispute letters |
+| Sub-category                            | Description                                                                  |
+| --------------------------------------- | ---------------------------------------------------------------------------- |
+| C01a — Academic Writing                | Essays, reports, assignments, theses for educational contexts                |
+| C01b — Professional & Business Writing | Emails, business plans, reports, proposals, marketing copy                   |
+| C01c — Creative Writing                | Fiction, poetry, scripts, song lyrics, creative narratives                   |
+| C01d — Technical Documentation         | API docs, system architecture write-ups, user manuals, README files          |
+| C01e — Personal & Social Writing       | Personal letters, social media posts, relationship messages, religious texts |
+| C01f — Legal & Formal Documents        | Contracts, legal briefs, formal correspondence, dispute letters              |
 
 ### Decision Rule
 
@@ -87,12 +85,12 @@ A task belongs to C01 **if and only if**:
 
 ### Resolution of Ambiguous Cases
 
-| Ambiguous case | Resolution | Rationale |
-| --- | --- | --- |
-| User provides a rough outline; asks LLM to write the full document | → C01 | Outline is scaffolding; LLM authors the artefact |
-| User provides a full draft and asks for improvements | → C05 | Existing artefact is primary input |
-| Summarising a document for a slide deck | → C07 | Condensation of existing material |
-| Writing an essay about a topic from memory | → C01 | Output is a new document |
+| Ambiguous case                                                     | Resolution | Rationale                                        |
+| ------------------------------------------------------------------ | ---------- | ------------------------------------------------ |
+| User provides a rough outline; asks LLM to write the full document | → C01     | Outline is scaffolding; LLM authors the artefact |
+| User provides a full draft and asks for improvements               | → C05     | Existing artefact is primary input               |
+| Summarising a document for a slide deck                            | → C07     | Condensation of existing material                |
+| Writing an essay about a topic from memory                         | → C01     | Output is a new document                         |
 
 ### Worked Examples
 
@@ -114,13 +112,13 @@ Code Development & Technical Problem Solving refers to LLM interactions in which
 
 ### Hierarchical Sub-categories
 
-| Sub-category | Description |
-| --- | --- |
-| C02a — Code Generation | Writing new functions, modules, scripts, or applications |
-| C02b — Debugging & Bug Fixing | Identifying and correcting errors in existing code |
-| C02c — Code Review & Refactoring | Improving code quality, readability, and efficiency |
-| C02d — Infrastructure & DevOps | Configuring servers, CI/CD pipelines, Docker, cloud, networking |
-| C02e — Database & Data Engineering | Writing SQL, designing schemas, managing data pipelines |
+| Sub-category                              | Description                                                     |
+| ----------------------------------------- | --------------------------------------------------------------- |
+| C02a — Code Generation                   | Writing new functions, modules, scripts, or applications        |
+| C02b — Debugging & Bug Fixing            | Identifying and correcting errors in existing code              |
+| C02c — Code Review & Refactoring         | Improving code quality, readability, and efficiency             |
+| C02d — Infrastructure & DevOps           | Configuring servers, CI/CD pipelines, Docker, cloud, networking |
+| C02e — Database & Data Engineering       | Writing SQL, designing schemas, managing data pipelines         |
 | C02f — Specialised Technical Development | ML/AI systems, embedded systems, game dev, security, blockchain |
 
 ### Decision Rule
@@ -132,12 +130,12 @@ A task belongs to C02 **if and only if**:
 
 ### Resolution of Ambiguous Cases
 
-| Ambiguous case | Resolution | Rationale |
-| --- | --- | --- |
-| "Explain what this code does" | → C04 | Explanation without producing code is educational |
-| "Fix the bug in my code" | → C02b | Output is corrected code |
-| "What is an API?" | → C04 | Conceptual question, no code output |
-| "Troubleshoot my WiFi connection" | → C02d | Technical resolution procedure |
+| Ambiguous case                    | Resolution | Rationale                                         |
+| --------------------------------- | ---------- | ------------------------------------------------- |
+| "Explain what this code does"     | → C04     | Explanation without producing code is educational |
+| "Fix the bug in my code"          | → C02b    | Output is corrected code                          |
+| "What is an API?"                 | → C04     | Conceptual question, no code output               |
+| "Troubleshoot my WiFi connection" | → C02d    | Technical resolution procedure                    |
 
 ### Worked Examples
 
@@ -159,13 +157,13 @@ Information Retrieval & Advisory refers to LLM interactions in which the user se
 
 ### Hierarchical Sub-categories
 
-| Sub-category | Description |
-| --- | --- |
-| C03a — Factual Question Answering | Answering specific factual queries from domain knowledge |
-| C03b — Research & Literature Synthesis | Synthesising information across sources; summarising a field |
-| C03c — Product & Service Recommendation | Comparing and recommending products, tools, or services |
-| C03d — Personal & Professional Advisory | Career, finance, health, relationship, and life-skills guidance |
-| C03e — Domain Expert Consultation | Advice requiring specialised professional knowledge (law, medicine, finance) |
+| Sub-category                             | Description                                                                  |
+| ---------------------------------------- | ---------------------------------------------------------------------------- |
+| C03a — Factual Question Answering       | Answering specific factual queries from domain knowledge                     |
+| C03b — Research & Literature Synthesis  | Synthesising information across sources; summarising a field                 |
+| C03c — Product & Service Recommendation | Comparing and recommending products, tools, or services                      |
+| C03d — Personal & Professional Advisory | Career, finance, health, relationship, and life-skills guidance              |
+| C03e — Domain Expert Consultation       | Advice requiring specialised professional knowledge (law, medicine, finance) |
 
 ### Decision Rule
 
@@ -176,12 +174,12 @@ A task belongs to C03 **if and only if**:
 
 ### Resolution of Ambiguous Cases
 
-| Ambiguous case | Resolution | Rationale |
-| --- | --- | --- |
-| "What is the capital of France?" | → C03a | Simple factual retrieval |
-| "Teach me about the French Revolution" | → C04 | Pedagogical orientation |
-| "Write a report on the French Revolution" | → C01 | New document as output |
-| "Help me choose between Python and R" | → C03c | Recommendation and comparison |
+| Ambiguous case                            | Resolution | Rationale                     |
+| ----------------------------------------- | ---------- | ----------------------------- |
+| "What is the capital of France?"          | → C03a    | Simple factual retrieval      |
+| "Teach me about the French Revolution"    | → C04     | Pedagogical orientation       |
+| "Write a report on the French Revolution" | → C01     | New document as output        |
+| "Help me choose between Python and R"     | → C03c    | Recommendation and comparison |
 
 ### Worked Examples
 
@@ -203,12 +201,12 @@ Learning & Education Support refers to LLM interactions in which the LLM acts as
 
 ### Hierarchical Sub-categories
 
-| Sub-category | Description |
-| --- | --- |
-| C04a — Concept Explanation | Explaining ideas, theories, or mechanisms at an appropriate level |
-| C04b — Worked Problem Solving | Walking through problems step-by-step (maths, science, logic) |
-| C04c — Skill Instruction | Teaching a skill progressively (programming, language, writing) |
-| C04d — Adaptive Tutoring | Diagnosing misunderstanding and adjusting instruction level |
+| Sub-category                   | Description                                                       |
+| ------------------------------ | ----------------------------------------------------------------- |
+| C04a — Concept Explanation    | Explaining ideas, theories, or mechanisms at an appropriate level |
+| C04b — Worked Problem Solving | Walking through problems step-by-step (maths, science, logic)     |
+| C04c — Skill Instruction      | Teaching a skill progressively (programming, language, writing)   |
+| C04d — Adaptive Tutoring      | Diagnosing misunderstanding and adjusting instruction level       |
 
 ### Decision Rule
 
@@ -220,12 +218,12 @@ A task belongs to C04 **if and only if**:
 
 ### Resolution of Ambiguous Cases
 
-| Ambiguous case | Resolution | Rationale |
-| --- | --- | --- |
-| "Explain recursion step by step" | → C04b | Explicit pedagogical structure |
-| "Write recursive code for me" | → C02a | Task completion, not instruction |
-| "Teach me SQL" | → C04c | Educational instruction |
-| "Write a SQL query for me" | → C02 | Code production |
+| Ambiguous case                   | Resolution | Rationale                        |
+| -------------------------------- | ---------- | -------------------------------- |
+| "Explain recursion step by step" | → C04b    | Explicit pedagogical structure   |
+| "Write recursive code for me"    | → C02a    | Task completion, not instruction |
+| "Teach me SQL"                   | → C04c    | Educational instruction          |
+| "Write a SQL query for me"       | → C02     | Code production                  |
 
 ### Worked Examples
 
@@ -249,13 +247,13 @@ Review & Feedback refers to LLM interactions in which the user submits an existi
 
 ### Hierarchical Sub-categories
 
-| Sub-category | Description |
-| --- | --- |
-| C05a — Proofreading & Copy-editing | Correcting grammar, spelling, style, and clarity |
-| C05b — Substantive Document Revision | Restructuring, improving argument, rewriting sections |
-| C05c — Academic Peer Review Simulation | Providing critique in the style of academic peer review |
-| C05d — Assessment & Grading | Evaluating work against defined criteria and assigning a score or grade |
-| C05e — Interview & Application Feedback | Reviewing CVs, cover letters, interview answers, personal statements |
+| Sub-category                             | Description                                                             |
+| ---------------------------------------- | ----------------------------------------------------------------------- |
+| C05a — Proofreading & Copy-editing      | Correcting grammar, spelling, style, and clarity                        |
+| C05b — Substantive Document Revision    | Restructuring, improving argument, rewriting sections                   |
+| C05c — Academic Peer Review Simulation  | Providing critique in the style of academic peer review                 |
+| C05d — Assessment & Grading             | Evaluating work against defined criteria and assigning a score or grade |
+| C05e — Interview & Application Feedback | Reviewing CVs, cover letters, interview answers, personal statements    |
 
 ### Decision Rule
 
@@ -266,12 +264,12 @@ A task belongs to C05 **if and only if**:
 
 ### Resolution of Ambiguous Cases
 
-| Ambiguous case | Resolution | Rationale |
-| --- | --- | --- |
-| "Edit this email and make it more professional" | → C05b | User's draft is the starting point |
-| "Write me a professional email" | → C01 | No existing artefact |
-| "Fix the bug in my code" | → C02b | Technical repair |
-| "Review my code for best practices" | → C05 | Evaluative review |
+| Ambiguous case                                  | Resolution | Rationale                          |
+| ----------------------------------------------- | ---------- | ---------------------------------- |
+| "Edit this email and make it more professional" | → C05b    | User's draft is the starting point |
+| "Write me a professional email"                 | → C01     | No existing artefact               |
+| "Fix the bug in my code"                        | → C02b    | Technical repair                   |
+| "Review my code for best practices"             | → C05     | Evaluative review                  |
 
 ### Worked Examples
 
@@ -294,13 +292,13 @@ Translation & Language Processing refers to LLM interactions in which the primar
 
 ### Hierarchical Sub-categories
 
-| Sub-category | Description |
-| --- | --- |
-| C06a — Document Translation | Converting documents, texts, or passages between languages |
-| C06b — Real-time or Conversational Translation | Translating short phrases, messages, or communication snippets |
-| C06c — Grammar & Linguistics Instruction | Explaining grammatical rules, syntax, and linguistic features |
-| C06d — Vocabulary & Phrase Learning | Building vocabulary, learning expressions, or practising phrases |
-| C06e — Localisation & Cultural Adaptation | Adapting content for a target language audience |
+| Sub-category                                    | Description                                                      |
+| ----------------------------------------------- | ---------------------------------------------------------------- |
+| C06a — Document Translation                    | Converting documents, texts, or passages between languages       |
+| C06b — Real-time or Conversational Translation | Translating short phrases, messages, or communication snippets   |
+| C06c — Grammar & Linguistics Instruction       | Explaining grammatical rules, syntax, and linguistic features    |
+| C06d — Vocabulary & Phrase Learning            | Building vocabulary, learning expressions, or practising phrases |
+| C06e — Localisation & Cultural Adaptation      | Adapting content for a target language audience                  |
 
 ### Decision Rule
 
@@ -311,12 +309,12 @@ A task belongs to C06 **if and only if**:
 
 ### Resolution of Ambiguous Cases
 
-| Ambiguous case | Resolution | Rationale |
-| --- | --- | --- |
-| "Translate this report" | → C06a | Cross-language conversion |
-| "Write me a report in French" | → C01 | New document; language is incidental |
-| "Correct my French grammar" | → C06c | Linguistic instruction |
-| "Help me learn Korean" | → C06d/C06c | Language acquisition |
+| Ambiguous case                | Resolution   | Rationale                            |
+| ----------------------------- | ------------ | ------------------------------------ |
+| "Translate this report"       | → C06a      | Cross-language conversion            |
+| "Write me a report in French" | → C01       | New document; language is incidental |
+| "Correct my French grammar"   | → C06c      | Linguistic instruction               |
+| "Help me learn Korean"        | → C06d/C06c | Language acquisition                 |
 
 ### Worked Examples
 
@@ -336,13 +334,13 @@ Data Analysis & Summarisation refers to LLM interactions in which the user provi
 
 ### Hierarchical Sub-categories
 
-| Sub-category | Description |
-| --- | --- |
-| C07a — Text Summarisation | Condensing long documents into shorter representations |
-| C07b — Quantitative Data Analysis | Statistical analysis or pattern detection on numerical data |
-| C07c — Document Information Extraction | Extracting specific entities or structured data from unstructured documents |
-| C07d — Financial & Business Analysis | Analysing financial statements, market data, business metrics |
-| C07e — Content Transformation & Reformatting | Converting content between formats, restructuring for a new purpose |
+| Sub-category                                  | Description                                                                 |
+| --------------------------------------------- | --------------------------------------------------------------------------- |
+| C07a — Text Summarisation                    | Condensing long documents into shorter representations                      |
+| C07b — Quantitative Data Analysis            | Statistical analysis or pattern detection on numerical data                 |
+| C07c — Document Information Extraction       | Extracting specific entities or structured data from unstructured documents |
+| C07d — Financial & Business Analysis         | Analysing financial statements, market data, business metrics               |
+| C07e — Content Transformation & Reformatting | Converting content between formats, restructuring for a new purpose         |
 
 ### Decision Rule
 
@@ -353,12 +351,12 @@ A task belongs to C07 **if and only if**:
 
 ### Resolution of Ambiguous Cases
 
-| Ambiguous case | Resolution | Rationale |
-| --- | --- | --- |
-| "Summarise this report" | → C07a | Existing document as input |
-| "Write a summary of climate change" | → C01 | No input document; LLM generates from knowledge |
-| "Analyse this spreadsheet" | → C07b | Existing data artefact as input |
-| "Extract the key findings from this paper" | → C07c | Information extraction |
+| Ambiguous case                             | Resolution | Rationale                                       |
+| ------------------------------------------ | ---------- | ----------------------------------------------- |
+| "Summarise this report"                    | → C07a    | Existing document as input                      |
+| "Write a summary of climate change"        | → C01     | No input document; LLM generates from knowledge |
+| "Analyse this spreadsheet"                 | → C07b    | Existing data artefact as input                 |
+| "Extract the key findings from this paper" | → C07c    | Information extraction                          |
 
 ### Worked Examples
 
@@ -380,12 +378,12 @@ Conversational Interaction & Roleplay refers to LLM interactions in which the pr
 
 ### Hierarchical Sub-categories
 
-| Sub-category | Description |
-| --- | --- |
-| C08a — Interactive Fiction & Roleplay | Collaborative storytelling, character roleplay, fantasy or narrative games |
-| C08b — Open-ended Intellectual Dialogue | Discussion-based exploration of ideas, philosophy, ethics, speculation |
-| C08c — Interactive Practice Scenarios | Simulated professional or social situations for skill practice |
-| C08d — Casual Conversation & Companionship | Social chitchat, emotional support, casual interaction |
+| Sub-category                                | Description                                                                |
+| ------------------------------------------- | -------------------------------------------------------------------------- |
+| C08a — Interactive Fiction & Roleplay      | Collaborative storytelling, character roleplay, fantasy or narrative games |
+| C08b — Open-ended Intellectual Dialogue    | Discussion-based exploration of ideas, philosophy, ethics, speculation     |
+| C08c — Interactive Practice Scenarios      | Simulated professional or social situations for skill practice             |
+| C08d — Casual Conversation & Companionship | Social chitchat, emotional support, casual interaction                     |
 
 ### Decision Rule
 
@@ -397,12 +395,12 @@ A task belongs to C08 **if and only if**:
 
 ### Resolution of Ambiguous Cases
 
-| Ambiguous case | Resolution | Rationale |
-| --- | --- | --- |
-| "Write me a fantasy story" | → C01c | Single output requested |
-| "Let's collaboratively build a fantasy story turn by turn" | → C08a | Multi-turn interactive experience |
-| "Discuss AI ethics with me" | → C08b | Open-ended dialogue |
-| "Explain AI ethics" | → C04 | Structured pedagogical explanation |
+| Ambiguous case                                             | Resolution | Rationale                          |
+| ---------------------------------------------------------- | ---------- | ---------------------------------- |
+| "Write me a fantasy story"                                 | → C01c    | Single output requested            |
+| "Let's collaboratively build a fantasy story turn by turn" | → C08a    | Multi-turn interactive experience  |
+| "Discuss AI ethics with me"                                | → C08b    | Open-ended dialogue                |
+| "Explain AI ethics"                                        | → C04     | Structured pedagogical explanation |
 
 ### Worked Examples
 
@@ -416,28 +414,28 @@ A task belongs to C08 **if and only if**:
 
 ## Axial Category to Core Capability Mapping
 
-| Axial Category | Core Capability |
-| --- | --- |
-| Academic task completion | C01 |
-| Professional writing and communication | C01 |
-| Professional document and plan creation | C01 |
-| Creative writing | C01 |
-| Code debugging and repair | C02 |
-| Code development and debugging | C02 |
-| Technical troubleshooting and support | C02 |
-| Domain knowledge retrieval | C03 |
-| Research and synthesis | C03 |
-| Advice and guidance | C03 |
-| Teaching and concept explanation | C04 |
-| Mathematical problem solving | C04 |
-| Adaptive instruction | C04 |
-| Reviewing and editing existing work | C05 |
-| Language translation | C06 |
-| Language learning and translation | C06 |
-| Data analysis and interpretation | C07 |
-| Document analysis and extraction | C07 |
-| Summarisation and condensation | C07 |
-| Conversational and interactive dialogue | C08 |
+| Axial Category                          | Core Capability |
+| --------------------------------------- | --------------- |
+| Academic task completion                | C01             |
+| Professional writing and communication  | C01             |
+| Professional document and plan creation | C01             |
+| Creative writing                        | C01             |
+| Code debugging and repair               | C02             |
+| Code development and debugging          | C02             |
+| Technical troubleshooting and support   | C02             |
+| Domain knowledge retrieval              | C03             |
+| Research and synthesis                  | C03             |
+| Advice and guidance                     | C03             |
+| Teaching and concept explanation        | C04             |
+| Mathematical problem solving            | C04             |
+| Adaptive instruction                    | C04             |
+| Reviewing and editing existing work     | C05             |
+| Language translation                    | C06             |
+| Language learning and translation       | C06             |
+| Data analysis and interpretation        | C07             |
+| Document analysis and extraction        | C07             |
+| Summarisation and condensation          | C07             |
+| Conversational and interactive dialogue | C08             |
 
 ---
 
@@ -448,10 +446,3 @@ A task belongs to C08 **if and only if**:
 - Chatterji, A. et al. (2025). How People Use ChatGPT. NBER Working Paper No. 34255. September 2025.
 - Handa, K. et al. (2025). Which Economic Tasks are Performed with AI? Evidence from Millions of Claude Conversations. arXiv:2503.04761.
 - O\*NET OnLine (n.d.). Detailed Work Activities. US Department of Labor.
-
----
-
-*Document version: FINAL (updated 2026-04-15 to add Chatterji et al. and Aubakirova et al. sources)*
-*Project: Benchmark Coverage Gap — Leon Kamau Kiunga (201759400)*
-*Phase 1 completion criterion: MET (coverage 100%, κ = 1.00)*
-*Total task instances in corpus: 158 (111 Handa et al. + 12 O\*NET + 24 Chatterji et al. + 11 Aubakirova et al.)*

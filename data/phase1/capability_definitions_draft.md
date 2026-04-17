@@ -41,16 +41,16 @@ Open codes were grouped into 19 intermediate axial categories:
 
 The 19 axial categories were collapsed into **8 core capabilities** as follows:
 
-| Axial Categories Collapsed | Core Capability |
-| --- | --- |
-| Academic task completion; Professional writing and communication; Professional document and plan creation; Creative writing | C01 – Content Generation |
-| Code debugging and repair; Code development and debugging; Technical troubleshooting and support | C02 – Code Development & Technical Problem Solving |
-| Domain knowledge retrieval; Research and synthesis; Advice and guidance | C03 – Information Retrieval & Advisory |
-| Teaching and concept explanation; Mathematical problem solving; Adaptive instruction | C04 – Learning & Education Support |
-| Reviewing and editing existing work | C05 – Review & Feedback |
-| Language translation; Language learning and translation | C06 – Translation & Language Processing |
-| Data analysis and interpretation; Document analysis and extraction; Summarisation and condensation | C07 – Data Analysis & Summarisation |
-| Conversational and interactive dialogue | C08 – Conversational Interaction & Roleplay |
+| Axial Categories Collapsed                                                                                                  | Core Capability                                     |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
+| Academic task completion; Professional writing and communication; Professional document and plan creation; Creative writing | C01 – Content Generation                           |
+| Code debugging and repair; Code development and debugging; Technical troubleshooting and support                            | C02 – Code Development & Technical Problem Solving |
+| Domain knowledge retrieval; Research and synthesis; Advice and guidance                                                     | C03 – Information Retrieval & Advisory             |
+| Teaching and concept explanation; Mathematical problem solving; Adaptive instruction                                        | C04 – Learning & Education Support                 |
+| Reviewing and editing existing work                                                                                         | C05 – Review & Feedback                            |
+| Language translation; Language learning and translation                                                                     | C06 – Translation & Language Processing            |
+| Data analysis and interpretation; Document analysis and extraction; Summarisation and condensation                          | C07 – Data Analysis & Summarisation                |
+| Conversational and interactive dialogue                                                                                     | C08 – Conversational Interaction & Roleplay        |
 
 ---
 
@@ -207,30 +207,29 @@ The 19 axial categories were collapsed into **8 core capabilities** as follows:
 
 ## Axial Category to Core Capability Mapping Summary
 
-| Axial Category | Core Capability |
-| --- | --- |
-| Academic task completion | C01 |
-| Professional writing and communication | C01 |
-| Professional document and plan creation | C01 |
-| Creative writing | C01 |
-| Code debugging and repair | C02 |
-| Code development and debugging | C02 |
-| Technical troubleshooting and support | C02 |
-| Domain knowledge retrieval | C03 |
-| Research and synthesis | C03 |
-| Advice and guidance | C03 |
-| Teaching and concept explanation | C04 |
-| Mathematical problem solving | C04 |
-| Adaptive instruction | C04 |
-| Reviewing and editing existing work | C05 |
-| Language translation | C06 |
-| Language learning and translation | C06 |
-| Data analysis and interpretation | C07 |
-| Document analysis and extraction | C07 |
-| Summarisation and condensation | C07 |
-| Conversational and interactive dialogue | C08 |
+| Axial Category                          | Core Capability |
+| --------------------------------------- | --------------- |
+| Academic task completion                | C01             |
+| Professional writing and communication  | C01             |
+| Professional document and plan creation | C01             |
+| Creative writing                        | C01             |
+| Code debugging and repair               | C02             |
+| Code development and debugging          | C02             |
+| Technical troubleshooting and support   | C02             |
+| Domain knowledge retrieval              | C03             |
+| Research and synthesis                  | C03             |
+| Advice and guidance                     | C03             |
+| Teaching and concept explanation        | C04             |
+| Mathematical problem solving            | C04             |
+| Adaptive instruction                    | C04             |
+| Reviewing and editing existing work     | C05             |
+| Language translation                    | C06             |
+| Language learning and translation       | C06             |
+| Data analysis and interpretation        | C07             |
+| Document analysis and extraction        | C07             |
+| Summarisation and condensation          | C07             |
+| Conversational and interactive dialogue | C08             |
 
 ---
 
 *Braun & Clarke (2006) Phase 5: Defining and naming themes.*
-*Note: WILDCHAT excluded from this project per researcher instruction (2026-04-15).*
