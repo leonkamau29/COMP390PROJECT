@@ -1,1 +1,31 @@
 benchmark_id,capability_id,rating,justification
+B001,C02,4,Primary capability: HumanEval+ directly evaluates Python code generation; avg quality 4.2 across all dimensions.
+B001,C03,2,Secondary: some problems require algorithmic reasoning overlapping information retrieval; rated 2 (partial coverage).
+B002,C02,4,Primary capability: MBPP+ evaluates Python code generation from natural language descriptions; avg quality 3.8.
+B003,C02,5,Primary capability: SWE-bench-Verified tests real GitHub issue resolution; highest relevance (5) and coherence (5).
+B003,C05,3,Secondary: debugging tasks involve fault localisation which overlaps review and feedback processes; rated 3.
+B004,C02,5,Primary capability: LiveCodeBench tests competitive programming with contamination controls; avg quality 4.6.
+B005,C02,4,Primary capability: BigCodeBench-Hard tests library-use and complex coding; highest real-world relevance (5).
+B006,C01,4,Primary capability: IFEval evaluates instruction-following in generation tasks with verifiable constraints; avg quality 4.4.
+B007,C01,4,Primary capability: WritingBench covers 6 writing domains with real-world relevance (5); highest coherence (5).
+B007,C05,3,"Secondary: WritingBench includes an evaluation component where models assess writing quality, overlapping critique; rated 3."
+B008,C01,4,"Primary capability: EQ-Bench Creative Writing evaluates narrative quality, emotional depth, and creative output; relevance 5."
+B009,C01,4,Primary capability: HelloBench tests long-form writing across multiple genres and formats; relevance 5.
+B010,C04,4,Primary capability: MathDial is a tutoring dialogue benchmark simulating real student-tutor interactions; relevance 5.
+B010,C03,2,Secondary: mathematical tutoring requires factual retrieval of mathematical knowledge; rated 2 (partial).
+B011,C04,4,"Primary capability: MRBench evaluates multi-turn reasoning in educational problem-solving contexts; coherence 5, relevance 5."
+B012,C04,4,Primary capability: MathTutorBench directly evaluates pedagogical quality of maths tutoring interactions; relevance 5.
+B012,C03,2,Secondary: maths tutoring requires knowledge retrieval of mathematical facts and procedures; rated 2.
+B012,C05,2,Secondary: feedback generation sub-task in MathTutorBench overlaps critique/review processes; rated 2.
+B013,C03,4,Primary capability: MMLU-Pro tests knowledge retrieval across 14 disciplines with chain-of-thought; avg quality 3.8.
+B013,C04,2,Secondary: academic domain questions closely resemble educational support scenarios; rated 2.
+B014,C03,5,"Primary capability: GPQA tests expert-level factual reasoning; highest coherence (5), accuracy (5), clarity (5)."
+B015,C03,4,Primary capability: TriviaQA/NQ tests open-domain factual question answering; fully automated and scalable.
+B016,C03,4,Primary capability: SimpleQA/FACTS tests factual accuracy with emphasis on hallucination detection; accuracy 5.
+B017,C05,4,Primary capability: CriticBench directly evaluates critique generation quality across multiple domains; avg quality 4.2.
+B017,C02,3,Secondary: code critique is an explicit sub-task in CriticBench; rated 3 (substantial but not primary).
+B017,C03,2,Secondary: reasoning critique tasks require information retrieval competence; rated 2.
+B017,C04,2,Secondary: maths critique tasks overlap with educational feedback scenarios; rated 2.
+B018,C05,4,"Primary capability: Auto-J/Shepherd evaluate LLM-as-judge for open-ended responses; relevance 5, coherence 4."
+B018,C01,3,Secondary: essay and creative writing feedback is an explicit evaluation scenario; rated 3.
+B018,C02,2,Secondary: code review evaluation is included in Auto-J/Shepherd test scenarios; rated 2.

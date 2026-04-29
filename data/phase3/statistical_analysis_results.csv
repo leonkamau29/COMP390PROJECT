@@ -1,1 +1,3 @@
 test_name,test_statistic,p_value,effect_size,confidence_interval,interpretation
+Pearson Correlation (usage_freq vs coverage_score),0.292,0.4828,0.292,"[-0.5196, 0.8266]","r=0.2920, p=0.4828. Not significant at α=0.05."
+Chi-Square (coverage distribution vs. usage frequency),26.654,0.0004,0.3563,N/A,"χ²=26.6540, p=0.0004, Cramér's V=0.3563. Significant at α=0.05."

@@ -110,10 +110,83 @@ def plot_usage_vs_coverage(gap_df: pd.DataFrame) -> None:
     print(f"Saved: {path}")
 
 
+def plot_temporal_trends(benchmarks: pd.DataFrame, gap_df: pd.DataFrame) -> None:
+    """Line chart: cumulative benchmark count per capability over years 2017–2025.
+
+    Args:
+        benchmarks: Benchmark database DataFrame with year_clean and primary_capability.
+        gap_df: Gap scores DataFrame with capability_id and capability_name.
+    """
+    cap_names = gap_df.set_index("capability_id")["capability_name"].to_dict()
+    years = sorted(benchmarks["year_clean"].dropna().unique())
+    years = [y for y in years if 2017 <= y <= 2025]
+
+    fig, ax = plt.subplots(figsize=(12, 7))
+    for cap_id, cap_name in cap_names.items():
+        subset = benchmarks[benchmarks["primary_capability"] == cap_id]
+        counts = [len(subset[subset["year_clean"] <= yr]) for yr in years]
+        if max(counts) > 0:
+            ax.plot(years, counts, marker="o", label=f"{cap_id}: {cap_name}")
+
+    ax.set_title("Cumulative Benchmark Count per Capability (2017–2025)\n(Source: Phase 2 Benchmark Database)", fontsize=13)
+    ax.set_xlabel("Year")
+    ax.set_ylabel("Cumulative Benchmark Count")
+    ax.set_xticks(years)
+    ax.legend(fontsize=8, loc="upper left")
+    ax.grid(True, alpha=0.3)
+    plt.tight_layout()
+    path = os.path.join(CHARTS_DIR, "temporal_trends.png")
+    plt.savefig(path, dpi=300)
+    plt.close()
+    print(f"Saved: {path}")
+
+
+def plot_quality_radar(benchmarks: pd.DataFrame, gap_df: pd.DataFrame) -> None:
+    """Radar/spider chart: average quality across 5 dimensions per capability.
+
+    Args:
+        benchmarks: Benchmark database DataFrame with quality dimension columns.
+        gap_df: Gap scores DataFrame with capability_id and capability_name.
+    """
+    dims = ["quality_coherence", "quality_accuracy", "quality_clarity",
+            "quality_relevance", "quality_efficiency"]
+    dim_labels = ["Coherence", "Accuracy", "Clarity", "Relevance", "Efficiency"]
+    n = len(dims)
+    angles = np.linspace(0, 2 * np.pi, n, endpoint=False).tolist()
+    angles += angles[:1]
+
+    cap_names = gap_df.set_index("capability_id")["capability_name"].to_dict()
+    fig, ax = plt.subplots(figsize=(9, 9), subplot_kw={"polar": True})
+
+    colors = plt.cm.tab10(np.linspace(0, 1, len(cap_names)))
+    for (cap_id, cap_name), color in zip(cap_names.items(), colors):
+        subset = benchmarks[benchmarks["primary_capability"] == cap_id]
+        if subset.empty:
+            continue
+        values = [subset[d].mean() for d in dims]
+        values += values[:1]
+        ax.plot(angles, values, "o-", linewidth=2, label=f"{cap_id}: {cap_name}", color=color)
+        ax.fill(angles, values, alpha=0.05, color=color)
+
+    ax.set_xticks(angles[:-1])
+    ax.set_xticklabels(dim_labels, fontsize=10)
+    ax.set_ylim(0, 5)
+    ax.set_yticks([1, 2, 3, 4, 5])
+    ax.set_yticklabels(["1", "2", "3", "4", "5"], fontsize=8)
+    ax.set_title("Average Quality Dimensions per Capability\n(Source: Phase 2 Benchmark Database)", fontsize=13, pad=20)
+    ax.legend(loc="upper right", bbox_to_anchor=(1.35, 1.1), fontsize=8)
+    plt.tight_layout()
+    path = os.path.join(CHARTS_DIR, "quality_radar.png")
+    plt.savefig(path, dpi=300, bbox_inches="tight")
+    plt.close()
+    print(f"Saved: {path}")
+
+
 def main():
     """Main execution: load data and generate all 5 charts."""
     matrix = pd.read_csv(MATRIX_PATH, index_col=0)
     gap_df = pd.read_csv(GAP_SCORES_PATH)
+    benchmarks = pd.read_csv(BENCHMARK_DB)
 
     if matrix.empty or gap_df.empty:
         print("Populate coverage_matrix.csv and gap_scores.csv before generating charts.")
@@ -122,7 +195,8 @@ def main():
     plot_coverage_heatmap(matrix)
     plot_gap_scores(gap_df)
     plot_usage_vs_coverage(gap_df)
-    print("Temporal trends and quality radar charts require benchmark_database_FINAL.csv data.")
+    plot_temporal_trends(benchmarks, gap_df)
+    plot_quality_radar(benchmarks, gap_df)
 
 
 if __name__ == "__main__":

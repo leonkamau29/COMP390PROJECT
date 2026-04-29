@@ -22,9 +22,6 @@ Method:
     reproducibility. Coder 2 labels are derived by applying the published
     decision rules from capability_definitions_draft.md independently.
 
-Notes:
-    - WILDCHAT excluded from this project per researcher instruction (2026-04-15).
-    - All random operations use seed 42.
 """
 
 import pandas as pd

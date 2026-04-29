@@ -79,9 +79,20 @@ def main():
         print("Populate benchmark_database_FINAL.csv and capability_taxonomy_FINAL.csv first.")
         return
 
-    matrix = build_coverage_matrix(benchmarks, capabilities)
-    matrix.to_csv(MATRIX_PATH)
-    print(f"Coverage matrix saved to {MATRIX_PATH}")
+    # If matrix already exists and has non-zero values, use it; otherwise initialise empty.
+    if os.path.exists(MATRIX_PATH):
+        existing = pd.read_csv(MATRIX_PATH, index_col=0)
+        if existing.values.sum() > 0:
+            matrix = existing
+            print(f"Loaded existing coverage matrix from {MATRIX_PATH}")
+        else:
+            matrix = build_coverage_matrix(benchmarks, capabilities)
+            matrix.to_csv(MATRIX_PATH)
+            print(f"Coverage matrix saved to {MATRIX_PATH}")
+    else:
+        matrix = build_coverage_matrix(benchmarks, capabilities)
+        matrix.to_csv(MATRIX_PATH)
+        print(f"Coverage matrix saved to {MATRIX_PATH}")
 
     metrics = compute_capability_metrics(matrix)
     metrics.to_csv(METRICS_PATH, index=False)

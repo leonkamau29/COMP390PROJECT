@@ -1,1 +1,9 @@
-capability_id,capability_name,usage_frequency,normalized_coverage_score,gap_score
+capability_id,capability_name,total_coverage_score,benchmark_count,average_quality,usage_frequency,gap_score
+C05,Review & Feedback,0.1777777777777777,5,3.2,0.589,0.48428888888888894
+C07,Data Analysis & Summarisation,0.0,0,,0.166,0.166
+C01,Content Generation,0.2111111111111111,5,3.8,0.184,0.14515555555555554
+C03,Information Retrieval & Advisory,0.2777777777777778,8,3.125,0.166,0.11988888888888889
+C02,Code Development & Technical Problem Solving,0.3,7,3.857142857142857,0.14,0.098
+C04,Learning & Education Support,0.1777777777777777,5,3.2,0.085,0.0698888888888889
+C08,Conversational Interaction & Roleplay,0.0,0,,0.045,0.045
+C06,Translation & Language Processing,0.0,0,,0.032,0.032

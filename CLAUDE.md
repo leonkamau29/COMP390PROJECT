@@ -549,7 +549,7 @@ Validate framework and findings through structured surveys with 5–10 AI resear
  **Recruitment channels** :
 
 1. Cold email to authors of cited papers
-2. Supervisor network introductions (Dr Konstantinos Tsakaldis)
+2. Supervisor network introductions
 3. Professional networks (LinkedIn, X/Twitter)
 
  **Targets** : Send 15–20 invitations; expect 5–10 responses (33–50% response rate).
