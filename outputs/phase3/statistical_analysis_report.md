@@ -25,7 +25,3 @@
 ## 3. Temporal Trend Analysis — Linear Regression per Capability
 
 [Results for each capability: slope, R², p-value]
-
----
-
-*All statistical tests reported with test statistic, p-value, effect size, and confidence interval per project standards.*

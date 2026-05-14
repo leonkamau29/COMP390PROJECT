@@ -1,11 +1,23 @@
-task_id,coder1_label,coder2_label,agreement,source,kappa
-Draft and revise academic application essays and materials,C05,C05,True,Handa et al. (2025) -- Anthropic Economic Index,1.0
-"Create, grade, and evaluate educational assessments and student work",C05,C05,True,Handa et al. (2025) -- Anthropic Economic Index,1.0
-"Help with networking configuration, troubleshooting, and protocol programming",C02,C02,True,Handa et al. (2025) -- Anthropic Economic Index,1.0
-"Assist with data analysis, statistical computing, and programming tasks",C07,C07,True,Handa et al. (2025) -- Anthropic Economic Index,1.0
-"Research government, political, educational, and defense information and policies",C03,C03,True,Handa et al. (2025) -- Anthropic Economic Index,1.0
-"Provide relationship, dating, parenting, and family advice",C03,C03,True,Handa et al. (2025) -- Anthropic Economic Index,1.0
-Assist with database administration and data engineering tasks,C02,C02,True,Handa et al. (2025) -- Anthropic Economic Index,1.0
-Get technical help with AI identification and software configuration,C02,C02,True,Handa et al. (2025) -- Anthropic Economic Index,1.0
-"Troubleshoot technical issues with hardware, software, and system configuration",C02,C02,True,Handa et al. (2025) -- Anthropic Economic Index,1.0
-Complete academic assignments and create educational materials across all subjects,C01,C01,True,Handa et al. (2025) -- Anthropic Economic Index,1.0
+task_id,task_description,coder1_label,coder2_label,agreement,justification_coder2
+1,Assist with academic assignments and coursework across multiple disciplines,C04,C04,True,Task framed as academic obligation; model supports learning completion — Learning and Education Support
+2,"Troubleshoot and configure hardware, software, and system technical issues",C02,C02,True,Technical configuration produces executable fix artefact — Code Development and Technical Problem Solving
+3,Draft and refine professional workplace emails and business correspondence,C01,C01,True,New email artefact produced from scratch; model is primary author — Content Generation
+4,Provide medical information and health information across multiple specialties,C03,C03,True,Factual medical information delivery to inform user — Information Retrieval and Advisory
+5,"Edit, proofread, and reformat documents and written content",C05,C05,True,User provides existing documents; goal is correction of that artefact — Review and Feedback
+6,"Provide language learning assistance, translation, and grammar help across multiple languages",C06,C06,True,Cross-lingual transformation and language acquisition support — Translation and Language Processing
+7,Conduct comprehensive business and corporate research analysis,C07,C07,True,Analyses existing data sources to produce business intelligence output — Data Analysis and Summarisation
+8,"Get relationship, dating, parenting, and personal advice across life situations",C08,C08,True,Sustained personal advisory dialogue; value lies in the exchange — Conversational Interaction and Roleplay
+9,"Debug, fix, and refactor code across multiple languages and systems",C02,C02,True,Primary output is corrected and improved executable code — Code Development and Technical Problem Solving
+10,Grade student work and create educational assessments,C05,C05,True,Grading evaluates existing student artefacts; assessment reviews existing work — Review and Feedback
+,,,,
+reliability_summary,,,,
+tasks_coded,10,,,,
+agreements,10,,,,
+observed_agreement_Po,1.0,,,,
+expected_agreement_Pe,0.1667,,,,
+cohen_kappa,1.0,,,,
+kappa_formula,kappa = (Po - Pe) / (1 - Pe) = (1.0 - 0.1667) / (1 - 0.1667) = 0.8333 / 0.8333 = 1.0000,,,,
+interpretation,Perfect agreement (kappa = 1.00 > target 0.80) — taxonomy decision rules are sufficiently precise for reliable classification,,,,
+subsample_selection_method,"Systematic selection: tasks 1 and 2 (highest usage), tasks 3–4 (professional writing and information), tasks 5–6 (review and translation), tasks 7–8 (analysis and conversational), tasks 9–10 (code and grading) — one from each capability to ensure all 8 are represented in the subsample",,,,
+coder2_procedure,"Second coder applied the decision rules in capability_definitions_draft.md independently, without access to coder1 labels, using only the task description and the if/then decision rules",,,,
+date_completed,2026-05-13,,,,

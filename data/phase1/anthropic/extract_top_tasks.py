@@ -27,8 +27,8 @@ import os
 
 # Paths
 HERE = os.path.dirname(os.path.abspath(__file__))
-RAW_CLAUDE = os.path.join(HERE, "aei_raw_claude_ai_2025-11-13_to_2025-11-20.csv")
-RAW_API    = os.path.join(HERE, "aei_raw_1p_api_2025-11-13_to_2025-11-20.csv")
+RAW_CLAUDE = os.path.join(HERE, "aei_raw_claude_ai_2026-02-05_to_2026-02-12.csv")
+RAW_API    = os.path.join(HERE, "aei_raw_1p_api_2026-02-05_to_2026-02-12.csv")
 OUT_PER_COUNTRY = os.path.join(HERE, "top_task_per_country.csv")
 OUT_GLOBAL      = os.path.join(HERE, "top_tasks_by_frequency.csv")
 OUT_PHASE1      = os.path.join(HERE, "..", "task_instances_raw.csv")

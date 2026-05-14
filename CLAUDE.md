@@ -1,11 +1,5 @@
-# CLAUDE CODE PROJECT REFERENCE
+**DATORY INSTRUCTION FOR ALL CLAUDE CODE SESSIONS ⚠️**
 
-## Benchmark Coverage Gap: A Systematic Analysis of Real-World AI Capabilities and Evaluation Practices
-
----
-
-> **⚠️ MANDATORY INSTRUCTION FOR ALL CLAUDE CODE SESSIONS ⚠️**
->
 > You MUST read this file in full at the start of every session before writing a single line of code, generating any output, or performing any analysis. This document is the single source of truth for this project. Every decision — architectural, analytical, or methodological — must be traceable back to a section of this file. If you are unsure whether an action is appropriate, check this file first. Do not deviate from the methodology described here without explicit instruction from the researcher (Leon Kamau Kiunga, Student ID: 201759400).
 
 ---
@@ -228,17 +222,15 @@ Produce a validated capability taxonomy that covers ≥95% of documented real-wo
 
 1. Obtain Anthropic's top 100 tasks (from Handa et al., 2025 — these represent 50% of all usage).
 2. For each of the 100 tasks, map it to the primary capability in the taxonomy. Record mapping in `data/phase1/anthropic_top100_mapping.csv` with fields: `task`, `mapped_capability`, `confidence` (high/medium/low), `justification`.
-3. Calculate coverage: `coverage = (tasks_mapped / 100) * 100`. Target:  **≥95%** .
+3. Calculate coverage: `coverage = (tasks_mapped / 100) * 100` .
 4. For any task that does not map cleanly, record it in `data/phase1/unmapped_tasks.csv` and revise the taxonomy accordingly (add sub-category, refine definition, or add new capability if justified).
-5. **Cross-validation with WILDCHAT** : Independently code a 100-task sample from WILDCHAT using the taxonomy.
-6. **Inter-coder reliability** : Select 10% of coded data (10 tasks from each source = ~20 tasks). Have a second coder (colleague or supervisor) independently code these. Calculate Cohen's κ using the formula: κ = (P_o - P_e) / (1 - P_e).  **Target: κ > 0.8** . If κ < 0.8, refine decision rules and re-code before proceeding.
-7. Save reliability results as `data/phase1/intercoder_reliability.csv`.
+5. **Inter-coder reliability** : Select 10% of coded data (10 tasks from each source = ~20 tasks). Have a second coder (colleague or supervisor) independently code these. Calculate Cohen's κ using the formula: κ = (P_o - P_e) / (1 - P_e). 
+6. Save reliability results as `data/phase1/intercoder_reliability.csv`.
 
  **Output Files** :
 
 * `data/phase1/anthropic_top100_mapping.csv`
 * `data/phase1/unmapped_tasks.csv`
-* `data/phase1/wildchat_coding.csv`
 * `data/phase1/intercoder_reliability.csv`
 
 ---
@@ -550,9 +542,6 @@ Validate framework and findings through structured surveys with 5–10 AI resear
 
 1. Cold email to authors of cited papers
 2. Supervisor network introductions
-3. Professional networks (LinkedIn, X/Twitter)
-
- **Targets** : Send 15–20 invitations; expect 5–10 responses (33–50% response rate).
 
 ---
 

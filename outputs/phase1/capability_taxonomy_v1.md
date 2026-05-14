@@ -3,442 +3,650 @@
 **Project:** Benchmark Coverage Gap: A Systematic Analysis of Real-World AI Capabilities and Evaluation Practices
 **Student:** Leon Kamau Kiunga (201759400)
 **Supervisor:** Dr Konstantinos Tsakaldis
-**Phase:** Phase 1 — Capability Framework Development
-**Version:** 1.0 (draft — for Week 3 validation)
-
-**Method:** Braun & Clarke (2006) six-phase thematic analysis
-**Primary source:** Handa et al. (2025) Anthropic Economic Index (arXiv:2503.04761); O\*NET Detailed Work Activities
+**Date:** 2026-05-13
+**Data sources:** Anthropic AEI (Feb 2026, arXiv:2503.04761); Ouyang et al. (2025) NBER WP 34255; OpenRouter (2025) 100T Token Study
+**Methodology:** Braun & Clarke (2006) six-phase thematic analysis
+**Status:** Version 1 — pending Week 3 validation
 
 ---
 
 ## Overview
 
-This taxonomy defines **8 core capabilities** representing distinct modes of LLM interaction, derived through thematic analysis of 123 empirically documented task instances from real-world LLM usage data (Handa et al., 2025) and occupational task databases (O\*NET). The taxonomy is designed to cover ≥95% of documented usage patterns and to serve as the analytical framework for Phase 3 coverage analysis.
+This taxonomy was derived through systematic thematic analysis of 131 real-world
+LLM task instances drawn from three empirical sources covering Claude.ai (Anthropic
+AEI, Feb 2026), ChatGPT (Ouyang et al., 2025, NBER WP 34255), and a cross-platform
+aggregator (OpenRouter, 2025). Eight core capabilities were identified through
+open coding (131 open codes), axial coding (19 intermediate categories), and
+selective coding (8 final capabilities).
 
-The 8 capabilities are:
+The taxonomy is intended to provide a usage-grounded foundation for the benchmark
+coverage gap analysis in Phase 3. Each capability is defined with sufficient
+precision to support reliable classification of both task instances and benchmark
+evaluations.
 
-| ID  | Name                                         | Description (one line)                                                     |
-| --- | -------------------------------------------- | -------------------------------------------------------------------------- |
-| C01 | Content Generation                           | Producing new written artefacts from a prompt                              |
-| C02 | Code Development & Technical Problem Solving | Writing, debugging, or configuring code and technical systems              |
-| C03 | Information Retrieval & Advisory             | Answering questions and providing guidance from domain knowledge           |
-| C04 | Learning & Education Support                 | Teaching and scaffolding understanding for a learner                       |
-| C05 | Review & Feedback                            | Evaluating and improving a user-provided artefact                          |
-| C06 | Translation & Language Processing            | Converting text between languages or supporting language learning          |
-| C07 | Data Analysis & Summarisation                | Processing existing data or documents to extract insight or condensed form |
-| C08 | Conversational Interaction & Roleplay        | Sustained interactive dialogue, roleplay, or open-ended conversation       |
+---
+
+## Capability Hierarchy
+
+```
+LLM Capability Taxonomy
+│
+├── C01  Content Generation
+│   ├── C01a  Academic and educational writing
+│   ├── C01b  Professional and business writing
+│   ├── C01c  Marketing and promotional writing
+│   ├── C01d  Creative writing (fiction, poetry, scripts)
+│   └── C01e  Technical and specialised writing
+│
+├── C02  Code Development and Technical Problem Solving
+│   ├── C02a  Web application development
+│   ├── C02b  Software engineering and systems
+│   ├── C02c  Code debugging and refactoring
+│   ├── C02d  Machine learning and AI development
+│   ├── C02e  DevOps and infrastructure
+│   └── C02f  Technical troubleshooting
+│
+├── C03  Information Retrieval and Advisory
+│   ├── C03a  Factual and encyclopaedic information
+│   ├── C03b  Product and service recommendations
+│   ├── C03c  Career, financial, and personal advisory
+│   ├── C03d  Research synthesis and literature overview
+│   └── C03e  Practical how-to guidance
+│
+├── C04  Learning and Education Support
+│   ├── C04a  Academic assignment support
+│   ├── C04b  Concept explanation and tutoring
+│   ├── C04c  Skill development
+│   └── C04d  Educational material creation
+│
+├── C05  Review and Feedback
+│   ├── C05a  Proofreading and grammar correction
+│   ├── C05b  Substantive editing and content improvement
+│   ├── C05c  Academic feedback and grading
+│   └── C05d  Peer review and manuscript revision
+│
+├── C06  Translation and Language Processing
+│   ├── C06a  Document and text translation
+│   ├── C06b  Language learning and grammar support
+│   └── C06c  Multilingual content formatting
+│
+├── C07  Data Analysis and Summarisation
+│   ├── C07a  Text summarisation and compression
+│   ├── C07b  Data analysis and statistical computing
+│   ├── C07c  Document processing and format conversion
+│   └── C07d  Business intelligence and forecasting
+│
+└── C08  Conversational Interaction and Roleplay
+    ├── C08a  Personal and emotional support dialogue
+    ├── C08b  Interactive roleplay and collaborative fiction
+    ├── C08c  Social and conversational practice
+    └── C08d  Entertainment and games
+```
 
 ---
 
 ## C01 — Content Generation
 
-### Formal Definition
-
-Content Generation refers to LLM interactions in which the primary output is a novel written artefact — a document, text, plan, script, or creative work — produced in response to a user prompt or partial input. The artefact did not exist before the interaction and is created to serve a specified communicative, professional, academic, or creative purpose. The LLM's role is generative: it authors rather than evaluates, transforms, or retrieves.
-
-### Hierarchical Sub-categories
-
-| Sub-category                            | Description                                                                  | Example tasks                                                                     |
-| --------------------------------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| C01a — Academic Writing                | Essays, reports, assignments, theses for educational contexts                | "Write an essay on the French Revolution"; "Complete my STEM assignment"          |
-| C01b — Professional & Business Writing | Emails, business plans, reports, proposals, marketing copy                   | "Draft a business plan"; "Write a marketing email campaign"                       |
-| C01c — Creative Writing                | Fiction, poetry, scripts, song lyrics, creative narratives                   | "Write a short story in the style of Hemingway"; "Draft a video game script"      |
-| C01d — Technical Documentation         | API docs, system architecture write-ups, user manuals, README files          | "Write API documentation for this endpoint"; "Create a technical design document" |
-| C01e — Personal & Social Writing       | Personal letters, social media posts, relationship messages, religious texts | "Write a condolence message"; "Draft social media posts for my brand"             |
-| C01f — Legal & Formal Documents        | Contracts, legal briefs, formal correspondence, dispute letters              | "Draft a cease-and-desist letter"; "Write a service agreement"                    |
+### Definition
+Content Generation is the capability to produce original, purposeful written or
+multimedia text artefacts in response to a user's creative, professional, or
+communicative goal. The model acts as an author or co-author, generating content
+that serves the user's intended audience and context. This encompasses professional
+business documents, creative fiction, marketing copy, scripts, personal
+communications, and technical documentation — any task where the primary output
+is a newly composed artefact.
 
 ### Decision Rule
+A task belongs to C01 if and only if:
+- (a) the primary user goal is to obtain a new written or multimedia artefact, AND
+- (b) the model is the primary producer of that artefact's content (not locating
+  existing information or critiquing a user's existing text).
 
-A task belongs to C01 **if and only if**:
+### Sub-categories
+- **C01a** Academic and educational writing: essays, assignment responses, reports
+- **C01b** Professional and business writing: emails, strategy documents, CVs, proposals
+- **C01c** Marketing and promotional writing: ad copy, social media posts, SEO content
+- **C01d** Creative writing: fiction, poetry, scripts, personal messages, song lyrics
+- **C01e** Technical and specialised writing: clinical notes, legal drafts, architecture specs
 
-1. The user's primary goal is to obtain a new written artefact (not an improved version of existing work → C05, not a factual answer → C03, not code → C02), **AND**
-2. The LLM's contribution is authoring that artefact from scratch or from minimal user-provided material.
+### Worked Examples (from task_instances_coded.csv)
 
-### Resolution of Ambiguous Cases
+1. *"Draft and refine professional workplace emails and business correspondence"*
+   (Anthropic AEI, 2.96%) → C01b. The user wants a new email artefact produced
+   by the model. Primary output is a composed professional communication.
 
-| Ambiguous case                                                        | Resolution       | Rationale                                                           |
-| --------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------- |
-| User provides a rough outline and asks LLM to write the full document | → C01           | Outline is scaffolding; LLM authors the artefact                    |
-| User provides a full draft and asks for improvements                  | → C05           | Existing artefact is primary input; LLM role is evaluative          |
-| User asks LLM to "write and then edit" a document                     | → C01 (primary) | Production goal is the first-order task                             |
-| Summarising a document for a slide deck                               | → C07           | Condensation of existing material                                   |
-| Writing an essay about a topic from memory                            | → C01           | Output is a new document, even though research knowledge is applied |
+2. *"Create marketing content, advertising campaigns, and SEO materials"*
+   (Anthropic AEI, 2.88%) → C01c. The model generates promotional copy. The
+   output is an original marketing artefact tailored to the user's audience.
 
-### Worked Examples (from empirical task instances)
+3. *"Assist with creative fiction writing, editing, and development"*
+   (Anthropic AEI, 1.71%) → C01d. The user wants original narrative content
+   generated or substantially developed by the model.
 
-1. **"Complete academic assignments and create educational materials across all subjects"** (Handa et al., 2025, rank 1, 4.98% usage) — The user wants a new written submission produced; → C01a.
-2. **"Write, develop, and edit original creative fiction across multiple genres"** (Handa et al., 2025, rank 7, 2.90% usage) — Production of new narrative content; → C01c.
-3. **"Draft and revise professional workplace correspondence and business communications"** (Handa et al., 2025, rank 9, 2.44% usage) — New professional writing artefact; → C01b.
-4. **"Create and optimize marketing content across multiple formats and industries"** (Handa et al., 2025, rank 10, 2.38% usage) — New marketing copy; → C01b.
-5. **"Create technical documentation, diagrams, and architectural designs"** (Handa et al., 2025, rank 17, 1.58% usage) — Technical documentation; → C01d.
-6. **"Draft, review, and analyze legal documents and court filings"** (Handa et al., 2025, rank 30, 1.09% usage) — Legal document creation (primary); → C01f.
-7. **"Assist with business planning, strategy, and entrepreneurial development"** (Handa et al., 2025, rank 6, 3.00% usage) — Business plan as a new document; → C01b.
+4. *"Create religious content, spiritual guidance, poetry, and creative writing"*
+   (Anthropic AEI, 1.51%) → C01d. Poetry and spiritual texts are composed
+   artefacts where the model serves as author.
+
+5. *"Write personal communications and messages on behalf of user"*
+   (OpenAI study) → C01d. Personal messages written from scratch by the model
+   at the user's direction are original artefacts.
+
+6. *"Assist with marketing copy or legal document drafting"*
+   (OpenRouter) → C01c/C01e. Drafting legal or marketing documents is originative
+   content production, regardless of the specialised domain.
+
+7. *"Develop comprehensive business strategy documents and corporate planning materials"*
+   (Anthropic AEI, 2.72%) → C01b. Business strategy documents are professional
+   artefacts produced by the model as co-author.
+
+8. *"Create and format professional presentation slides and materials"*
+   (Anthropic AEI, 0.71%) → C01b. Slide content creation is originative writing
+   even when structured as a presentation.
+
+### Edge Cases
+- Writing an email FROM SCRATCH → C01. Editing an email the user already drafted → C05.
+- Generating a summary of a document → C07. Writing a narrative essay → C01.
+- Translating a document → C06. Writing a bilingual document from scratch → C01.
+- "Help me write my thesis chapter" (substantial authorship) → C01.
+  "Give me feedback on my thesis chapter" → C05.
 
 ---
 
-## C02 — Code Development & Technical Problem Solving
+## C02 — Code Development and Technical Problem Solving
 
-### Formal Definition
-
-Code Development & Technical Problem Solving refers to LLM interactions in which the output is executable code, a configuration, a technical specification, or a systematic procedure for resolving a software, hardware, or infrastructure problem. The LLM applies knowledge of programming languages, systems architecture, protocols, and technical tools to produce or repair functional technical artefacts or resolve technical failures.
-
-### Hierarchical Sub-categories
-
-| Sub-category                              | Description                                                     | Example tasks                                                                        |
-| ----------------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| C02a — Code Generation                   | Writing new functions, modules, scripts, or applications        | "Build a web scraper in Python"; "Create a REST API in Node.js"                      |
-| C02b — Debugging & Bug Fixing            | Identifying and correcting errors in existing code              | "Debug this Python function"; "Fix the CSS layout bug"                               |
-| C02c — Code Review & Refactoring         | Improving code quality, readability, and efficiency             | "Refactor this function to be more efficient"; "Review this code for best practices" |
-| C02d — Infrastructure & DevOps           | Configuring servers, CI/CD pipelines, Docker, cloud, networking | "Set up a CI/CD pipeline"; "Configure an nginx server"                               |
-| C02e — Database & Data Engineering       | Writing SQL, designing schemas, managing data pipelines         | "Write a SQL query to find duplicate records"; "Design a database schema"            |
-| C02f — Specialised Technical Development | ML/AI systems, embedded systems, game dev, security, blockchain | "Implement a neural network in PyTorch"; "Debug embedded firmware"                   |
+### Definition
+Code Development and Technical Problem Solving is the capability to write, debug,
+refactor, and maintain software code; to design and implement technical systems;
+and to diagnose and resolve technical failures in software, hardware, and networked
+infrastructure. The model acts as a technical collaborator, producing or modifying
+executable artefacts and providing concrete technical solutions that make systems
+function correctly.
 
 ### Decision Rule
+A task belongs to C02 if and only if the primary output is:
+- (a) executable code, a configuration file, or a technical command, OR
+- (b) a diagnosis and fix for a technical system failure where the resolution
+  involves modifying a technical artefact.
 
-A task belongs to C02 **if and only if**:
+### Sub-categories
+- **C02a** Web application development: frontend (HTML/CSS/JS), backend, full-stack, APIs
+- **C02b** Software engineering and systems: business apps, mobile apps, databases, automation
+- **C02c** Code debugging and refactoring: fixing bugs, improving code quality, performance
+- **C02d** Machine learning and AI development: models, training pipelines, AI systems
+- **C02e** DevOps and infrastructure: CI/CD, deployment, containers, server configuration
+- **C02f** Technical troubleshooting: hardware failures, network issues, system configuration
 
-1. The primary output is code, a configuration, a technical specification, or a systematic technical procedure, **AND**
-2. The task requires applied knowledge of programming, systems, or technical infrastructure.
+### Worked Examples (from task_instances_coded.csv)
 
-### Resolution of Ambiguous Cases
+1. *"Troubleshoot and configure hardware, software, and system technical issues"*
+   (Anthropic AEI, 4.16%) → C02f. Resolution requires modifying system configuration;
+   the output is a fix, not mere information.
 
-| Ambiguous case                            | Resolution     | Rationale                                                               |
-| ----------------------------------------- | -------------- | ----------------------------------------------------------------------- |
-| "Explain what this code does"             | → C04         | Explanation without producing code is educational                       |
-| "Fix the bug in my code"                  | → C02b        | Output is corrected code                                                |
-| "Review my code and suggest improvements" | → C02c or C05 | If output is revised code → C02c; if output is written critique → C05 |
-| "What is an API?"                         | → C04         | Conceptual question, no code output                                     |
-| "Write a machine learning model"          | → C02f        | Code output despite ML knowledge domain                                 |
-| "Troubleshoot my WiFi connection"         | → C02d        | Technical procedure to resolve infrastructure failure                   |
+2. *"Develop, debug, and modify websites and web applications"*
+   (Anthropic AEI, 3.92%) → C02a. The model produces executable web code that makes
+   the application function as intended.
 
-### Worked Examples (from empirical task instances)
+3. *"Debug, fix, and refactor code across multiple languages and systems"*
+   (Anthropic AEI, 1.86%) → C02c. The primary output is corrected, improved code.
 
-1. **"Debug, fix, and refactor code across programming languages and development tasks"** (Handa et al., 2025, rank 2, 4.53% usage) — Code repair and improvement; → C02b/C02c.
-2. **"Build, debug, and customize web applications and websites"** (Handa et al., 2025, rank 4, 3.57% usage) — Web application development; → C02a.
-3. **"Debug and fix CSS, HTML, and UI layout and styling issues"** (Handa et al., 2025, rank 8, 2.63% usage) — Front-end bug fixing; → C02b.
-4. **"Help with machine learning, AI development, and technical implementation"** (Handa et al., 2025, rank 20, 1.35% usage) — ML code development; → C02f.
-5. **"Help with SQL queries, database design, and optimization"** (Handa et al., 2025, rank 38, 0.87% usage) — Database query writing; → C02e.
-6. **"Troubleshoot and configure Docker, Kubernetes, and virtualization platforms"** (Handa et al., 2025, rank 55, 0.57% usage) — Infrastructure configuration; → C02d.
-7. **"Configure and troubleshoot development infrastructure, CI/CD, and deployment systems"** (Handa et al., 2025, rank 68, 0.45% usage) — DevOps configuration; → C02d.
+4. *"Develop, debug, and optimize machine learning and AI systems"*
+   (Anthropic AEI, 1.50%) → C02d. ML system development produces executable model
+   pipelines and training code.
+
+5. *"Learn and troubleshoot DevOps infrastructure and deployment technologies"*
+   (Anthropic AEI, 0.97%) → C02e. DevOps troubleshooting produces configuration
+   changes and deployment scripts.
+
+6. *"Write or debug computer programming code"*
+   (OpenAI study, 4.2% of messages) → C02b/C02c. Direct code production or repair.
+
+7. *"Write or assist with programming and software development tasks"*
+   (OpenRouter, 11–50% of token usage) → C02b. Programming assistance produces
+   executable code output.
+
+8. *"Implement and troubleshoot authentication, authorization, and security systems"*
+   (Anthropic AEI, 0.96%) → C02a. Security system implementation is web/backend
+   development producing executable code artefacts.
+
+### Edge Cases
+- "Explain how recursion works" → C04 (conceptual understanding, not code production).
+  "Write a recursive function to traverse a tree" → C02.
+- "Tell me what DevOps tools exist" → C03. "Set up a CI/CD pipeline for me" → C02.
+- "Debug this Python script" (user provides code) → C02c.
+  "Review my Python script for best practices" → C05.
 
 ---
 
-## C03 — Information Retrieval & Advisory
+## C03 — Information Retrieval and Advisory
 
-### Formal Definition
-
-Information Retrieval & Advisory refers to LLM interactions in which the user seeks to obtain factual information, domain-specific knowledge, recommendations, or guidance from the LLM. The LLM acts as a knowledgeable informant, synthesising and applying its training knowledge to answer questions, compare options, or support a decision. The primary output is a response containing information or a recommendation — not a new document (→ C01), executable code (→ C02), or structured pedagogy (→ C04).
-
-### Hierarchical Sub-categories
-
-| Sub-category                             | Description                                                                  | Example tasks                                                                                           |
-| ---------------------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| C03a — Factual Question Answering       | Answering specific factual queries from domain knowledge                     | "What causes Type 2 diabetes?"; "What are the immigration requirements for Canada?"                     |
-| C03b — Research & Literature Synthesis  | Synthesising information across sources; summarising a field                 | "What does the literature say about transformer efficiency?"; "Survey recent work on LLM hallucination" |
-| C03c — Product & Service Recommendation | Comparing and recommending products, tools, or services                      | "Which laptop should I buy for machine learning?"; "Compare these two cloud providers"                  |
-| C03d — Personal & Professional Advisory | Career, finance, health, relationship, and life-skills guidance              | "How should I negotiate my salary?"; "What exercises help with lower back pain?"                        |
-| C03e — Domain Expert Consultation       | Advice requiring specialised professional knowledge (law, medicine, finance) | "What are the legal implications of this contract clause?"; "Is this medication safe with metformin?"   |
+### Definition
+Information Retrieval and Advisory is the capability to locate, synthesise, and
+deliver factual information, evidence-based recommendations, or domain-specific
+advisory guidance in response to a user's question or decision-making need. The
+model acts as an informed respondent, drawing on its knowledge base to answer
+questions, compare options, or advise on decisions. The primary output is
+informational text that transfers knowledge to the user.
 
 ### Decision Rule
+A task belongs to C03 if and only if:
+- (a) the user is seeking factual information or advice to inform a decision
+  or satisfy curiosity, AND
+- (b) the primary output is informational text (not a composed artefact (C01),
+  a technical system output (C02), or a pedagogical explanation building
+  toward understanding (C04)).
 
-A task belongs to C03 **if and only if**:
+### Sub-categories
+- **C03a** Factual and encyclopaedic information: science, medicine, history, law
+- **C03b** Product and service recommendations: consumer research, comparisons
+- **C03c** Career, financial, and personal advisory: job guidance, financial advice
+- **C03d** Research synthesis and literature overview: summarising fields, papers
+- **C03e** Practical how-to guidance: recipes, home maintenance, travel, fitness
 
-1. The user's primary goal is to obtain information, recommendations, or decision support, **AND**
-2. The output is an answer, explanation, or recommendation — not a new content artefact (→ C01), code (→ C02), or a pedagogically structured lesson (→ C04).
+### Worked Examples (from task_instances_coded.csv)
 
-### Resolution of Ambiguous Cases
+1. *"Provide medical information and health information across multiple specialties"*
+   (Anthropic AEI, 2.38%) → C03a. Medical fact delivery to inform the user's
+   understanding or decision-making.
 
-| Ambiguous case                                    | Resolution | Rationale                                       |
-| ------------------------------------------------- | ---------- | ----------------------------------------------- |
-| "What is the capital of France?"                  | → C03a    | Simple factual retrieval                        |
-| "Teach me about the French Revolution"            | → C04     | Pedagogical orientation, structured explanation |
-| "Write a report on the French Revolution"         | → C01     | New document as output                          |
-| "What medication is prescribed for ADHD?"         | → C03e    | Domain knowledge answer                         |
-| "Write a prescription letter for ADHD medication" | → C01     | New document                                    |
-| "Help me choose between Python and R"             | → C03c    | Recommendation and comparison                   |
+2. *"Help research, compare, and select consumer products for purchase"*
+   (Anthropic AEI, 2.25%) → C03b. Product comparison and recommendation to support
+   a purchasing decision.
 
-### Worked Examples (from empirical task instances)
+3. *"Provide comprehensive career development and job transition assistance"*
+   (Anthropic AEI, 1.63%) → C03c. Advisory guidance on career moves; the output
+   is informational advice, not a written artefact.
 
-1. **"Help research, compare, and select consumer products for purchasing decisions"** (Handa et al., 2025, rank 5, 3.10% usage) — Product comparison and recommendation; → C03c.
-2. **"Provide medical and health-related information across multiple specialties"** (Handa et al., 2025, rank 24, 1.24% usage) — Medical factual information; → C03e.
-3. **"Provide relationship, dating, parenting, and family advice"** (Handa et al., 2025, rank 40, 0.85% usage) — Personal advisory; → C03d.
-4. **"Provide personal finance guidance and perform financial calculations"** (Handa et al., 2025, rank 44, 0.71% usage) — Financial advisory; → C03d.
-5. **"Assist with multidisciplinary scientific research and academic projects"** (Handa et al., 2025, rank 34, 0.96% usage) — Research synthesis; → C03b.
-6. **"Find local information about places, services, restaurants, and cultural topics"** (Handa et al., 2025, rank 60, 0.53% usage) — Factual local information; → C03a.
-7. **"Provide general information regarding investment and portfolio management"** (Handa et al., 2025, rank 72, 0.43% usage) — Financial domain advisory; → C03e.
+4. *"Provide food recipes, cooking advice, nutrition information"*
+   (Anthropic AEI, 1.15%) → C03e. Practical how-to guidance delivered as
+   informational text.
+
+5. *"Answer specific factual or informational questions from the user"*
+   (OpenAI study, 24.4% Seeking Information aggregate) → C03a. Direct Q&A is the
+   paradigm case of information retrieval.
+
+6. *"Provide how-to procedural advice for practical tasks"*
+   (OpenAI study, 28.8% Practical Guidance aggregate) → C03e. Step-by-step
+   procedural guidance delivered as information.
+
+7. *"Assist with earth sciences, environmental research, and natural science tasks"*
+   (Anthropic AEI, 0.41%) → C03a/C03d. Scientific information retrieval and
+   research overview, not a tutorial.
+
+8. *"Provide investment information, stock analysis, and financial market information"*
+   (Anthropic AEI, 0.72%) → C03c. Financial advisory is information delivery
+   supporting user decisions.
+
+### Edge Cases
+- "What are the symptoms of diabetes?" → C03a. "Explain how the immune system
+  works in a way a student can understand" → C04.
+- "Give me career advice" → C03c. "Write my career change cover letter" → C01.
+- "What is matplotlib?" → C03a. "Show me how to use matplotlib step by step" → C04.
+- "Recommend a good laptop" → C03b. "Write a product review of a laptop" → C01.
 
 ---
 
-## C04 — Learning & Education Support
+## C04 — Learning and Education Support
 
-### Formal Definition
-
-Learning & Education Support refers to LLM interactions in which the LLM acts as a tutor, instructor, or mentor, structuring knowledge to facilitate the user's comprehension of a concept, skill, or procedure. The defining feature distinguishing C04 from C03 is pedagogical intent: the LLM scaffolds understanding (explains why, demonstrates how, provides worked examples, checks understanding) rather than simply delivering a factual answer. The user's goal is to develop capability, not merely obtain information.
-
-### Hierarchical Sub-categories
-
-| Sub-category                   | Description                                                       | Example tasks                                                                              |
-| ------------------------------ | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| C04a — Concept Explanation    | Explaining ideas, theories, or mechanisms at an appropriate level | "Explain gradient descent to a beginner"; "What is the difference between RAM and ROM?"    |
-| C04b — Worked Problem Solving | Walking through problems step-by-step (maths, science, logic)     | "Solve this integral and explain each step"; "Walk me through this physics problem"        |
-| C04c — Skill Instruction      | Teaching a skill progressively (programming, language, writing)   | "Teach me Python from scratch"; "How do I structure an argument in an essay?"              |
-| C04d — Adaptive Tutoring      | Diagnosing misunderstanding and adjusting instruction level       | "I don't understand your explanation — can you use an analogy?"; "Explain it more simply" |
+### Definition
+Learning and Education Support is the capability to assist users in acquiring
+knowledge, skills, or academic qualifications through tutoring, explanation,
+worked examples, and structured guidance. This includes helping learners understand
+concepts, complete assignments, solve problems as learning exercises, and develop
+academic competencies. The model acts as tutor, teacher, or study partner, with
+the primary goal of building the user's understanding or academic capability.
 
 ### Decision Rule
+A task belongs to C04 if and only if:
+- (a) the user's primary goal is to learn, understand, or develop a skill
+  (rather than simply obtain an answer), OR
+- (b) the task is framed as an educational or academic obligation (coursework,
+  homework, exam preparation).
 
-A task belongs to C04 **if and only if**:
+### Sub-categories
+- **C04a** Academic assignment support: completing coursework, homework, exam prep
+- **C04b** Concept explanation and tutoring: STEM concepts, humanities, science
+- **C04c** Skill development: programming fundamentals, writing skills, languages
+- **C04d** Educational material creation: lesson plans, quizzes, teaching resources
 
-1. The user's explicit or implicit goal is to develop understanding or competence, **AND**
-2. The LLM's response is structured pedagogically (explains, demonstrates, scaffolds), not merely factual, **AND**
-3. The interaction is oriented toward building user capability rather than completing a task on the user's behalf.
+### Worked Examples (from task_instances_coded.csv)
 
-### Resolution of Ambiguous Cases
+1. *"Assist with academic assignments and coursework across multiple disciplines"*
+   (Anthropic AEI, 5.19%) → C04a. The task is explicitly framed as academic
+   obligation; the model supports learning completion.
 
-| Ambiguous case                          | Resolution    | Rationale                                                                                       |
-| --------------------------------------- | ------------- | ----------------------------------------------------------------------------------------------- |
-| "What is machine learning?"             | → C03 or C04 | If a single factual sentence suffices → C03; if the user wants a structured explanation → C04 |
-| "Explain recursion step by step"        | → C04b       | Explicit pedagogical structure requested                                                        |
-| "Write recursive code for me"           | → C02a       | Task completion, not instruction                                                                |
-| "Help me understand this maths problem" | → C04b       | Understanding is the goal                                                                       |
-| "Solve this maths problem for me"       | → C01 or C04 | If answer only → C01/C03; if worked explanation → C04b                                        |
+2. *"Create educational materials and explain concepts across academic subjects"*
+   (Anthropic AEI, 1.94%) → C04d/C04b. Creating educational materials is a
+   pedagogical support task; explaining concepts is tutoring.
 
-### Worked Examples (from empirical task instances)
+3. *"Help solve and explain mathematics problems across multiple topics and levels"*
+   (Anthropic AEI, 1.40%) → C04b. Problem explanation with the intent to build
+   mathematical understanding.
 
-1. **"Help me learn programming languages and software development concepts"** (Handa et al., 2025, rank 15, 1.80% usage) — Skill instruction in programming; → C04c.
-2. **"Help solve mathematics problems from basic arithmetic to advanced university-level topics"** (Handa et al., 2025, rank 22, 1.32% usage) — Worked mathematical problem solving; → C04b.
-3. **"Help with algorithms, data structures, and competitive programming tasks"** (Handa et al., 2025, rank 50, 0.63% usage) — CS concept instruction; → C04a/C04c.
-4. **"Help with physics problems, coursework, and educational explanations"** (Handa et al., 2025, rank 79, 0.36% usage) — Physics concept explanation; → C04a/C04b.
-5. **"Solve engineering physics problems and debug simulation code"** (Handa et al., 2025, rank 67, 0.46% usage) — Problem-solving with explanation; → C04b.
-6. **"Assist with quantum mechanics and quantum computing topics"** (Handa et al., 2025, rank 109, 0.06% usage) — Specialist concept instruction; → C04a.
-7. **O\*NET: "Adapt instructional content or delivery methods for different levels or types of learners"** (O\*NET, 0.134%) — Adaptive tutoring; → C04d.
+4. *"Tutor or teach academic subjects to the user"*
+   (OpenAI study, 10.2% of messages) → C04b. Direct tutoring is the paradigm
+   case of this capability.
+
+5. *"Help with programming fundamentals including regex and data structures"*
+   (Anthropic AEI, 0.32%) → C04c. Programming fundamentals instruction is
+   skill-building, not just code production.
+
+6. *"Help with physics education, problems, and theory"*
+   (Anthropic AEI, 0.20%) → C04b. Physics education is concept explanation
+   for learning purposes.
+
+7. *"Assist with technical and STEM coursework, homework, and assignments"*
+   (Anthropic AEI, 1.07%) → C04a. Coursework assistance is academically framed
+   and learning-oriented.
+
+8. *"Perform mathematical calculations or solve numerical problems"*
+   (OpenAI study, 3.0% of messages) → C04b. Mathematical problem-solving for
+   learning purposes (the OpenAI classification context is practical guidance/tutoring).
+
+### Edge Cases
+- "Solve this integral for me" (no learning intent) → C07 or C03.
+  "Walk me through how to solve this integral" → C04b.
+- "Complete my essay for me" → C01. "Help me understand essay structure" → C04c.
+- "Grade these essays" → C05. "Create a rubric for grading essays" → C01.
+- "Explain what Docker is" → C03a if brief factual query; C04b if structured
+  tutorial is requested.
 
 ---
 
-## C05 — Review & Feedback
+## C05 — Review and Feedback
 
-### Formal Definition
-
-Review & Feedback refers to LLM interactions in which the user submits an existing artefact — a written document, code, argument, or piece of work — and the LLM evaluates, critiques, annotates, or produces an improved version. The primary input is the user's artefact; the primary output is an assessment, edited version, or structured critique. This capability is distinguished from C01 (where the LLM authors from scratch) and C02 (where the LLM corrects code as a technical repair task).
-
-### Hierarchical Sub-categories
-
-| Sub-category                             | Description                                                              | Example tasks                                                                   |
-| ---------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
-| C05a — Proofreading & Copy-editing      | Correcting grammar, spelling, style, and clarity                         | "Proofread this email"; "Fix the grammar in this paragraph"                     |
-| C05b — Substantive Document Revision    | Restructuring, improving argument, rewriting sections                    | "Improve the structure of this essay"; "Rewrite this section more concisely"    |
-| C05c — Academic Peer Review Simulation  | Providing critique in the style of academic peer review                  | "Review this abstract as if you were a journal reviewer"                        |
-| C05d — Assessment & Grading             | Evaluating work against defined criteria and assigning a score or grade  | "Grade this essay on a scale of 1–10 with justification"                       |
-| C05e — Interview & Application Feedback | Reviewing CVs, cover letters, interview answers, and personal statements | "Review my CV and suggest improvements"; "Give feedback on my interview answer" |
+### Definition
+Review and Feedback is the capability to evaluate, critique, edit, and improve
+existing written or creative work produced by the user or a third party. The model
+acts as a reviewer, editor, or assessor — identifying errors, weaknesses, and
+opportunities for improvement in a user-supplied artefact and providing actionable
+feedback, corrections, or a revised version. The defining feature is that a
+user-produced artefact is the primary input.
 
 ### Decision Rule
+A task belongs to C05 if and only if:
+- (a) the user provides an existing text artefact as the primary input, AND
+- (b) the user's goal is evaluation, correction, critique, or improvement of
+  that specific artefact (not creation of a new one).
 
-A task belongs to C05 **if and only if**:
+### Sub-categories
+- **C05a** Proofreading and grammar correction: spelling, punctuation, syntax
+- **C05b** Substantive editing and content improvement: clarity, structure, argument
+- **C05c** Academic feedback and grading: marking student work, rubric application
+- **C05d** Peer review and manuscript revision: responding to reviewers, journal submission
 
-1. The user provides an existing artefact as primary input, **AND**
-2. The LLM's primary role is to evaluate, improve, or provide feedback — not to produce an entirely new artefact (→ C01) or perform a technical code repair (→ C02b).
+### Worked Examples (from task_instances_coded.csv)
 
-### Resolution of Ambiguous Cases
+1. *"Edit, proofread, and reformat documents and written content"*
+   (Anthropic AEI, 1.71%) → C05a/C05b. The user provides an existing document
+   for correction and reformatting.
 
-| Ambiguous case                                    | Resolution       | Rationale                                      |
-| ------------------------------------------------- | ---------------- | ---------------------------------------------- |
-| "Edit this email and make it more professional"   | → C05b          | User's draft is the starting point             |
-| "Write me a professional email"                   | → C01           | No existing artefact; LLM authors from scratch |
-| "Fix the bug in my code"                          | → C02b          | Technical repair, not quality feedback         |
-| "Review my code for best practices"               | → C05 (or C02c) | Evaluative review of existing code             |
-| "Respond to peer reviewers and revise manuscript" | → C05c          | Revision driven by existing reviewer comments  |
-| "Grade this student essay and explain the grade"  | → C05d          | Assessment of submitted work                   |
+2. *"Edit or critique provided text to improve writing quality"*
+   (OpenAI study, Writing aggregate ~two-thirds of 23.9%) → C05b. The paradigm
+   case from OpenAI data: editing user-provided text.
 
-### Worked Examples (from empirical task instances)
+3. *"Grade student work and create educational assessments"*
+   (Anthropic AEI, 0.78%) → C05c. Grading involves evaluating existing student
+   artefacts.
 
-1. **"Proofread, edit, and correct written documents and communications"** (Handa et al., 2025, rank 18, 1.51% usage) — Copy-editing existing text; → C05a.
-2. **"Revise and format academic documents across multiple disciplines"** (Handa et al., 2025, rank 25, 1.12% usage) — Document revision; → C05b.
-3. **"Create, grade, and evaluate educational assessments and student work"** (Handa et al., 2025, rank 54, 0.60% usage) — Assessment and grading; → C05d.
-4. **"Draft and revise academic application essays and materials"** (Handa et al., 2025, rank 84, 0.32% usage) — Application feedback; → C05e.
-5. **"Help prepare for job interviews with questions, answers, and practice"** (Handa et al., 2025, rank 87, 0.31% usage) — Interview answer feedback; → C05e.
-6. **"Respond to peer reviewers and revise manuscripts for journal submission"** (Handa et al., 2025, rank 101, 0.14% usage) — Academic peer review; → C05c.
-7. **"Evaluate arguments and develop debate positions or counterarguments"** (Handa et al., 2025, rank 104, 0.11% usage) — Evaluating an existing argument; → C05c.
-8. **O\*NET: "Review and revise documents to ensure accuracy and clarity"** (O\*NET) — Document revision in professional context; → C05b.
+4. *"Edit and revise academic writing on AI and research topics"*
+   (Anthropic AEI, 0.47%) → C05b. Academic writing revision is improvement of
+   an existing scholarly artefact.
+
+5. *"Respond to peer reviewers and revise manuscripts for journal submission"*
+   (Anthropic AEI, 0.12%) → C05d. Responding to peer review involves critiquing
+   and improving an existing manuscript.
+
+6. *"Revise and format academic documents across multiple disciplines"*
+   (previous AEI dataset, referenced in earlier analysis) → C05b. Revision implies
+   an existing artefact is being improved.
+
+7. *"Proofread this email before I send it"*
+   (illustrative instance consistent with C05a pattern) → C05a. The user's email
+   is the input; correction is the output.
+
+8. *"Provide feedback on my business plan"*
+   (consistent with C05b patterns across sources) → C05b. Business plan critique
+   is substantive review of an existing artefact.
+
+### Edge Cases
+- "Edit my essay" → C05b. "Write me an essay" → C01.
+- "Fix the grammar in my cover letter" → C05a. "Write my cover letter" → C01.
+- "Grade this student's essay using the rubric" → C05c.
+  "Create a grading rubric" → C01.
+- Peer review response → C05d. Writing a new paper → C01.
 
 ---
 
-## C06 — Translation & Language Processing
+## C06 — Translation and Language Processing
 
-### Formal Definition
-
-Translation & Language Processing refers to LLM interactions in which the primary task is converting written text between natural languages (translation) or supporting the acquisition of a foreign language through vocabulary instruction, grammar explanation, pronunciation guidance, or language exercises. The task is fundamentally linguistic — concerned with cross-linguistic equivalence or language learning — rather than general writing in a language (→ C01) or explaining a non-linguistic subject (→ C04).
-
-### Hierarchical Sub-categories
-
-| Sub-category                                    | Description                                                                 | Example tasks                                                                  |
-| ----------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| C06a — Document Translation                    | Converting documents, texts, or passages between languages                  | "Translate this contract from Spanish to English"                              |
-| C06b — Real-time or Conversational Translation | Translating short phrases, messages, or communication snippets              | "How do I say 'I need a doctor' in Japanese?"                                  |
-| C06c — Grammar & Linguistics Instruction       | Explaining grammatical rules, syntax, and linguistic features of a language | "Explain the subjunctive mood in French"                                       |
-| C06d — Vocabulary & Phrase Learning            | Building vocabulary, learning expressions, or practising phrases            | "Give me 20 common French business phrases"; "What does 'schadenfreude' mean?" |
-| C06e — Localisation & Cultural Adaptation      | Adapting content for a target language audience, including cultural nuance  | "Adapt this marketing copy for a Japanese audience"                            |
+### Definition
+Translation and Language Processing is the capability to convert text between
+natural languages, assist users in learning or practising a foreign language, and
+perform language-specific transformations such as grammar checking in a non-native
+language context. The model acts as a linguist or language tutor, bridging
+linguistic systems. The defining feature is a cross-lingual purpose.
 
 ### Decision Rule
+A task belongs to C06 if and only if:
+- (a) the primary user goal involves a cross-lingual transformation (translating
+  text from one language to another), OR
+- (b) the user is seeking support for competence in a language they are learning
+  (vocabulary, grammar, expression in the target language).
 
-A task belongs to C06 **if and only if**:
+### Sub-categories
+- **C06a** Document and text translation: legal, medical, technical, general
+- **C06b** Language learning and grammar support: vocabulary, grammar, fluency
+- **C06c** Multilingual content formatting: producing content in multiple languages
 
-1. The task involves converting text between natural languages OR providing instruction specifically in a foreign language, **AND**
-2. The primary user goal is linguistic equivalence, comprehension, or language acquisition — not producing a new document in a language (→ C01).
+### Worked Examples (from task_instances_coded.csv)
 
-### Resolution of Ambiguous Cases
+1. *"Provide language learning assistance, translation, and grammar help across multiple languages"*
+   (Anthropic AEI, 1.51%) → C06a/C06b. Covers both translation and language learning
+   support in a single cluster.
 
-| Ambiguous case                   | Resolution   | Rationale                                         |
-| -------------------------------- | ------------ | ------------------------------------------------- |
-| "Translate this report"          | → C06a      | Cross-language conversion is the goal             |
-| "Write me a report in French"    | → C01       | New document production; language is incidental   |
-| "Correct my French grammar"      | → C06c      | Linguistic instruction/feedback                   |
-| "Proofread this French document" | → C05a      | Quality review of existing text (not translation) |
-| "Help me learn Korean"           | → C06d/C06c | Language acquisition                              |
-| "What does 'Zeitgeist' mean?"    | → C06d      | Vocabulary/linguistic explanation                 |
+2. *"Translate and format diverse professional, academic, medical, and religious content between languages"*
+   (Anthropic AEI, 1.20%) → C06a. Cross-lingual document conversion across
+   professional domains.
 
-### Worked Examples (from empirical task instances)
+3. *"Translate text between languages for the user"*
+   (OpenAI study, Writing subcategory) → C06a. Direct translation is the paradigm case.
 
-1. **"Translate text and documents between various languages"** (Handa et al., 2025, rank 14, 1.83% usage) — Document translation; → C06a.
-2. **"Assist with multilingual vocabulary, grammar, translation, and pronunciation learning"** (Handa et al., 2025, rank 35, 0.96% usage) — Language learning support; → C06c/C06d.
-3. **O\*NET: "Translate documents or communications between languages"** (O\*NET) — Occupational translation task; → C06a.
-4. **O\*NET: "Adapt software and accompanying technical documents to another language and culture"** (O\*NET) — Technical localisation; → C06e.
-5. **O\*NET: "Adapt translations to students' cognitive and grade levels"** (O\*NET) — Pedagogically-adapted translation; → C06a/C06e.
+4. *"Translate written content between different natural languages"*
+   (OpenRouter) → C06a. Platform-level confirmation that translation is a distinct
+   usage category.
+
+5. *"Help me learn Spanish vocabulary"*
+   (illustrative instance consistent with C06b) → C06b. Language acquisition
+   support, not mere factual information about Spanish.
+
+6. *"Check the grammar of my French essay and suggest natural phrasing"*
+   (illustrative instance consistent with C06b) → C06b. Language learner grammar
+   support is cross-lingual in character.
+
+7. *"Translate a legal contract from German to English and preserve formatting"*
+   (illustrative instance consistent with C06a) → C06a. Legal document translation
+   with formatting preservation.
+
+8. *"Help me practise conversational Arabic"*
+   (illustrative instance consistent with C06b) → C06b. Conversational language
+   practice is language learning support, even in dialogue form.
+
+### Edge Cases
+- "Translate this document from French to English" → C06a.
+  "Write a document in English" → C01.
+- "Help me learn Spanish" → C06b. "Explain Spanish grammar" as factual query → C03a.
+- "Check the grammar of my English essay" → C05a (monolingual editing).
+  "Check the grammar of my French essay" (user is a French learner) → C06b.
+- "Write a bilingual brochure in English and Mandarin" → C01c (original content
+  production in multiple languages is authorship, not translation).
 
 ---
 
-## C07 — Data Analysis & Summarisation
+## C07 — Data Analysis and Summarisation
 
-### Formal Definition
-
-Data Analysis & Summarisation refers to LLM interactions in which the user provides existing data, documents, or information corpora, and the LLM processes them to extract insights, identify patterns, produce condensed representations, or transform unstructured material into structured form. The key distinguishing feature is that the input is a data artefact (not just a topic or question), and the output is a derived product (analysis, summary, extract, or structured output) rather than a new authored document (→ C01) or a factual answer from model memory (→ C03).
-
-### Hierarchical Sub-categories
-
-| Sub-category                                  | Description                                                                           | Example tasks                                                                                   |
-| --------------------------------------------- | ------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| C07a — Text Summarisation                    | Condensing long documents into shorter representations                                | "Summarise this 50-page report in 5 bullet points"                                              |
-| C07b — Quantitative Data Analysis            | Performing calculations, statistical analysis, or pattern detection on numerical data | "Analyse this sales dataset and identify trends"                                                |
-| C07c — Document Information Extraction       | Extracting specific entities, facts, or structured data from unstructured documents   | "Extract all dates and named parties from this contract"                                        |
-| C07d — Financial & Business Analysis         | Analysing financial statements, market data, and business metrics                     | "Analyse this income statement and identify risks"                                              |
-| C07e — Content Transformation & Reformatting | Converting content between formats, restructuring for a new purpose                   | "Convert this Word document to a structured JSON"; "Turn these meeting notes into action items" |
+### Definition
+Data Analysis and Summarisation is the capability to process, analyse, and
+synthesise existing datasets, documents, or information corpora to extract
+insights, patterns, statistical results, or compressed representations. The model
+acts as an analyst or information processor, converting raw or verbose input into
+structured, meaningful output. The defining feature is that the user supplies
+existing data or content as the primary input.
 
 ### Decision Rule
+A task belongs to C07 if and only if:
+- (a) the user provides existing data, documents, or a corpus as input, AND
+- (b) the goal is to extract, compress, or analyse information from that input
+  (not to produce a new creative artefact or retrieve facts from the model's
+  knowledge base).
 
-A task belongs to C07 **if and only if**:
+### Sub-categories
+- **C07a** Text summarisation and compression: summarising documents, reports, papers
+- **C07b** Data analysis and statistical computing: processing datasets, statistics
+- **C07c** Document processing and format conversion: reformatting, converting files
+- **C07d** Business intelligence and forecasting: business data analysis, reporting
 
-1. The user provides existing data, documents, or content as input, **AND**
-2. The LLM's role is to process, analyse, summarise, extract from, or reformat that material — not to generate new content from scratch (→ C01) or answer factual questions from training knowledge (→ C03).
+### Worked Examples (from task_instances_coded.csv)
 
-### Resolution of Ambiguous Cases
+1. *"Extract, analyze, and process content from images and documents"*
+   (Anthropic AEI, 1.47%) → C07a/C07b. The user supplies images or documents;
+   the model extracts and analyses their content.
 
-| Ambiguous case                             | Resolution | Rationale                                       |
-| ------------------------------------------ | ---------- | ----------------------------------------------- |
-| "Summarise this report"                    | → C07a    | Existing document as input                      |
-| "Write a summary of climate change"        | → C01     | No input document; LLM generates from knowledge |
-| "Analyse this spreadsheet"                 | → C07b    | Existing data artefact as input                 |
-| "What are trends in AI investment?"        | → C03b    | Knowledge-based answer, no data artefact        |
-| "Convert these meeting notes into a table" | → C07e    | Reformatting existing content                   |
-| "Extract the key findings from this paper" | → C07c    | Information extraction from existing document   |
+2. *"Conduct comprehensive business and corporate research analysis"*
+   (Anthropic AEI, 1.05%) → C07d. Business research analysis processes existing
+   data sources to generate business intelligence.
 
-### Worked Examples (from empirical task instances)
+3. *"Assist with data analysis, statistical computing, and database management tasks"*
+   (Anthropic AEI, 0.96%) → C07b. Statistical computing on user-supplied datasets.
 
-1. **"Summarize documents and conversation histories to specified formats"** (Handa et al., 2025, rank 74, 0.39% usage) — Text summarisation; → C07a.
-2. **"Extract and analyze content from images, PDFs, and documents"** (Handa et al., 2025, rank 27, 1.12% usage) — Document extraction; → C07c.
-3. **"Assist with data analysis, statistical computing, and programming tasks"** (Handa et al., 2025, rank 46, 0.68% usage) — Quantitative analysis; → C07b.
-4. **"Perform corporate financial analysis and business research"** (Handa et al., 2025, rank 37, 0.88% usage) — Financial analysis; → C07d.
-5. **"Create and format presentation slides, scripts, and speaker notes from source materials"** (Handa et al., 2025, rank 93, 0.25% usage) — Content transformation; → C07e.
-6. **"Analyze financial markets and summarize cryptocurrency news"** (Handa et al., 2025, rank 97, 0.22% usage) — Financial summarisation; → C07a/C07d.
-7. **O\*NET: "Analyse data to identify operational trends and inform decisions"** (O\*NET) — Occupational data analysis; → C07b.
+4. *"Analyse datasets or perform data analysis and reporting tasks"*
+   (OpenAI study, 0.4% Data Analysis subcategory) → C07b. Direct dataset
+   analysis and reporting.
+
+5. *"Create data visualizations, dashboards, and knowledge maps"*
+   (Anthropic AEI, 0.54%) → C07b/C07d. Visualisation is a form of analytical
+   output derived from existing data.
+
+6. *"Extract and structure data from multiple sources into organized formats"*
+   (Anthropic AEI, 0.33%) → C07c. Data extraction and structuring processes
+   existing sources into a new structured form.
+
+7. *"Analyze business data and generate forecasting reports and insights"*
+   (Anthropic AEI, 0.20%) → C07d. Forecasting reports are analytical outputs
+   derived from existing business data.
+
+8. *"Generate argument or document summaries on demand"*
+   (OpenAI study) → C07a. Document summarisation compresses existing content
+   into a shorter representation.
+
+### Edge Cases
+- "Summarise this report" → C07a. "Write a report on this topic" → C01.
+- "Analyse this CSV" → C07b. "Explain what regression analysis is" → C04b.
+- "Convert this Word doc to PDF" → C07c. "Write a document" → C01.
+- "Solve this equation" without data input → C04b (learning context) or C03.
+  "Analyse these survey results and run descriptive statistics" → C07b.
 
 ---
 
-## C08 — Conversational Interaction & Roleplay
+## C08 — Conversational Interaction and Roleplay
 
-### Formal Definition
-
-Conversational Interaction & Roleplay refers to LLM interactions in which the primary value lies in the conversational experience itself — the sustained, interactive exchange — rather than in a specific artefact, answer, or learned concept as output. This includes interactive fiction, persona-based roleplay, open-ended intellectual dialogue, companionship interactions, and interactive practice scenarios. The LLM is expected to maintain a conversational dynamic over multiple turns, responding coherently to the unfolding interaction rather than delivering a single output.
-
-### Hierarchical Sub-categories
-
-| Sub-category                                | Description                                                                | Example tasks                                                                                   |
-| ------------------------------------------- | -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| C08a — Interactive Fiction & Roleplay      | Collaborative storytelling, character roleplay, fantasy or narrative games | "Let's play a D\&D campaign"; "Roleplay as a historical figure"                                 |
-| C08b — Open-ended Intellectual Dialogue    | Discussion-based exploration of ideas, philosophy, ethics, speculation     | "Debate the ethics of AI consciousness with me"; "Discuss whether free will exists"             |
-| C08c — Interactive Practice Scenarios      | Simulated professional or social situations for skill practice             | "Act as a difficult client and let me practise handling objections"; "Simulate a job interview" |
-| C08d — Casual Conversation & Companionship | Social chitchat, emotional support, casual interaction                     | "Just talk to me"; "I'm feeling anxious — can we chat?"                                        |
+### Definition
+Conversational Interaction and Roleplay is the capability to engage in open-ended,
+interactive dialogue with users for purposes of entertainment, personal support,
+social practice, or collaborative world-building. The model acts as a conversational
+partner, adopting personas, participating in narratives, and responding to emotional
+or social cues in a sustained exchange. The defining feature is that the primary
+user value lies in the interactive exchange itself rather than in a discrete output
+artefact.
 
 ### Decision Rule
+A task belongs to C08 if and only if:
+- (a) the primary user value lies in the interactive conversational exchange itself
+  (not in a discrete transferable output), AND
+- (b) the interaction serves emotional, entertainment, social practice, or
+  exploratory purposes.
 
-A task belongs to C08 **if and only if**:
+### Sub-categories
+- **C08a** Personal and emotional support dialogue: loneliness, mental wellness,
+  relationship reflection
+- **C08b** Interactive roleplay and collaborative fiction: character roleplay,
+  interactive stories, games
+- **C08c** Social and conversational practice: interview rehearsal, language conversation
+- **C08d** Entertainment and games: trivia, casual games, divination, sports prediction
 
-1. The user's goal is sustained interactive engagement over multiple turns, **AND**
-2. The value of the interaction lies in the conversational experience — not in a specific information product (→ C03), document (→ C01), or educational lesson (→ C04), **AND**
-3. The LLM is expected to maintain a persona, narrative thread, or interactive dynamic.
+### Worked Examples (from task_instances_coded.csv)
 
-### Resolution of Ambiguous Cases
+1. *"Get relationship, dating, parenting, and personal advice across life situations"*
+   (Anthropic AEI, 1.15%) → C08a. Personal advisory in a sustained emotional
+   dialogue context. (Distinguish from C03c: this is ongoing personal support,
+   not one-shot advice delivery.)
 
-| Ambiguous case                                             | Resolution | Rationale                                         |
-| ---------------------------------------------------------- | ---------- | ------------------------------------------------- |
-| "Write me a fantasy story"                                 | → C01c    | Single output requested                           |
-| "Let's collaboratively build a fantasy story turn by turn" | → C08a    | Multi-turn interactive experience                 |
-| "Discuss AI ethics with me"                                | → C08b    | Open-ended dialogue, no specific output requested |
-| "Explain AI ethics"                                        | → C04     | Structured pedagogical explanation                |
-| "Simulate a job interview"                                 | → C08c    | Interactive scenario practice                     |
-| "Help me prepare for interviews" (without simulation)      | → C05e    | Feedback on existing answers                      |
+2. *"Practice job interviews and roleplay professional scenarios"*
+   (Anthropic AEI, 0.65%) → C08c. Interactive interview practice is valued for
+   the conversational exchange, not a specific output document.
 
-### Worked Examples (from empirical task instances)
+3. *"Engage in casual conversation or social chitchat with the model"*
+   (OpenAI study, 5.3% Self-Expression aggregate) → C08a. Social interaction
+   with no task output goal.
 
-1. **"Facilitate interactive roleplay sessions and initiate basic conversations"** (Handa et al., 2025, rank 58, 0.54% usage) — Roleplay and conversational interaction; → C08a/C08d.
-2. **"Discuss philosophy, mythology, AI ethics, and abstract intellectual topics"** (Handa et al., 2025, rank 65, 0.47% usage) — Intellectual dialogue; → C08b.
-3. **"Generate guidance for speculative and aleatory activities"** (Handa et al., 2025, rank 75, 0.38% usage) — Speculative interactive engagement; → C08b.
-4. Simulated doctor–patient consultations for medical training — → C08c.
-5. AI companion interactions for emotional support — → C08d.
+4. *"Discuss relationships or seek personal emotional reflection support"*
+   (OpenAI study, 1.9% subcategory) → C08a. Emotional support dialogue.
 
----
+5. *"Play interactive games or engage in roleplay with the model"*
+   (OpenAI study, 0.4% subcategory) → C08b/C08d. Interactive fiction and games.
 
-## Taxonomy Validation Summary (Week 3 target)
+6. *"Engage in interactive roleplay or collaborative fiction storytelling"*
+   (OpenRouter, ~50% of OSS token usage) → C08b. The dominant OSS usage pattern
+   on OpenRouter; collaborative fiction as interactive exchange.
 
-| Metric                               | Target           | Status                    |
-| ------------------------------------ | ---------------- | ------------------------- |
-| Coverage of Anthropic top 100 tasks  | ≥95%            | Pending Week 3 validation |
-| Cohen's κ (inter-coder reliability) | >0.8             | Pending Week 3 validation |
-| Number of core capabilities          | 6–10            | 8 ✓                      |
-| Worked examples per capability       | ≥5              | 5–8 per capability ✓    |
-| Decision rules documented            | All capabilities | ✓                        |
-| Edge cases resolved                  | All capabilities | ✓                        |
+7. *"Provide mental health, behavioral health, and ADHD support resources"*
+   (Anthropic AEI, 0.35%) → C08a. Mental health support is sustained interactive
+   dialogue, not one-shot information delivery.
 
----
+8. *"Create prediction tools for gaming, sports analysis, and divination readings"*
+   (Anthropic AEI, 0.54%) → C08d. Prediction and divination tools are used for
+   entertainment in interactive exchanges.
 
-## Mapping of Axial Categories to Core Capabilities
-
-| Axial Category                          | Core Capability |
-| --------------------------------------- | --------------- |
-| Academic task completion                | C01             |
-| Professional writing and communication  | C01             |
-| Professional document and plan creation | C01             |
-| Creative writing                        | C01             |
-| Code debugging and repair               | C02             |
-| Code development and debugging          | C02             |
-| Technical troubleshooting and support   | C02             |
-| Domain knowledge retrieval              | C03             |
-| Research and synthesis                  | C03             |
-| Advice and guidance                     | C03             |
-| Teaching and concept explanation        | C04             |
-| Mathematical problem solving            | C04             |
-| Adaptive instruction                    | C04             |
-| Reviewing and editing existing work     | C05             |
-| Language translation                    | C06             |
-| Language learning and translation       | C06             |
-| Data analysis and interpretation        | C07             |
-| Document analysis and extraction        | C07             |
-| Summarisation and condensation          | C07             |
-| Conversational and interactive dialogue | C08             |
+### Edge Cases
+- "Pretend you're a historical figure and I'll interview you" → C08b (interactive
+  roleplay). "Write a monologue by a historical figure" → C01d.
+- "Practice a job interview with me" → C08c. "Give me tips for job interviews" → C03c.
+- "I feel anxious, can we talk?" → C08a. "What are the symptoms of anxiety?" → C03a.
+- "Help me with relationship problems" (one-shot advice) → C03c.
+  "I need someone to talk to about my relationship" (sustained emotional dialogue) → C08a.
 
 ---
 
-## References
+## Cross-Capability Disambiguation Table
 
-- Braun, V. and Clarke, V. (2006). Using thematic analysis in psychology. *Qualitative Research in Psychology*, 3(2), pp. 77–101.
-- Handa, K. et al. (2025). Which Economic Tasks are Performed with AI? Evidence from Millions of Claude Conversations. arXiv:2503.04761.
-- O\*NET OnLine (n.d.). Detailed Work Activities. US Department of Labor.
+| Ambiguous Scenario | Correct Capability | Rationale |
+|---|---|---|
+| User asks model to write code | C02 | Primary output is executable artefact |
+| User asks model to explain code | C04 | Goal is understanding, not artefact |
+| User asks model to review their code | C05 | User's code is the input; feedback is the goal |
+| User provides document; asks for summary | C07 | Compression of existing input |
+| User asks model to write a document | C01 | Original authorship |
+| User provides their essay; asks for feedback | C05 | Review of existing artefact |
+| User asks how to write an essay | C04 | Skill development |
+| User asks model to translate text | C06 | Cross-lingual conversion |
+| User asks about a language (factually) | C03 | Informational query |
+| User wants to learn a language | C06 | Language acquisition support |
+| User asks for medical information | C03 | Factual retrieval |
+| User wants tutoring on biology | C04 | Pedagogical intent |
+| User wants emotional conversation | C08 | Interactive exchange value |
+| User asks for advice (one-shot) | C03 | Informational advisory |
 
 ---
+
+## Validation Status (Week 3 pending)
+
+| Metric | Target | Status |
+|--------|--------|--------|
+| Taxonomy coverage of Anthropic top 100 tasks | ≥95% | Pending Week 3 mapping |
+| Cohen's κ (10% subsample) | >0.8 | Pending inter-coder reliability exercise |
+| Number of core capabilities | 6–10 | 8 ✓ |
+| Worked examples per capability | ≥5 | 8 per capability ✓ |
+
+---
+
+*Document produced as part of Phase 1 Week 2 (Braun & Clarke, 2006)*
+*Data sources: Handa et al. (2025) arXiv:2503.04761; Ouyang et al. (2025) NBER WP 34255; OpenRouter (2025)*
