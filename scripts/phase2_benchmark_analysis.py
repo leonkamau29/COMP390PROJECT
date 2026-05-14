@@ -4,7 +4,7 @@ phase2_benchmark_analysis.py
 Phase 2, Week 9: Descriptive analysis and visualisations for the benchmark inventory.
 
 Inputs:
-    data/phase2/benchmark_database.csv   — 18-benchmark master database
+    data/phase2/benchmark_database.csv   — Phase 2 master benchmark database
 
 Outputs:
     outputs/phase2/benchmark_database_FINAL.csv   — verified final database copy
@@ -41,15 +41,18 @@ os.makedirs(CHARTS_DIR, exist_ok=True)
 # ── Design constants ──────────────────────────────────────────────────────────
 sns.set_theme(style="whitegrid", font_scale=1.1)
 PALETTE_CAP = {
-    "C02": "#2196F3",
     "C01": "#4CAF50",
-    "C04": "#FF9800",
+    "C02": "#2196F3",
     "C03": "#9C27B0",
+    "C04": "#FF9800",
     "C05": "#F44336",
+    "C06": "#795548",
+    "C07": "#009688",
+    "C08": "#607D8B",
 }
 DPI = 300
 SOURCE = "Source: Phase 2 Benchmark Inventory — Kamau Kiunga (2026)"
-CAP_ORDER = ["C02", "C01", "C04", "C03", "C05"]
+CAP_ORDER = ["C02", "C03", "C01", "C07", "C04", "C05", "C08", "C06"]
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
@@ -94,7 +97,7 @@ def classify_risk(v: str) -> str:
 def classify_venue(v: str) -> str:
     """Bucket venue strings into broad publication-type categories."""
     v = str(v).lower()
-    if any(kw in v for kw in ("neurips", "acl", "emnlp", "naacl", "tmlr", "tacl", "iclr")):
+    if any(kw in v for kw in ("neurips", "acl", "emnlp", "naacl", "tmlr", "tacl", "iclr", "icml")):
         return "Peer-reviewed\nConference / Journal"
     if "arxiv" in v:
         return "arXiv Preprint"
@@ -148,18 +151,24 @@ def chart_by_year(df: pd.DataFrame) -> None:
 def chart_by_capability(df: pd.DataFrame) -> None:
     """Bar chart of benchmark count per capability, ordered by usage share."""
     cap_labels = {
-        "C02": "C02\nCode Development",
         "C01": "C01\nContent Generation",
-        "C04": "C04\nLearning & Education",
+        "C02": "C02\nCode Development",
         "C03": "C03\nInformation Retrieval",
+        "C04": "C04\nLearning & Education",
         "C05": "C05\nReview & Feedback",
+        "C06": "C06\nTranslation",
+        "C07": "C07\nData Analysis",
+        "C08": "C08\nConversation",
     }
     usage = {
-        "C02": "~37–42%",
-        "C01": "~15–20%",
-        "C04": "~10–14%",
-        "C03": "~9–12%",
-        "C05": "~7–10%",
+        "C02": "34.0%",
+        "C03": "21.4%",
+        "C01": "17.5%",
+        "C07": "10.7%",
+        "C04": "7.8%",
+        "C05": "3.9%",
+        "C08": "2.9%",
+        "C06": "1.9%",
     }
     counts = df["primary_capability"].value_counts().reindex(CAP_ORDER, fill_value=0)
 
@@ -192,12 +201,12 @@ def chart_by_capability(df: pd.DataFrame) -> None:
         )
 
     ax.set_title("Phase 2 Benchmarks by Primary Capability Area\n"
-                 "(ordered by real-world usage frequency)",
+                 "(v3 inventory ordered by Anthropic AEI Feb 2026 usage share)",
                  fontsize=14, fontweight="bold", pad=12)
     ax.set_ylabel("Number of Benchmarks", fontsize=12)
     ax.set_ylim(0, counts.max() + 1.8)
     ax.yaxis.set_major_locator(plt.MaxNLocator(integer=True))
-    ax.text(0.99, -0.22, SOURCE,
+    ax.text(0.99, -0.25, SOURCE,
             transform=ax.transAxes, ha="right", fontsize=8, color="grey")
 
     fig.tight_layout()
@@ -313,7 +322,7 @@ def chart_quality_ratings(df: pd.DataFrame) -> None:
 # ── Chart 5: Contamination risk pie ───────────────────────────────────────────
 
 def chart_contamination_risk(df: pd.DataFrame) -> None:
-    """Pie chart of High / Medium / Low contamination risk across 18 benchmarks."""
+    """Pie chart of High / Medium / Low contamination risk across all benchmarks."""
     df = df.copy()
     df["risk_clean"] = df["contamination_risk"].apply(classify_risk)
     risk_counts = df["risk_clean"].value_counts().reindex(
@@ -340,7 +349,7 @@ def chart_contamination_risk(df: pd.DataFrame) -> None:
     for at in autotexts:
         at.set_fontsize(10)
 
-    ax.set_title("Contamination Risk Distribution\nAcross 18 Shortlisted Benchmarks",
+    ax.set_title(f"Contamination Risk Distribution\nAcross {len(df)} Shortlisted Benchmarks",
                  fontsize=14, fontweight="bold", pad=16)
     ax.text(0.5, -0.04, SOURCE,
             transform=ax.transAxes, ha="center", fontsize=8, color="grey")
@@ -399,7 +408,8 @@ def main() -> None:
     chart_contamination_risk(df)
 
     print("\nSaving benchmark_database_FINAL.csv …")
-    df.to_csv(FINAL_PATH, index=False)
+    final_df = df.drop(columns=["year_clean"], errors="ignore")
+    final_df.to_csv(FINAL_PATH, index=False)
     print(f"  Saved: {FINAL_PATH}")
 
     print_stats(df)

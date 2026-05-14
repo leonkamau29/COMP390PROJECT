@@ -1,4 +1,4 @@
-# Phase 2 Final Benchmark List (v3)
+# Phase 2 Final Benchmark List
 
 **Project:** Benchmark Coverage Gap — A Systematic Analysis of Real-World AI Capabilities and Evaluation Practices
 **Student:** Leon Kamau Kiunga (201759400)
@@ -9,36 +9,19 @@
 
 ## Summary
 
-| Capability | Code | Benchmarks | Count |
-|---|---|---|---|
-| Code Development and Technical Problem Solving | C02 | HumanEval+, SWE-bench Verified, LiveCodeBench, BigCodeBench Hard, SWE-Lancer Diamond | 5 |
-| Information Retrieval and Advisory | C03 | MMLU-Pro, GPQA Diamond, Humanity's Last Exam, SimpleQA / FACTS Grounding, LiveBench | 5 |
-| Content Generation | C01 | IFEval, WritingBench, EQ-Bench Creative Writing v3, WildBench | 4 |
-| Data Analysis and Summarisation | C07 | InfiAgent-DABench, DA-Code, Spider 2.0, MMLongBench-Doc | 4 |
-| Learning and Education Support | C04 | MathDial, MathTutorBench, TutorBench | 3 |
-| Review and Feedback | C05 | CriticBench (Tsinghua), JudgeBench, RewardBench 2 | 3 |
-| Conversational Interaction and Roleplay | C08 | PingPong, CoSER | 2 |
-| Translation and Language Processing | C06 | BenchMAX, WMT24++ | 2 |
-| **TOTAL** | | | **28** |
 
-> **Scope note:** The final count of 28 exceeds the original 15–20 cap. This is justified by: (a) the Phase 1 FINAL taxonomy expanding scope to all eight capabilities; (b) the alternatives review replacing several weaker benchmarks with stronger, more recent ones rather than simply adding. The 28 benchmarks span the complete C01–C08 capability space validated by the Feb 2026 AEI data. If the supervisor requires a hard cap at 20, the trimming protocol at the bottom of this document specifies which benchmarks to drop first.
+| Capability                                     | Code | Benchmarks                                                                           | Count  |
+| ---------------------------------------------- | ---- | ------------------------------------------------------------------------------------ | ------ |
+| Code Development and Technical Problem Solving | C02  | HumanEval+, SWE-bench Verified, LiveCodeBench, BigCodeBench Hard, SWE-Lancer Diamond | 5      |
+| Information Retrieval and Advisory             | C03  | MMLU-Pro, GPQA Diamond, Humanity's Last Exam, SimpleQA / FACTS Grounding, LiveBench  | 5      |
+| Content Generation                             | C01  | IFEval, WritingBench, EQ-Bench Creative Writing v3, WildBench                        | 4      |
+| Data Analysis and Summarisation                | C07  | InfiAgent-DABench, DA-Code, Spider 2.0, MMLongBench-Doc                              | 4      |
+| Learning and Education Support                 | C04  | MathDial, MathTutorBench, TutorBench                                                 | 3      |
+| Review and Feedback                            | C05  | CriticBench (Tsinghua), JudgeBench, RewardBench 2                                    | 3      |
+| Conversational Interaction and Roleplay        | C08  | PingPong, CoSER                                                                      | 2      |
+| Translation and Language Processing            | C06  | BenchMAX, WMT24++                                                                    | 2      |
+| **TOTAL**                                      |      |                                                                                      | **28** |
 
----
-
-## Decision Log: What Changed from v2 and Why
-
-| Benchmark (v2) | Decision | Replacement / Reason |
-|---|---|---|
-| B001 HumanEval / HumanEval+ | **Demoted to legacy** | Saturated (>90% frontier). Retained only as a historical anchor noted in the database; not a primary coverage metric. Freed the slot for SWE-Lancer Diamond. |
-| B002 MBPP / MBPP+ | **Demoted to legacy** | Same saturation issue. Dropped from primary inventory. |
-| B009 HelloBench / LongBench-Write | **Dropped** | Low adoption outside authors; not cited in any frontier model report. Replaced by WildBench, which has higher Arena correlation and real-user grounding. |
-| B015 TriviaQA / Natural Questions | **Demoted to legacy** | Effectively solved (>85% EM). Replaced by Humanity's Last Exam and LiveBench. |
-| B019 QRData | **Dropped** | Narrower scope than InfiAgent-DABench; lower adoption. Replaced. |
-| B020 Text2Analysis | **Dropped** | Superseded by DA-Code and Spider 2.0 for analytical depth and adoption. Replaced. |
-| B011 MRBench | **Dropped** | Subsumed by TutorBench, which is multimodal and multi-subject. MRBench's eight pedagogical dimensions are now better covered. |
-| B018 Auto-J + Shepherd + MetaCritique | **Replaced** | 2023 vintage; superseded methodologically by JudgeBench (ICLR 2025) and RewardBench 2. |
-| B025 FIREBALL | **Replaced** | 2023; D&D-specific; low generalisation. Replaced by CoSER (ICML 2025), which is far broader and more recent. |
-| B023 Multi-IF | **Replaced** | Absorbed by WMT24++, which covers multilingual instruction quality as part of a broader 55-language evaluation. |
 
 ---
 
@@ -220,60 +203,38 @@ Extends WMT24 General MT to 55 languages and dialects with human-written referen
 
 ---
 
-## Trimming Protocol (If Supervisor Requires Cap at 20)
-
-If a hard cap of 20 benchmarks is required, drop in this order. Benchmarks listed first are the lowest-priority within their capability area.
-
-| Drop order | Benchmark | Capability | Reason it can be dropped |
-|---|---|---|---|
-| 1 | HumanEval+ (legacy) | C02 | Already demoted to legacy; not a primary metric |
-| 2 | LiveBench | C03 | Partially redundant with GPQA + HLE for reasoning; can be noted without full database entry |
-| 3 | RewardBench 2 | C05 | JudgeBench + CriticBench provide sufficient C05 coverage; RewardBench 2 is supplementary |
-| 4 | WildBench | C01 | EQ-Bench + WritingBench + IFEval cover C01 adequately; WildBench adds breadth but is not essential |
-| 5 | DA-Code | C07 | InfiAgent-DABench + Spider 2.0 + MMLongBench-Doc cover C07 sufficiently; DA-Code adds depth but is third-priority |
-| 6 | TutorBench | C04 | MathDial + MathTutorBench meet Phase 1 coverage targets; TutorBench extends to non-math but C04 is fifth-ranked |
-| 7 | WMT24++ | C06 | BenchMAX alone is defensible for a C06 slot given C06's 1.9% usage share |
-| 8 | CoSER | C08 | PingPong alone provides minimum viable C08 coverage given C08's rank |
-
-Dropping items 1–8 yields exactly **20 benchmarks** while preserving full coverage of all 8 capabilities.
-
----
-
 ## Final Cross-Capability Alignment Table
 
-| ID | Benchmark | Capability | Sub-categories | Venue / Year | Frontier Reports |
-|---|---|---|---|---|---|
-| B001 | HumanEval+ *(legacy)* | C02 | C02a, C02b | arXiv 2021/2023 | All major labs (historical) |
-| B002 | SWE-bench Verified | C02 | C02b, C02c | arXiv 2024 | Claude 4, Gemini 2.5, GPT-4o, Llama 4, DeepSeek R1 |
-| B003 | LiveCodeBench | C02 | C02a, C02b | arXiv 2024 | Claude 4, Gemini 2.5, Llama 4 |
-| B004 | BigCodeBench Hard | C02 | C02a, C02b, C02e | arXiv 2024 | Claude 4, Gemini 2.5 |
-| B005 | SWE-Lancer Diamond | C02 | C02b, C02c, C02f | arXiv 2025 (OpenAI) | OpenAI (primary) |
-| B006 | MMLU-Pro | C03 | C03a, C03d | arXiv 2024 | GPT-4o, Claude 4, Gemini 2.5, Llama 4 |
-| B007 | GPQA Diamond | C03 | C03a | arXiv 2023 | All 2025 frontier releases |
-| B008 | Humanity's Last Exam | C03 | C03a, C03d | Nature 2026 / arXiv:2501.14249 | OpenAI, Anthropic, Google, xAI, DeepSeek |
-| B009 | SimpleQA / FACTS Grounding | C03 | C03a | arXiv 2024 / 2025 | Claude 4, Gemini 2.0 |
-| B010 | LiveBench | C03, C07 | C03a, C07b | arXiv 2024; ICLR 2025 Spotlight | Cross-lab leaderboard |
-| B011 | IFEval | C01 | C01b, C01e | arXiv 2023 | Claude 4, Gemini 2.5, Llama 4 |
-| B012 | WritingBench | C01 | C01a–C01e | NeurIPS 2025 | None (gap evidence) |
-| B013 | EQ-Bench Creative Writing v3 | C01 | C01d, C01e | eqbench.com 2025 | Community leaderboard |
-| B014 | WildBench | C01 | C01a–C01e | arXiv 2024; ICLR 2025 | Llama 3, Yi, open-model reports |
-| B015 | InfiAgent-DABench | C07 | C07b | arXiv 2024; ICML 2024 | DA-Code, DABstep (downstream) |
-| B016 | DA-Code | C07 | C07b, C07d | arXiv 2024; EMNLP 2024 | Downstream data-analysis papers |
-| B017 | Spider 2.0 | C07 | C07b, C07d | arXiv 2024; ICLR 2025 Oral | Snowflake AI challenge |
-| B018 | MMLongBench-Doc | C07 | C07a, C07b, C07c | arXiv 2024; NeurIPS 2024 Spotlight | Multimodal model reports |
-| B019 | MathDial | C04 | C04b | EMNLP 2023 | None (gap evidence) |
-| B020 | MathTutorBench | C04 | C04b, C04c | arXiv 2025; EMNLP 2025 Oral | None (gap evidence) |
-| B021 | TutorBench | C04 | C04b, C04c | arXiv 2025 (Scale AI) | None (gap evidence) |
-| B022 | CriticBench (Tsinghua) | C05 | C05b, C05c, C05d | ACL 2024 Findings | None (gap evidence) |
-| B023 | JudgeBench | C05 | C05b, C05d | arXiv 2024; ICLR 2025 | Alignment research community |
-| B024 | RewardBench 2 | C05 | C05b | arXiv 2025 (AI2) | RLHF/DPO pipeline papers |
-| B025 | PingPong | C08 | C08b, C08c | arXiv 2024 (v4: 2025) | None (gap evidence) |
-| B026 | CoSER | C08 | C08b, C08d | arXiv 2025; ICML 2025 | Roleplay reward-model papers |
-| B027 | BenchMAX | C06 | C06a, C06b | EMNLP 2025 Findings | None (gap evidence) |
-| B028 | WMT24++ | C06 | C06a | arXiv 2025 (Google/Unbabel) | MT community standard |
 
----
+| ID   | Benchmark                    | Capability | Sub-categories   | Venue / Year                       | Frontier Reports                                   |
+| ---- | ---------------------------- | ---------- | ---------------- | ---------------------------------- | -------------------------------------------------- |
+| B001 | HumanEval+ *(legacy)*        | C02        | C02a, C02b       | arXiv 2021/2023                    | All major labs (historical)                        |
+| B002 | SWE-bench Verified           | C02        | C02b, C02c       | arXiv 2024                         | Claude 4, Gemini 2.5, GPT-4o, Llama 4, DeepSeek R1 |
+| B003 | LiveCodeBench                | C02        | C02a, C02b       | arXiv 2024                         | Claude 4, Gemini 2.5, Llama 4                      |
+| B004 | BigCodeBench Hard            | C02        | C02a, C02b, C02e | arXiv 2024                         | Claude 4, Gemini 2.5                               |
+| B005 | SWE-Lancer Diamond           | C02        | C02b, C02c, C02f | arXiv 2025 (OpenAI)                | OpenAI (primary)                                   |
+| B006 | MMLU-Pro                     | C03        | C03a, C03d       | arXiv 2024                         | GPT-4o, Claude 4, Gemini 2.5, Llama 4              |
+| B007 | GPQA Diamond                 | C03        | C03a             | arXiv 2023                         | All 2025 frontier releases                         |
+| B008 | Humanity's Last Exam         | C03        | C03a, C03d       | Nature 2026 / arXiv:2501.14249     | OpenAI, Anthropic, Google, xAI, DeepSeek           |
+| B009 | SimpleQA / FACTS Grounding   | C03        | C03a             | arXiv 2024 / 2025                  | Claude 4, Gemini 2.0                               |
+| B010 | LiveBench                    | C03, C07   | C03a, C07b       | arXiv 2024; ICLR 2025 Spotlight    | Cross-lab leaderboard                              |
+| B011 | IFEval                       | C01        | C01b, C01e       | arXiv 2023                         | Claude 4, Gemini 2.5, Llama 4                      |
+| B012 | WritingBench                 | C01        | C01a–C01e        | NeurIPS 2025                       | None (gap evidence)                                |
+| B013 | EQ-Bench Creative Writing v3 | C01        | C01d, C01e       | eqbench.com 2025                   | Community leaderboard                              |
+| B014 | WildBench                    | C01        | C01a–C01e        | arXiv 2024; ICLR 2025              | Llama 3, Yi, open-model reports                    |
+| B015 | InfiAgent-DABench            | C07        | C07b             | arXiv 2024; ICML 2024              | DA-Code, DABstep (downstream)                      |
+| B016 | DA-Code                      | C07        | C07b, C07d       | arXiv 2024; EMNLP 2024             | Downstream data-analysis papers                    |
+| B017 | Spider 2.0                   | C07        | C07b, C07d       | arXiv 2024; ICLR 2025 Oral         | Snowflake AI challenge                             |
+| B018 | MMLongBench-Doc              | C07        | C07a, C07b, C07c | arXiv 2024; NeurIPS 2024 Spotlight | Multimodal model reports                           |
+| B019 | MathDial                     | C04        | C04b             | EMNLP 2023                         | None (gap evidence)                                |
+| B020 | MathTutorBench               | C04        | C04b, C04c       | arXiv 2025; EMNLP 2025 Oral        | None (gap evidence)                                |
+| B021 | TutorBench                   | C04        | C04b, C04c       | arXiv 2025 (Scale AI)              | None (gap evidence)                                |
+| B022 | CriticBench (Tsinghua)       | C05        | C05b, C05c, C05d | ACL 2024 Findings                  | None (gap evidence)                                |
+| B023 | JudgeBench                   | C05        | C05b, C05d       | arXiv 2024; ICLR 2025              | Alignment research community                       |
+| B024 | RewardBench 2                | C05        | C05b             | arXiv 2025 (AI2)                   | RLHF/DPO pipeline papers                           |
+| B025 | PingPong                     | C08        | C08b, C08c       | arXiv 2024 (v4: 2025)              | None (gap evidence)                                |
+| B026 | CoSER                        | C08        | C08b, C08d       | arXiv 2025; ICML 2025              | Roleplay reward-model papers                       |
+| B027 | BenchMAX                     | C06        | C06a, C06b       | EMNLP 2025 Findings                | None (gap evidence)                                |
+| B028 | WMT24++                      | C06        | C06a             | arXiv 2025 (Google/Unbabel)        | MT community standard                              |
 
-*Document version: v3 (Final)*
-*Project: Benchmark Coverage Gap — Leon Kamau Kiunga (201759400)*
-*Supersedes: benchmark_selection_rationale_v2.md*
+
