@@ -1,9 +1,9 @@
-capability_id,capability_name,total_coverage_score,benchmark_count,average_quality,usage_frequency
-C01,Content Generation,0.2111111111111111,5,3.8,0.184
-C02,Code Development & Technical Problem Solving,0.3,7,3.857142857142857,0.14
-C03,Information Retrieval & Advisory,0.2777777777777778,8,3.125,0.166
-C04,Learning & Education Support,0.1777777777777777,5,3.2,0.085
-C05,Review & Feedback,0.1777777777777777,5,3.2,0.589
-C06,Translation & Language Processing,0.0,0,,0.032
-C07,Data Analysis & Summarisation,0.0,0,,0.166
-C08,Conversational Interaction & Roleplay,0.0,0,,0.045
+capability_id,capability_name,total_coverage_score,coverage_points,max_possible_points,benchmark_count,average_quality
+C01,Content Generation,0.14285714285714285,20,140,6,3.3333333333333335
+C02,Code Development and Technical Problem Solving,0.2357142857142857,33,140,10,3.3
+C03,Information Retrieval and Advisory,0.17142857142857143,24,140,7,3.4285714285714284
+C04,Learning and Education Support,0.17142857142857143,24,140,8,3.0
+C05,Review and Feedback,0.12857142857142856,18,140,5,3.6
+C06,Translation and Language Processing,0.07142857142857142,10,140,2,5.0
+C07,Data Analysis and Summarisation,0.2,28,140,7,4.0
+C08,Conversational Interaction and Roleplay,0.12857142857142856,18,140,5,3.6
