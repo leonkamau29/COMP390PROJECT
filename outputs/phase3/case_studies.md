@@ -1,96 +1,59 @@
 # Phase 3 Case Studies: Benchmark Scores and Real-World Deployment Failures
 
-**Objective:** Document real-world cases where strong benchmark performance or benchmark confidence did not translate into reliable deployment behaviour.
-**Scope:** Six cases are included, exceeding the minimum acceptable three cases in the Phase 3 protocol.
+In this section, I examine cases where strong benchmark performance, or confidence created by benchmark reporting, did not translate into reliable behaviour in realistic deployment settings. My aim is not to argue that benchmarks have no value. Instead, I use these examples to show why benchmark scores need to be interpreted through the capability coverage framework developed in this project.
 
 ## Search Strategy
 
-Searches covered academic and industry sources for `LLM deployment failure`, `benchmark performance gap`, `AI evaluation mismatch`, medical LLM failures, legal hallucination failures, benchmark contamination, leaderboard instability, and the project core papers. The cases below prioritise sources already named in `CLAUDE.md` and additional peer-reviewed or preprint evidence where directly relevant.
+I searched academic and industry sources using terms such as `LLM deployment failure`, `benchmark performance gap`, `AI evaluation mismatch`, medical LLM failures, legal hallucination failures, benchmark contamination, and leaderboard instability. I gave priority to sources already central to this project, especially the papers listed in `CLAUDE.md`, and I added peer-reviewed or preprint evidence where it directly supported a case.
 
-## Case 1: Autonomous workplace agents complete only a minority of consequential tasks
+## Case 1: Autonomous Workplace Agents Complete Only a Minority of Consequential Tasks
 
-**Model name and benchmark performance:** Frontier LLM agents evaluated in TheAgentCompany. Models report strong scores on standard frontier evaluations, but the best reported autonomous workplace completion rate in TheAgentCompany is about 30%.
+The first case I considered is TheAgentCompany, which evaluates frontier LLM agents in a simulated software-company workplace. Although these models are usually presented as strong performers on standard frontier evaluations, Xu et al. (2025) report that the best autonomous workplace completion rate is only about 30%. This creates a clear mismatch between general benchmark confidence and actual task completion in a realistic work setting.
 
-**Real-world deployment context:** A simulated software-company workplace requiring agents to browse, code, communicate, and complete HR, finance, engineering, legal, and administration tasks.
+The deployment context matters because the tasks require agents to browse, code, communicate, and complete work across HR, finance, engineering, legal, and administrative scenarios. In this setting, the main failure mode is not simply factual error. The agents often struggle with long-horizon planning, tool use, and context management. I therefore map this case mainly to C02, C03, and C07, because it combines technical problem solving, information retrieval, and data or document processing within integrated workflows.
 
-**Specific failure mode observed:** Agents frequently fail long-horizon task planning, tool use, and context management despite high benchmark performance.
+For this project, the consequence is important because it shows that benchmark strength does not automatically imply production readiness for autonomous work. Human oversight, narrower task boundaries, and better workflow-specific evaluation remain necessary. The source used for this case is Xu, F. F. et al. (2025), *TheAgentCompany: Benchmarking LLM Agents on Consequential Real World Tasks*, arXiv:2412.14161.
 
-**Capability gap implicated:** C02, C03, and C07: technical problem solving, information retrieval, and data/document processing in integrated workflows.
+## Case 2: Coding Scores Fall on Post-Cutoff Problems, Exposing Contamination Risk
 
-**Consequences:** The result indicates that benchmark strength does not imply production readiness for autonomous work; human oversight and constrained scope remain necessary.
+The second case focuses on coding benchmarks. Many models perform strongly on established code benchmarks such as HumanEval, but LiveCodeBench shows that performance can fall on problems released after likely training cutoffs. I treat this as evidence that older public coding benchmarks can overstate generalisation when benchmark items are memorised, leaked, or too similar to training data.
 
-**Source documentation:** Xu, F. F. et al. (2025). TheAgentCompany: Benchmarking LLM Agents on Consequential Real World Tasks. arXiv:2412.14161.
+The real-world context is competitive programming and code generation, using tasks collected by release date from sources such as LeetCode, AtCoder, and Codeforces. The key failure mode is inflated confidence from saturated or contaminated tasks. I map this case to C02 because it directly concerns code development and technical problem solving under contamination-resistant, temporally controlled evaluation.
 
-## Case 2: Coding scores fall on post-cutoff problems, exposing contamination risk
+The practical risk is that teams may choose models based on coding scores that do not reflect performance on new bugs, unfamiliar libraries, or unseen engineering tasks. This case supports the need for post-cutoff data, refreshed task pools, and clearer reporting of contamination risk. The source used here is Jain, N. et al. (2024), *LiveCodeBench: Holistic and Contamination Free Evaluation of Large Language Models for Code*, arXiv:2403.07974.
 
-**Model name and benchmark performance:** LLMs evaluated on LiveCodeBench and older code benchmarks. Many models perform strongly on established code benchmarks such as HumanEval, while LiveCodeBench reports performance drops on problems released after training cutoffs for some model families.
+## Case 3: Multiple-Choice Rankings Change Under Answer-Order Perturbations
 
-**Real-world deployment context:** Competitive-programming and code-generation tasks collected by release date from LeetCode, AtCoder, and Codeforces.
+The third case concerns MMLU-style multiple-choice evaluation. These scores are widely used in leaderboards and model-selection decisions, but Pezeshkpour and Hruschka (2024) show that changing the order of answer options can shift model rankings by up to eight positions. I interpret this as a construct-validity problem because the underlying question has not changed, yet the reported performance can change materially.
 
-**Specific failure mode observed:** Performance on older public problems can overstate generalisation because memorised or contaminated items inflate apparent capability.
+The deployment context is factual and reasoning evaluation where answer options can be reordered without changing the intended task. The observed failure mode is option-order sensitivity, which means that leaderboard outcomes may partly reflect presentation artefacts rather than stable capability. I map this case to C03 because information retrieval and advisory tasks should be robust to superficial prompt and answer-format changes.
 
-**Capability gap implicated:** C02: code development and technical problem solving under contamination-resistant, temporally controlled evaluation.
+The consequence is that a model selected for a marginal leaderboard advantage may not actually be more reliable in real advisory settings. For my coverage analysis, this case supports the need to look beyond headline scores and ask whether the benchmark format measures the capability it claims to measure. The source used is Pezeshkpour, P. and Hruschka, E. (2024), *Large Language Models Sensitivity to The Order of Options in Multiple-Choice Questions*, Findings of NAACL 2024.
 
-**Consequences:** Deployment decisions based on saturated coding benchmarks may overestimate reliability on new bugs, libraries, and unseen engineering tasks.
+## Case 4: Clinical Decision-Making Failures Persist Despite Medical Benchmark Success
 
-**Source documentation:** Jain, N. et al. (2024). LiveCodeBench: Holistic and Contamination Free Evaluation of Large Language Models for Code. arXiv:2403.07974.
+The fourth case looks at medical LLMs and frontier models. These systems can achieve strong results on medical exams or clinical benchmark tasks, but studies still report failures in realistic clinical decision-making. I use this case because it shows how aggregate benchmark scores can hide safety-relevant error patterns.
 
-## Case 3: Multiple-choice benchmark rankings change under answer-order perturbations
+The deployment context involves patient cases that require diagnosis, treatment planning, interpretation of laboratory results, and attention to patient-specific context. The failure modes include diagnostic mistakes, weak guideline following, poor adjustment to patient context, and unsafe responses to patient questions. I map this case mainly to C03 and C07 because clinical use requires advisory reasoning and careful analysis of supplied patient information.
 
-**Model name and benchmark performance:** LLMs evaluated on MMLU-style multiple-choice tasks. MMLU-style scores are widely used in model selection and leaderboard reporting.
+The main consequence is patient-safety risk. A model may appear competent when judged by broad medical benchmark scores while still making errors that lead to under-triage, unsafe advice, or inappropriate treatment suggestions. The source used here is Kanjee, Z. et al. (2024), *Evaluation and mitigation of the limitations of large language models in clinical decision-making*, *Nature Medicine*.
 
-**Real-world deployment context:** Multiple-choice factual and reasoning questions where answer options can be reordered without changing the underlying task.
+## Case 5: Legal Hallucinations Lead to False Citations and Professional Sanctions
 
-**Specific failure mode observed:** Option-order sensitivity changes model scores and can shift rankings by up to eight positions, showing that leaderboard outcomes can depend on presentation artefacts.
+The fifth case concerns legal research and legal drafting. General LLMs and specialised legal research systems can appear fluent and authoritative, but evaluations and real incidents show that they can generate fictitious legal authorities and unreliable legal statements. I include this case because legal work depends not only on plausible prose, but also on accurate citations, quotations, and jurisdiction-specific authority.
 
-**Capability gap implicated:** C03: information retrieval and advisory evaluation that is robust to prompt and answer-format artefacts.
+The real-world deployment context is legal research and brief drafting, where users need verifiable cases and accurate legal references. The main failure mode is hallucination of legal sources and claims. I map the case to C03, C05, and C01 because it combines legal information retrieval, review of generated claims, and professional document generation.
 
-**Consequences:** A model selected because of a marginal leaderboard advantage may not be more reliable in real advisory settings.
+The consequences are serious because false citations can mislead courts and clients, lead to professional sanctions, and damage trust in legal AI tools. This case shows why evaluation needs to test source-grounded reliability rather than just fluent answer production. The source used is Magesh, V. et al. (2025), *Hallucination-Free? Assessing the Reliability of Leading AI Legal Research Tools*, arXiv:2405.20362.
 
-**Source documentation:** Pezeshkpour, P. and Hruschka, E. (2024). Large Language Models Sensitivity to The Order of Options in Multiple-Choice Questions. Findings of NAACL 2024.
+## Case 6: Leaderboard Disclosure Practices Distort Model Selection
 
-## Case 4: Clinical decision-making failures persist despite medical benchmark success
+The sixth case focuses on the way benchmark results are reported. Closed-source and selectively reported model releases often present strong headline results across common leaderboards, but Singh et al. (2025) show that selective disclosure and leaderboard choices can materially distort rankings. I treat this as a cross-cutting evaluation-validity issue rather than a failure of one specific capability.
 
-**Model name and benchmark performance:** State-of-the-art medical LLMs and general frontier models. Medical LLMs and frontier models can achieve strong medical-exam or clinical benchmark results.
+The deployment context is model selection based on public technical reports and benchmark tables. The failure mode is that practitioners may see an incomplete or strategically selected evidence base and assume it represents overall model quality. This is especially relevant to C03 and C02 because organisations often rely on benchmark tables when choosing models for advisory work or technical work.
 
-**Real-world deployment context:** Clinical decision-making over real or realistic patient cases requiring diagnosis, treatment planning, and interpretation of laboratory and contextual information.
-
-**Specific failure mode observed:** Studies report failures in diagnostic accuracy, guideline following, patient-context adjustment, and unsafe responses to patient-posed questions.
-
-**Capability gap implicated:** C03 and C07: advisory reasoning and context-sensitive analysis of patient information.
-
-**Consequences:** Aggregate benchmark scores can mask patient-safety-relevant error patterns such as under-triage or unsafe advice.
-
-**Source documentation:** Kanjee, Z. et al. (2024). Evaluation and mitigation of the limitations of large language models in clinical decision-making. Nature Medicine.
-
-## Case 5: Legal hallucinations lead to false citations and professional sanctions
-
-**Model name and benchmark performance:** ChatGPT and specialised legal research LLM systems. General and legal-domain LLMs can appear fluent and authoritative on legal questions.
-
-**Real-world deployment context:** Legal research and brief drafting where users require accurate cases, quotations, and citations.
-
-**Specific failure mode observed:** LLMs generated fictitious legal authorities and unreliable legal statements; specialised systems still hallucinated in later evaluations.
-
-**Capability gap implicated:** C03, C05, and C01: legal information retrieval, review of generated claims, and professional document generation.
-
-**Consequences:** False citations can mislead courts and clients, producing sanctions and undermining trust in legal AI tools.
-
-**Source documentation:** Magesh, V. et al. (2025). Hallucination-Free? Assessing the Reliability of Leading AI Legal Research Tools. arXiv:2405.20362.
-
-## Case 6: Leaderboard disclosure practices distort model selection
-
-**Model name and benchmark performance:** Closed-source and selectively reported model releases. Vendors report strong headline benchmark results across common leaderboards.
-
-**Real-world deployment context:** Model-selection decisions made from public technical reports and benchmark tables.
-
-**Specific failure mode observed:** Selective disclosure and leaderboard choices can materially distort rankings, separating reported benchmark success from actual comparative utility.
-
-**Capability gap implicated:** Cross-cutting evaluation validity; especially C03 and C02 where organisations rely on benchmark tables for deployment choices.
-
-**Consequences:** Practitioners may select models based on incomplete or strategically disclosed evidence rather than fit to their real use cases.
-
-**Source documentation:** Singh, S. et al. (2025). The Leaderboard Illusion. arXiv:2504.20879.
+The consequence is that model-selection decisions may be based on reported benchmark strength rather than actual fit to the intended use case. This supports my decision in Phase 3 to treat benchmark coverage as a capability-specific validity question, not simply as a count of available leaderboards. The source used is Singh, S. et al. (2025), *The Leaderboard Illusion*, arXiv:2504.20879.
 
 ## Cross-Case Pattern
 
-Across these cases, the recurring problem is not that benchmarks are useless. It is that benchmark scores are often treated as general evidence of deployment reliability when they are actually evidence for a narrower task format, data distribution, scoring method, or disclosure context. Phase 3 therefore treats coverage as a capability-specific construct-validity question rather than as a count of available leaderboards.
+Across these cases, I find the same underlying pattern. Benchmarks are useful, but they are often treated as broader evidence than they can support. A score may reflect a narrow task format, a particular data distribution, a scoring method, or a selective disclosure context. For that reason, I treat Phase 3 coverage as a question of construct validity at the capability level, rather than as a simple inventory of benchmark names.

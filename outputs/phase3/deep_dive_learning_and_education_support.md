@@ -1,60 +1,37 @@
 # Deep Dive: Learning and Education Support
 
-**Coverage profile:** Moderate Coverage Capability
-**Capability ID:** C04
-**Usage frequency:** 0.1113
-**Normalised coverage score:** 0.1714
-**Gap score:** 0.0922
-**Benchmark count:** 8
-**Average quality among covering benchmarks:** 3.0000
+I classify Learning and Education Support as a moderate coverage capability. Its capability ID is C04, its usage frequency is 0.1113, its normalised coverage score is 0.1714, and its gap score is 0.0922. The benchmark inventory includes 8 benchmarks that touch this area, with an average quality score of 3.0000 among the covering benchmarks.
 
 ## 1. Current Evaluation Landscape
 
-Learning and Education Support is defined in the Phase 1 taxonomy as follows: Learning and Education Support is the capability to assist users in acquiring knowledge, skills, or academic qualifications through tutoring, explanation, worked examples, and structured guidance. This includes helping learners understand concepts, complete assignments, solve problems as learning exercises, and develop academic competencies. The model acts as tutor, teacher, or study partner, with the primary goal of building the user's understanding or academic capability.
+In the Phase 1 taxonomy, I define Learning and Education Support as the ability to help users acquire knowledge, skills, or academic qualifications through tutoring, explanation, worked examples, and structured guidance. This includes support for understanding concepts, completing assignments as learning exercises, solving problems, and developing academic competence. In this role, the model acts as a tutor, teacher, or study partner rather than only as an answer generator.
 
-The updated Phase 2 benchmark inventory provides the following coverage:
+The strongest coverage comes from TutorBench and MathTutorBench, both rated 5/5. TutorBench is important because it evaluates multisubject multimodal tutoring, although it is very new and depends on LLM judging. MathTutorBench also gives strong coverage because it is designed around pedagogical tasks, but it is primarily mathematical and its aggregate scores may be difficult to interpret because of reward-model bias. MathDial receives 4/5 because it tests multi-turn tutoring dialogue, although it is limited to mathematics and may penalise valid alternative teaching approaches when they do not match the reference.
 
-- B021 TutorBench (TutorBench): coverage rating 5/5; task type: Multisubject multimodal tutoring; limitation noted in Phase 2: Very new; LLM judge dependence; citation/adoption not yet established
-- B020 MathTutorBench (MathTutorBench): coverage rating 5/5; task type: Multi-task pedagogical benchmark; limitation noted in Phase 2: Reward-model bias; primarily mathematics; aggregate interpretation complex
-- B019 MathDial (MathDial): coverage rating 4/5; task type: Multi-turn tutoring dialogue; limitation noted in Phase 2: Math-only; reference matching penalises valid alternative pedagogy
-- B006 MMLU-Pro (MMLU-Pro): coverage rating 2/5; task type: Multiple-choice knowledge and reasoning; limitation noted in Phase 2: Still multiple-choice; tests academic recall more than situated advice
-- B014 WildBench (WildBench): coverage rating 2/5; task type: Real-user task benchmark; limitation noted in Phase 2: Broadness makes construct attribution less precise; LLM judge dependence
-- B008 Humanity's Last Exam (HLE): coverage rating 2/5; task type: Expert knowledge and multimodal reasoning; limitation noted in Phase 2: Very new; private split complicates full independent replication; difficult items may overrepresent contest-style expertise
-- B007 GPQA Diamond (GPQA Diamond): coverage rating 2/5; task type: Expert-level multiple-choice science QA; limitation noted in Phase 2: Small and STEM-only; gated access limits replication
-- B022 CriticBench (Tsinghua) (CriticBench): coverage rating 2/5; task type: Critique and correction; limitation noted in Phase 2: STEM/reasoning focused; weak coverage of prose editing and stylistic feedback
+The remaining benchmarks provide weaker coverage. MMLU-Pro, Humanity's Last Exam, and GPQA Diamond mainly test academic knowledge or expert reasoning, but they do so through formats that are closer to examination than tutoring. WildBench includes real-user tasks, but its broadness makes construct attribution less precise. CriticBench is relevant because critique and correction can support learning, but its focus is more STEM and reasoning oriented than broad educational support.
 
-This landscape shows that coverage is not only a question of benchmark count. A capability can have multiple benchmarks while still lacking direct coverage of the real-world situations described in the Phase 1 taxonomy. The coverage ratings therefore treat benchmark construct validity, task realism, scoring reliability, and update strategy as distinct from mere benchmark presence.
+This landscape suggests that education is no longer completely ignored, but it is still only partially covered. Many benchmarks test whether a model can answer difficult questions. Fewer test whether it can teach well, adapt to a learner, diagnose misunderstanding, or guide a student without simply giving away an answer.
 
 ## 2. Technical and Practical Challenges to Evaluation
 
-Evaluating Learning and Education Support is difficult because the capability definition spans several sub-categories: C04a — Academic assignment support; C04b — Concept explanation and tutoring; C04c — Skill development; C04d — Educational material creation. Benchmark design must decide which sub-categories are in scope, how user context is represented, and what counts as a valid response. Static answer-key scoring is easiest where outputs are short and objectively checkable, but many tasks in this capability require contextual judgement, long-form outputs, human preference, or multi-step tool use.
+I find this capability difficult to evaluate because good tutoring is interactive and context-sensitive. The taxonomy includes academic assignment support, concept explanation, skill development, and educational material creation. A benchmark has to decide whether it is measuring correctness, pedagogy, learner adaptation, encouragement, scaffolding, or some combination of these.
 
-The Phase 2 quality notes indicate recurring constraints: contamination risk for static public datasets, operational cost for agentic environments, judge reliability for open-ended outputs, and reduced ecological validity when a benchmark uses a proxy format such as multiple choice. These constraints are especially important because the project aims to compare benchmark coverage against actual usage rather than against historically convenient evaluation formats.
+Static answer-key scoring is often too narrow for this capability. A tutoring response can be factually correct but pedagogically weak, or it can use a different teaching path that is still valid. The Phase 2 notes also point to contamination risk, LLM judge dependence, and reduced ecological validity when education is reduced to multiple-choice questions. These issues matter because the project is interested in real educational use, not only exam-style performance.
 
 ## 3. Real-World Importance
 
-The importance of this capability is grounded in mapped Anthropic AEI top-task usage. Examples include:
+I ground the importance of this capability in the mapped Anthropic AEI top-task data. The strongest examples are assisting with academic assignments and coursework across disciplines at 5.1945%, creating educational materials and explaining concepts at 1.9390%, and helping solve and explain mathematics problems across levels at 1.4013%.
 
-- Assisting with academic assignments and coursework across disciplines (Anthropic AEI, 5.1945%).
-- Creating educational materials and explaining concepts (Anthropic AEI, 1.9390%).
-- Helping solve and explain mathematics problems across levels (Anthropic AEI, 1.4013%).
-
-These examples show why usage-weighted analysis is necessary. A benchmark ecosystem can look active in aggregate while leaving everyday user workflows under-tested, particularly when common tasks require judgement, context preservation, or end-to-end completion rather than isolated answer production.
+These examples show that education-related use is not a niche behaviour. Users often come to LLMs for explanation, structured help, and academic support. A usage-weighted analysis is therefore necessary because a model's ability to pass an exam benchmark does not necessarily show that it can support learning responsibly or effectively.
 
 ## 4. Consequences of Inadequate Evaluation
 
-Inadequate evaluation can produce three deployment risks. First, model-selection decisions may reward benchmark-specific competence rather than capability fit. Second, teams may deploy models into user workflows where the highest-risk failure modes were not measured. Third, improvements may be optimised toward visible leaderboards while lower-visibility but high-usage behaviours receive less research attention.
+If this capability is evaluated poorly, models may be selected because they know the answer rather than because they can teach. This can lead to systems that provide overconfident explanations, give away solutions without building understanding, fail to adapt to a learner's level, or reinforce misconceptions. In educational settings, these weaknesses can directly affect student learning.
 
-For Learning and Education Support, the most direct consequence is mismatch between benchmark confidence and user-facing reliability. If the benchmark primarily tests simplified or proxy tasks, high scores may not imply performance on realistic inputs, ambiguous user goals, domain constraints, or longer interaction histories.
+For Learning and Education Support, the mismatch between benchmark confidence and real use is especially important because users may be students, teachers, or self-directed learners. A high score on an academic QA benchmark may not indicate that a model can scaffold reasoning, ask useful follow-up questions, or explain mistakes in a way that helps the learner improve.
 
 ## 5. Requirements for Adequate Coverage
 
-Adequate coverage for this capability would require:
+In my view, adequate coverage would need realistic tutoring dialogues, assignment-support scenarios, and educational material creation tasks. It should separate the sub-capabilities so that a model's strength in mathematics tutoring does not hide weakness in writing support, conceptual explanation, or skill development. The scoring should combine correctness with pedagogical quality, and it should include calibrated human or expert judgement where open-ended teaching quality matters.
 
-- Task samples drawn from realistic user workflows and documented source distributions.
-- Clear separation of sub-capabilities so that aggregate scores do not hide weak areas.
-- Scoring methods matched to output type, combining automated checks where possible with calibrated human or expert judgement where necessary.
-- Contamination controls, including post-cutoff data, private holdouts, or continuously refreshed task pools.
-- Reporting that links benchmark scores to use-case assumptions, limitations, and confidence intervals rather than headline accuracy alone.
-
-For Phase 5, this capability should be considered for new benchmark design if it remains high in the gap ranking or if existing benchmarks fail to cover the most deployment-relevant sub-categories.
+I would also expect contamination controls and clearer reporting of what each benchmark can and cannot support. Scores should be connected to learner context, subject area, and intended use. For Phase 5, this capability remains a useful candidate for benchmark design if existing education benchmarks do not cover the most common real-world learning scenarios identified in the usage data.

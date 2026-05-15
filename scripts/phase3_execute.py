@@ -3,15 +3,16 @@ Execute the full modular Phase 3 coverage-analysis pipeline.
 
 Purpose:
     Orchestrate the Phase 3 modules in methodology order: coverage matrix,
-    usage-weighted gap scores, statistical analysis/reporting, visualisations,
-    qualitative deep dives, and case studies.
+    usage-weighted gap scores, statistical analysis/reporting, and
+    visualisations. Qualitative deep dives and case studies are maintained as
+    manually written Markdown outputs and are not regenerated here.
 
 Inputs:
     Phase 1 taxonomy and usage mapping files.
     Updated Phase 2 benchmark database.
 
 Outputs:
-    All Phase 3 CSV, Markdown, and chart deliverables.
+    Generated Phase 3 CSV, statistical Markdown report, and chart deliverables.
 """
 
 from __future__ import annotations
@@ -19,7 +20,6 @@ from __future__ import annotations
 from phase3_config import ensure_directories, load_inputs, prepare_benchmarks, validate_outputs
 from phase3_coverage_matrix import build_coverage_outputs
 from phase3_gap_scores import compute_gap_scores, compute_usage_frequencies
-from phase3_qualitative_analysis import write_case_studies, write_deep_dives
 from phase3_statistical_analysis import run_statistics, write_statistical_report
 from phase3_visualisations import plot_charts
 
@@ -36,8 +36,6 @@ def main() -> None:
     stats_df = run_statistics(gap_scores, matrix, benchmarks)
     write_statistical_report(gap_scores, stats_df, matrix, notes_df)
     plot_charts(taxonomy, benchmarks, matrix, gap_scores)
-    write_deep_dives(taxonomy, benchmarks, matrix, gap_scores)
-    write_case_studies()
     validate_outputs()
 
     print("Phase 3 execution complete.")

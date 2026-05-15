@@ -1,44 +1,41 @@
 # LLM Capability Taxonomy — FINAL
 
-**Project:** Benchmark Coverage Gap: A Systematic Analysis of Real-World AI Capabilities and Evaluation Practices
-**Student:** Leon Kamau Kiunga (201759400)
-**Supervisor:** Dr Konstantinos Tsakaldis
-**Date:** 2026-05-13
 **Data sources:** Anthropic AEI (Feb 2026, arXiv:2503.04761); Ouyang et al. (2025) NBER WP 34255; OpenRouter (2025) 100T Token Study
 **Methodology:** Braun & Clarke (2006) six-phase thematic analysis
-**Status:** FINAL — validation complete
 
 ---
 
 ## Validation Summary
 
+
 | Metric                                         | Target | Result                            | Status |
 | ---------------------------------------------- | ------ | --------------------------------- | ------ |
-| Coverage of Anthropic top 100 tasks (Feb 2026) | ≥95%  | 103/103 = 100.0%                  | PASS   |
-| Cohen's κ (10% subsample, 10 tasks)           | >0.8   | 1.0000                            | PASS   |
-| Number of core capabilities                    | 6–10  | 8                                 | PASS   |
-| Worked examples per capability                 | ≥5    | ≥8 per capability                | PASS   |
+| Coverage of Anthropic top 100 tasks (Feb 2026) | ≥95%   | 103/103 = 100.0%                  | PASS   |
+| Cohen's κ (10% subsample, 10 tasks)            | >0.8   | 1.0000                            | PASS   |
+| Number of core capabilities                    | 6–10   | 8                                 | PASS   |
+| Worked examples per capability                 | ≥5     | ≥8 per capability                 | PASS   |
 | Unmapped tasks requiring taxonomy revision     | 0      | 4 medium-confidence, all resolved | PASS   |
 
-All four medium-confidence tasks in `data/phase1/unmapped_tasks.csv` were resolved
-via dual-capability disambiguation rules without requiring new capabilities or
-sub-categories. The taxonomy is stable and requires no further revision.
+
+
 
 ---
 
 ## Capability Distribution in Anthropic Top 103 Tasks (Feb 2026)
 
-| Capability                                     | Code | Task Count    | % of Top 103     |
-| ---------------------------------------------- | ---- | ------------- | ---------------- |
-| Code Development and Technical Problem Solving | C02  | 35            | 34.0%            |
-| Information Retrieval and Advisory             | C03  | 22            | 21.4%            |
-| Content Generation                             | C01  | 18            | 17.5%            |
-| Data Analysis and Summarisation                | C07  | 11            | 10.7%            |
-| Learning and Education Support                 | C04  | 8             | 7.8%             |
-| Conversational Interaction and Roleplay        | C08  | 3             | 2.9%             |
-| Review and Feedback                            | C05  | 4             | 3.9%             |
-| Translation and Language Processing            | C06  | 2             | 1.9%             |
-| **TOTAL**                                |      | **103** | **100.0%** |
+
+| Capability                                     | Code | Task Count | % of Top 103 |
+| ---------------------------------------------- | ---- | ---------- | ------------ |
+| Code Development and Technical Problem Solving | C02  | 35         | 34.0%        |
+| Information Retrieval and Advisory             | C03  | 22         | 21.4%        |
+| Content Generation                             | C01  | 18         | 17.5%        |
+| Data Analysis and Summarisation                | C07  | 11         | 10.7%        |
+| Learning and Education Support                 | C04  | 8          | 7.8%         |
+| Conversational Interaction and Roleplay        | C08  | 3          | 2.9%         |
+| Review and Feedback                            | C05  | 4          | 3.9%         |
+| Translation and Language Processing            | C06  | 2          | 1.9%         |
+| **TOTAL**                                      |      | **103**    | **100.0%**   |
+
 
 ---
 
@@ -119,7 +116,7 @@ A task belongs to C01 if and only if:
 
 - (a) the primary user goal is to obtain a new written or multimedia artefact, AND
 - (b) the model is the primary producer of that artefact's content (not locating
-  existing information or critiquing a user's existing text).
+existing information or critiquing a user's existing text).
 
 If the user provides an existing text and requests improvement → C05.
 If the primary output is executable code → C02.
@@ -137,21 +134,21 @@ If the primary output compresses or analyses existing content → C07.
 ### Worked Examples
 
 1. *"Draft and refine professional workplace emails and business correspondence"*
-   (Anthropic AEI, 2.96%) → **C01b**. New email artefact produced by model; primary output is a composed professional communication.
+  (Anthropic AEI, 2.96%) → **C01b**. New email artefact produced by model; primary output is a composed professional communication.
 2. *"Create marketing content, advertising campaigns, and SEO materials"*
-   (Anthropic AEI, 2.88%) → **C01c**. Model generates promotional copy; original marketing artefact.
+  (Anthropic AEI, 2.88%) → **C01c**. Model generates promotional copy; original marketing artefact.
 3. *"Assist with creative fiction writing, editing, and development"*
-   (Anthropic AEI, 1.71%) → **C01d**. Original narrative content generated by model as co-author.
+  (Anthropic AEI, 1.71%) → **C01d**. Original narrative content generated by model as co-author.
 4. *"Create religious content, spiritual guidance, poetry, and creative writing"*
-   (Anthropic AEI, 1.51%) → **C01d**. Poetry and spiritual texts are composed artefacts.
+  (Anthropic AEI, 1.51%) → **C01d**. Poetry and spiritual texts are composed artefacts.
 5. *"Write personal communications and messages on behalf of user"*
-   (OpenAI study) → **C01d**. Personal messages written from scratch are original artefacts.
+  (OpenAI study) → **C01d**. Personal messages written from scratch are original artefacts.
 6. *"Assist with marketing copy or legal document drafting"*
-   (OpenRouter) → **C01c/C01e**. Drafting legal or marketing documents is originative content production.
+  (OpenRouter) → **C01c/C01e**. Drafting legal or marketing documents is originative content production.
 7. *"Develop comprehensive business strategy documents and corporate planning materials"*
-   (Anthropic AEI, 2.72%) → **C01b**. Business strategy documents are professional artefacts.
+  (Anthropic AEI, 2.72%) → **C01b**. Business strategy documents are professional artefacts.
 8. *"Draft and revise formal legal correspondence and court documents"*
-   (Anthropic AEI, 0.46%) → **C01e**. Legal documents are composed specialised artefacts.
+  (Anthropic AEI, 0.46%) → **C01e**. Legal documents are composed specialised artefacts.
 
 ### Edge Cases and Resolutions
 
@@ -178,7 +175,7 @@ A task belongs to C02 if and only if the primary output is:
 
 - (a) executable code, a configuration file, or a technical command, OR
 - (b) a diagnosis and fix for a technical system failure where the resolution
-  involves modifying a technical artefact.
+involves modifying a technical artefact.
 
 If the goal is to understand a concept → C04.
 If the goal is merely to obtain information about tools → C03.
@@ -196,21 +193,21 @@ If the user provides code for critique rather than fixing → C05.
 ### Worked Examples
 
 1. *"Troubleshoot and configure hardware, software, and system technical issues"*
-   (Anthropic AEI, 4.16%) → **C02f**. Resolution requires modifying system configuration.
+  (Anthropic AEI, 4.16%) → **C02f**. Resolution requires modifying system configuration.
 2. *"Develop, debug, and modify websites and web applications"*
-   (Anthropic AEI, 3.92%) → **C02a**. Model produces executable web code.
+  (Anthropic AEI, 3.92%) → **C02a**. Model produces executable web code.
 3. *"Debug, fix, and refactor code across multiple languages and systems"*
-   (Anthropic AEI, 1.86%) → **C02c**. Primary output is corrected, improved code.
+  (Anthropic AEI, 1.86%) → **C02c**. Primary output is corrected, improved code.
 4. *"Develop, debug, and optimize machine learning and AI systems"*
-   (Anthropic AEI, 1.50%) → **C02d**. ML system development produces executable pipelines.
+  (Anthropic AEI, 1.50%) → **C02d**. ML system development produces executable pipelines.
 5. *"Learn and troubleshoot DevOps infrastructure and deployment technologies"*
-   (Anthropic AEI, 0.97%) → **C02e**. DevOps troubleshooting produces configuration changes.
+  (Anthropic AEI, 0.97%) → **C02e**. DevOps troubleshooting produces configuration changes.
 6. *"Write or debug computer programming code"*
-   (OpenAI study, 4.2% of messages) → **C02b/C02c**. Direct code production or repair.
+  (OpenAI study, 4.2% of messages) → **C02b/C02c**. Direct code production or repair.
 7. *"Implement and troubleshoot authentication, authorization, and security systems"*
-   (Anthropic AEI, 0.96%) → **C02a**. Security implementation produces executable code.
+  (Anthropic AEI, 0.96%) → **C02a**. Security implementation produces executable code.
 8. *"Develop and debug blockchain applications, smart contracts, and cryptocurrency infrastructure"*
-   (Anthropic AEI, 0.07%) → **C02b**. Blockchain development produces executable smart contracts.
+  (Anthropic AEI, 0.07%) → **C02b**. Blockchain development produces executable smart contracts.
 
 ### Edge Cases and Resolutions
 
@@ -235,9 +232,9 @@ questions, compare options, or advise on decisions.
 A task belongs to C03 if and only if:
 
 - (a) the user is seeking factual information or advice to inform a decision
-  or satisfy curiosity, AND
+or satisfy curiosity, AND
 - (b) the primary output is informational text (not a composed artefact C01,
-  a technical output C02, or a pedagogical explanation building toward understanding C04).
+a technical output C02, or a pedagogical explanation building toward understanding C04).
 
 ### Sub-categories
 
@@ -250,21 +247,21 @@ A task belongs to C03 if and only if:
 ### Worked Examples
 
 1. *"Provide medical information and health information across multiple specialties"*
-   (Anthropic AEI, 2.38%) → **C03a**. Medical fact delivery to inform user decisions.
+  (Anthropic AEI, 2.38%) → **C03a**. Medical fact delivery to inform user decisions.
 2. *"Help research, compare, and select consumer products for purchase"*
-   (Anthropic AEI, 2.25%) → **C03b**. Product comparison for a purchasing decision.
+  (Anthropic AEI, 2.25%) → **C03b**. Product comparison for a purchasing decision.
 3. *"Provide comprehensive career development and job transition assistance"*
-   (Anthropic AEI, 1.63%) → **C03c**. Career advisory; informational output.
+  (Anthropic AEI, 1.63%) → **C03c**. Career advisory; informational output.
 4. *"Provide food recipes, cooking advice, nutrition information"*
-   (Anthropic AEI, 1.15%) → **C03e**. Practical how-to guidance as informational text.
+  (Anthropic AEI, 1.15%) → **C03e**. Practical how-to guidance as informational text.
 5. *"Answer specific factual or informational questions from the user"*
-   (OpenAI study, 24.4% Seeking Information aggregate) → **C03a**. Direct factual Q&A.
+  (OpenAI study, 24.4% Seeking Information aggregate) → **C03a**. Direct factual Q&A.
 6. *"Provide how-to procedural advice for practical tasks"*
-   (OpenAI study, 28.8% Practical Guidance aggregate) → **C03e**. Step-by-step procedural guidance.
+  (OpenAI study, 28.8% Practical Guidance aggregate) → **C03e**. Step-by-step procedural guidance.
 7. *"Assist with earth sciences, environmental research, and natural science tasks"*
-   (Anthropic AEI, 0.41%) → **C03a/C03d**. Scientific information retrieval and overview.
+  (Anthropic AEI, 0.41%) → **C03a/C03d**. Scientific information retrieval and overview.
 8. *"Provide investment information, stock analysis, and financial market information"*
-   (Anthropic AEI, 0.72%) → **C03c**. Financial advisory to support user investment decisions.
+  (Anthropic AEI, 0.72%) → **C03c**. Financial advisory to support user investment decisions.
 
 ### Edge Cases and Resolutions
 
@@ -289,9 +286,9 @@ academic competencies. The model acts as tutor, teacher, or study partner.
 A task belongs to C04 if and only if:
 
 - (a) the user's primary goal is to learn, understand, or develop a skill
-  (rather than simply obtain an answer), OR
+(rather than simply obtain an answer), OR
 - (b) the task is framed as an educational or academic obligation (coursework,
-  homework, exam preparation).
+homework, exam preparation).
 
 ### Sub-categories
 
@@ -303,21 +300,21 @@ A task belongs to C04 if and only if:
 ### Worked Examples
 
 1. *"Assist with academic assignments and coursework across multiple disciplines"*
-   (Anthropic AEI, 5.19%) → **C04a**. Explicitly framed as academic obligation; learning support.
+  (Anthropic AEI, 5.19%) → **C04a**. Explicitly framed as academic obligation; learning support.
 2. *"Create educational materials and explain concepts across academic subjects"*
-   (Anthropic AEI, 1.94%) → **C04d/C04b**. Creating educational resources and explaining concepts.
+  (Anthropic AEI, 1.94%) → **C04d/C04b**. Creating educational resources and explaining concepts.
 3. *"Help solve and explain mathematics problems across multiple topics and levels"*
-   (Anthropic AEI, 1.40%) → **C04b**. Mathematical explanation to build understanding.
+  (Anthropic AEI, 1.40%) → **C04b**. Mathematical explanation to build understanding.
 4. *"Tutor or teach academic subjects to the user"*
-   (OpenAI study, 10.2% of messages) → **C04b**. Direct tutoring; paradigm case.
+  (OpenAI study, 10.2% of messages) → **C04b**. Direct tutoring; paradigm case.
 5. *"Help with programming fundamentals including regex and data structures"*
-   (Anthropic AEI, 0.32%) → **C04c**. Programming fundamentals instruction is skill-building.
+  (Anthropic AEI, 0.32%) → **C04c**. Programming fundamentals instruction is skill-building.
 6. *"Help with physics education, problems, and theory"*
-   (Anthropic AEI, 0.20%) → **C04b**. Physics education is concept explanation for learning.
+  (Anthropic AEI, 0.20%) → **C04b**. Physics education is concept explanation for learning.
 7. *"Assist with technical and STEM coursework, homework, and assignments"*
-   (Anthropic AEI, 1.07%) → **C04a**. STEM coursework is academically framed learning support.
+  (Anthropic AEI, 1.07%) → **C04a**. STEM coursework is academically framed learning support.
 8. *"Assist with graduate-level academic writing, research, and assignments"*
-   (Anthropic AEI, 0.65%) → **C04a**. Graduate academic work is learning-oriented.
+  (Anthropic AEI, 0.65%) → **C04a**. Graduate academic work is learning-oriented.
 
 ### Edge Cases and Resolutions
 
@@ -343,7 +340,7 @@ A task belongs to C05 if and only if:
 
 - (a) the user provides an existing text artefact as the primary input, AND
 - (b) the user's goal is evaluation, correction, critique, or improvement of that
-  specific artefact (not creation of a new one).
+specific artefact (not creation of a new one).
 
 ### Sub-categories
 
@@ -355,21 +352,21 @@ A task belongs to C05 if and only if:
 ### Worked Examples
 
 1. *"Edit, proofread, and reformat documents and written content"*
-   (Anthropic AEI, 1.71%) → **C05a/C05b**. User provides existing documents for correction.
+  (Anthropic AEI, 1.71%) → **C05a/C05b**. User provides existing documents for correction.
 2. *"Edit or critique provided text to improve writing quality"*
-   (OpenAI study, Writing aggregate ~two-thirds of 23.9%) → **C05b**. Paradigm case from OpenAI data.
+  (OpenAI study, Writing aggregate ~two-thirds of 23.9%) → **C05b**. Paradigm case from OpenAI data.
 3. *"Grade student work and create educational assessments"*
-   (Anthropic AEI, 0.78%) → **C05c**. Grading evaluates existing student artefacts.
+  (Anthropic AEI, 0.78%) → **C05c**. Grading evaluates existing student artefacts.
 4. *"Edit and revise academic writing on AI and research topics"*
-   (Anthropic AEI, 0.47%) → **C05b**. Revision of existing scholarly artefact.
+  (Anthropic AEI, 0.47%) → **C05b**. Revision of existing scholarly artefact.
 5. *"Respond to peer reviewers and revise manuscripts for journal submission"*
-   (Anthropic AEI, 0.12%) → **C05d**. Improving existing manuscript based on reviewer feedback.
+  (Anthropic AEI, 0.12%) → **C05d**. Improving existing manuscript based on reviewer feedback.
 6. *"Proofread this email before I send it"*
-   (illustrative, consistent with C05a pattern) → **C05a**. User's email is input; correction is output.
+  (illustrative, consistent with C05a pattern) → **C05a**. User's email is input; correction is output.
 7. *"Revise and format academic documents across multiple disciplines"*
-   (consistent with C05b pattern) → **C05b**. Revision implies improvement of existing artefact.
+  (consistent with C05b pattern) → **C05b**. Revision implies improvement of existing artefact.
 8. *"Provide feedback on my business plan"*
-   (consistent with C05b pattern) → **C05b**. Business plan critique reviews existing work.
+  (consistent with C05b pattern) → **C05b**. Business plan critique reviews existing work.
 
 ### Edge Cases and Resolutions
 
@@ -394,7 +391,7 @@ linguistic systems. The defining feature is a cross-lingual purpose.
 A task belongs to C06 if and only if:
 
 - (a) the primary user goal involves a cross-lingual transformation (translating
-  text from one language to another), OR
+text from one language to another), OR
 - (b) the user is seeking support for competence in a language they are learning.
 
 ### Sub-categories
@@ -406,21 +403,21 @@ A task belongs to C06 if and only if:
 ### Worked Examples
 
 1. *"Provide language learning assistance, translation, and grammar help across multiple languages"*
-   (Anthropic AEI, 1.51%) → **C06a/C06b**. Covers both translation and language learning.
+  (Anthropic AEI, 1.51%) → **C06a/C06b**. Covers both translation and language learning.
 2. *"Translate and format diverse professional, academic, medical, and religious content between languages"*
-   (Anthropic AEI, 1.20%) → **C06a**. Cross-lingual professional document conversion.
+  (Anthropic AEI, 1.20%) → **C06a**. Cross-lingual professional document conversion.
 3. *"Translate text between languages for the user"*
-   (OpenAI study, Writing subcategory) → **C06a**. Direct translation; paradigm case.
+  (OpenAI study, Writing subcategory) → **C06a**. Direct translation; paradigm case.
 4. *"Translate written content between different natural languages"*
-   (OpenRouter) → **C06a**. Platform-level confirmation of translation as distinct category.
+  (OpenRouter) → **C06a**. Platform-level confirmation of translation as distinct category.
 5. *"Help me learn Spanish vocabulary"*
-   (illustrative, consistent with C06b) → **C06b**. Language acquisition support.
+  (illustrative, consistent with C06b) → **C06b**. Language acquisition support.
 6. *"Check the grammar of my French essay and suggest natural phrasing"*
-   (illustrative, consistent with C06b) → **C06b**. Cross-lingual grammar support for a language learner.
+  (illustrative, consistent with C06b) → **C06b**. Cross-lingual grammar support for a language learner.
 7. *"Translate a legal contract from German to English and preserve formatting"*
-   (illustrative, consistent with C06a) → **C06a**. Legal document translation.
+  (illustrative, consistent with C06a) → **C06a**. Legal document translation.
 8. *"Help me practise conversational Arabic"*
-   (illustrative, consistent with C06b) → **C06b**. Conversational language practice.
+  (illustrative, consistent with C06b) → **C06b**. Conversational language practice.
 
 ### Edge Cases and Resolutions
 
@@ -447,7 +444,7 @@ A task belongs to C07 if and only if:
 
 - (a) the user provides existing data, documents, or a corpus as input, AND
 - (b) the goal is to extract, compress, or analyse information from that input
-  (not produce a new artefact or retrieve facts from the model's knowledge base).
+(not produce a new artefact or retrieve facts from the model's knowledge base).
 
 ### Sub-categories
 
@@ -459,21 +456,21 @@ A task belongs to C07 if and only if:
 ### Worked Examples
 
 1. *"Extract, analyze, and process content from images and documents"*
-   (Anthropic AEI, 1.47%) → **C07a/C07b**. User supplies content; model extracts and analyses it.
+  (Anthropic AEI, 1.47%) → **C07a/C07b**. User supplies content; model extracts and analyses it.
 2. *"Conduct comprehensive business and corporate research analysis"*
-   (Anthropic AEI, 1.05%) → **C07d**. Business research analyses existing data sources.
+  (Anthropic AEI, 1.05%) → **C07d**. Business research analyses existing data sources.
 3. *"Assist with data analysis, statistical computing, and database management tasks"*
-   (Anthropic AEI, 0.96%) → **C07b**. Statistical computing on user-supplied datasets.
+  (Anthropic AEI, 0.96%) → **C07b**. Statistical computing on user-supplied datasets.
 4. *"Analyse datasets or perform data analysis and reporting tasks"*
-   (OpenAI study, 0.4% Data Analysis subcategory) → **C07b**. Direct dataset analysis.
+  (OpenAI study, 0.4% Data Analysis subcategory) → **C07b**. Direct dataset analysis.
 5. *"Create data visualizations, dashboards, and knowledge maps"*
-   (Anthropic AEI, 0.54%) → **C07b/C07d**. Visualisation is analytical output from existing data.
+  (Anthropic AEI, 0.54%) → **C07b/C07d**. Visualisation is analytical output from existing data.
 6. *"Extract and structure data from multiple sources into organized formats"*
-   (Anthropic AEI, 0.33%) → **C07c**. Structuring existing source data into organised form.
+  (Anthropic AEI, 0.33%) → **C07c**. Structuring existing source data into organised form.
 7. *"Analyze business data and generate forecasting reports and insights"*
-   (Anthropic AEI, 0.20%) → **C07d**. Forecasting from existing business data.
+  (Anthropic AEI, 0.20%) → **C07d**. Forecasting from existing business data.
 8. *"Generate argument or document summaries on demand"*
-   (OpenAI study) → **C07a**. Summarisation compresses existing content.
+  (OpenAI study) → **C07a**. Summarisation compresses existing content.
 
 ### Edge Cases and Resolutions
 
@@ -500,9 +497,9 @@ artefact.
 A task belongs to C08 if and only if:
 
 - (a) the primary user value lies in the interactive conversational exchange itself
-  (not in a discrete transferable output), AND
+(not in a discrete transferable output), AND
 - (b) the interaction serves emotional, entertainment, social practice, or
-  exploratory purposes.
+exploratory purposes.
 
 ### Sub-categories
 
@@ -514,21 +511,21 @@ A task belongs to C08 if and only if:
 ### Worked Examples
 
 1. *"Get relationship, dating, parenting, and personal advice across life situations"*
-   (Anthropic AEI, 1.15%) → **C08a**. Sustained personal emotional dialogue; value in the exchange.
+  (Anthropic AEI, 1.15%) → **C08a**. Sustained personal emotional dialogue; value in the exchange.
 2. *"Practice job interviews and roleplay professional scenarios"*
-   (Anthropic AEI, 0.65%) → **C08c**. Interactive interview practice valued for the conversational exchange.
+  (Anthropic AEI, 0.65%) → **C08c**. Interactive interview practice valued for the conversational exchange.
 3. *"Engage in casual conversation or social chitchat with the model"*
-   (OpenAI study, 5.3% Self-Expression aggregate) → **C08a**. Social interaction with no task output goal.
+  (OpenAI study, 5.3% Self-Expression aggregate) → **C08a**. Social interaction with no task output goal.
 4. *"Discuss relationships or seek personal emotional reflection support"*
-   (OpenAI study, 1.9% subcategory) → **C08a**. Emotional support dialogue.
+  (OpenAI study, 1.9% subcategory) → **C08a**. Emotional support dialogue.
 5. *"Play interactive games or engage in roleplay with the model"*
-   (OpenAI study, 0.4% subcategory) → **C08b/C08d**. Interactive fiction and games.
+  (OpenAI study, 0.4% subcategory) → **C08b/C08d**. Interactive fiction and games.
 6. *"Engage in interactive roleplay or collaborative fiction storytelling"*
-   (OpenRouter, ~50% of OSS token usage) → **C08b**. Dominant OSS usage pattern; collaborative fiction.
+  (OpenRouter, ~50% of OSS token usage) → **C08b**. Dominant OSS usage pattern; collaborative fiction.
 7. *"Provide mental health, behavioral health, and ADHD support resources"*
-   (Anthropic AEI, 0.35%) → **C08a**. Mental health support is sustained interactive dialogue.
+  (Anthropic AEI, 0.35%) → **C08a**. Mental health support is sustained interactive dialogue.
 8. *"Create prediction tools for gaming, sports analysis, and divination readings"*
-   (Anthropic AEI, 0.54%) → **C08d**. Prediction and divination tools used for entertainment.
+  (Anthropic AEI, 0.54%) → **C08d**. Prediction and divination tools used for entertainment.
 
 ### Edge Cases and Resolutions
 
@@ -540,6 +537,7 @@ A task belongs to C08 if and only if:
 ---
 
 ## Cross-Capability Disambiguation Table
+
 
 | Ambiguous Scenario                           | Correct Capability | Rationale                              |
 | -------------------------------------------- | ------------------ | -------------------------------------- |
@@ -558,6 +556,7 @@ A task belongs to C08 if and only if:
 | User wants emotional conversation            | C08                | Interactive exchange value             |
 | User asks for advice (one-shot)              | C03                | Informational advisory                 |
 
+
 ---
 
 ## Validation Details
@@ -567,8 +566,7 @@ A task belongs to C08 if and only if:
 - Tasks in mapping file: 103 (all tasks from Anthropic AEI Feb 2026 top-103 list)
 - Tasks successfully mapped: 103
 - Coverage: 103/103 = **100.0%** (target: ≥95%)
-- 4 tasks were classified at medium confidence (see `data/phase1/unmapped_tasks.csv`);
-  all 4 were resolved via dual-capability disambiguation without requiring new capabilities.
+- 4 tasks were classified at medium confidence ;all 4 were resolved via dual-capability disambiguation without requiring new capabilities.
 
 **Inter-coder reliability:**
 
@@ -577,12 +575,8 @@ A task belongs to C08 if and only if:
 - Observed agreement (P_o): 10/10 = 1.00
 - Expected agreement (P_e): 1/6 = 0.1667 (6 categories used in subsample)
 - Cohen's κ = (P_o − P_e) / (1 − P_e) = (1.00 − 0.167) / (1 − 0.167) = **1.0000**
-- Target: κ > 0.8. **PASS.**
 
-**Conclusion:** The taxonomy meets all Phase 1 completion criteria. It is cleared
-for use in Phase 2 benchmark inventory and Phase 3 coverage analysis.
+
 
 ---
 
-*Document version: FINAL (Feb 2026 data)*
-*References: Handa et al. (2025) arXiv:2503.04761; Ouyang et al. (2025) NBER WP 34255; OpenRouter (2025); Braun & Clarke (2006)*
