@@ -1,1 +1,128 @@
 benchmark_name,abbreviation,year,source,found_in_report,inclusion_criteria_met,notes
+HumanEval,HumanEval,2021,Papers with Code / Chen et al. arXiv:2107.03374,Yes — GPT-4 / Claude 3 / Gemini 1.0 / Llama 3,Yes,Most-cited Python code-generation benchmark; 164 hand-written problems; pass@k metric
+Mostly Basic Python Problems,MBPP,2021,Papers with Code / Austin et al. arXiv:2108.07732,Yes — GPT-4 / Claude 3 / Gemini 1.0 / Llama 3,Yes,~974 entry-level Python problems; broader coverage than HumanEval
+APPS,APPS,2021,Papers with Code / Hendrycks et al. arXiv:2105.09938,Partial — cited in Llama 3,Yes,5000 Python problems from competitive programming; harder than HumanEval
+DS-1000,DS-1000,2022,Papers with Code / Lai et al. arXiv:2211.11501,No,Yes,Data-science code generation across 7 libraries; realistic prompts
+CodeContests,CodeContests,2022,Papers with Code / Li et al. arXiv:2203.07814,Partial — cited in Gemini reports,Yes,Competitive programming from Codeforces/AtCoder; very high difficulty
+SWE-bench,SWE-bench,2024,Papers with Code / Jimenez et al. arXiv:2310.06770,Yes — Claude 4 / Gemini 2.5 / Llama 4,Yes,Real GitHub issue resolution; 2294 issues from 12 Python repos
+SWE-bench Verified,SWE-bench Verified,2024,Frontier reports / OpenAI human verification,Yes — Claude 4 / Gemini 2.5 / Llama 4,Yes,500 human-verified subset of SWE-bench; de-facto agentic-coding standard 2025
+BigCodeBench,BigCodeBench,2024,Papers with Code / Zhuo et al. arXiv:2406.15877,Partial — Claude 4 / Gemini 2.5,Yes,1140 tasks requiring library/tool integration; Hard subset = 148 tasks
+LiveCodeBench,LiveCodeBench,2024,Frontier reports / Jain et al. arXiv:2403.07974,Yes — Claude 4 / Gemini 2.5 / Llama 4,Yes,Monthly-refreshed contamination-resistant code benchmark
+Aider Polyglot,Aider Polyglot,2024,Frontier reports / Gauthier,Yes — Claude 4 / Gemini 2.5,Yes,Multi-language code editing benchmark; real-world code modification tasks
+Terminal-Bench,Terminal-Bench,2025,Frontier reports / Artificial Analysis,Yes — Claude 4 / Gemini 2.5,Yes,Terminal/shell task execution; agentic code environment
+EvalPlus / HumanEval+,HumanEval+,2023,Papers with Code / Liu et al. arXiv:2305.01210,Partial,Yes,80× more test cases than HumanEval; reduces false positives; MBPP+ companion
+SQuAD 1.1,SQuAD,2016,Papers with Code / Rajpurkar et al. arXiv:1606.05250,Partial — older reports,Yes,100k reading-comprehension QA pairs from Wikipedia; EM and F1 metrics
+SQuAD 2.0,SQuAD2,2018,Papers with Code / Rajpurkar et al. arXiv:1806.03822,Partial — older reports,Yes,Adds 50k unanswerable questions to SQuAD 1.1
+TriviaQA,TriviaQA,2017,Papers with Code / Joshi et al. arXiv:1705.03551,Yes — Llama 3 / Gemini 1.5,Yes,95k trivia QA pairs with evidence documents; open-domain retrieval benchmark
+Natural Questions,NQ,2019,Papers with Code / Kwiatkowski et al.,Yes — Llama 3 / Gemini 1.5,Yes,300k Google search questions with Wikipedia answers; realistic open-domain QA
+MMLU,MMLU,2020,Papers with Code / Hendrycks et al. arXiv:2009.03300,Yes — GPT-4 / Claude 3 / Gemini 1.0 / Llama 3,Yes,57-subject multiple-choice across STEM arts and humanities; 14k questions
+MMLU-Pro,MMLU-Pro,2024,Leaderboards / Wang et al. arXiv:2406.01574,Yes — Claude 4 / Gemini 2.5 / Llama 4,Yes,Contamination-resistant 14-subject harder MMLU variant; 12k questions
+GPQA Diamond,GPQA,2023,Frontier reports / Rein et al. arXiv:2311.12022,Yes — Claude 4 / Gemini 2.5 / Llama 4,Yes,Graduate-level science MCQ; gated access; 448 Diamond subset; expert-validated
+TruthfulQA,TruthfulQA,2021,Papers with Code / Lin et al. arXiv:2109.07958,Yes — GPT-4 / Claude 3 / Llama 3,Yes,817 questions probing model truthfulness; adversarially constructed
+HotpotQA,HotpotQA,2018,Papers with Code / Yang et al. arXiv:1809.09600,Partial,Yes,113k multi-hop reasoning QA; requires reasoning across multiple documents
+DROP,DROP,2019,Papers with Code / Dua et al. arXiv:1903.00161,Yes — GPT-4 / Claude 3,Yes,Discrete reasoning over paragraphs; 96k questions; addition/subtraction/counting
+SimpleQA,SimpleQA,2024,Frontier reports / Wei et al. (OpenAI),Yes — Claude 4 / GPT-4o,Yes,4326 short-form factual questions with unambiguous single-token answers
+FACTS Grounding,FACTS,2024,Frontier reports / Jacovi et al. (Google),Yes — Gemini 2.0 / Claude 4,Yes,860 grounding tasks measuring hallucination against provided context
+HellaSwag,HellaSwag,2019,Papers with Code / Zellers et al. arXiv:1905.07830,Yes — GPT-4 / Claude 3 / Llama 3,Yes,70k commonsense NLI sentence completion; Adversarial Filtering
+WinoGrande,WinoGrande,2019,Papers with Code / Sakaguchi et al. arXiv:1907.10641,Yes — GPT-4 / Claude 3 / Llama 3,Yes,44k pronoun disambiguation; adversarial Winograd schema
+ARC-Challenge,ARC-C,2018,Papers with Code / Clark et al. arXiv:1803.05457,Yes — GPT-4 / Claude 3 / Gemini 1.0 / Llama 3,Yes,7787 grade-school science MCQs; Challenge set = hardest 25%
+CommonsenseQA,CSQA,2019,Papers with Code / Talmor et al. arXiv:1811.00937,Partial,Yes,12k commonsense MCQ derived from ConceptNet
+BIG-Bench Hard,BBH,2022,Frontier reports / Suzgun et al. arXiv:2210.09261,Yes — GPT-4 / Claude 3 / Gemini 1.0,Yes,23 challenging BIG-Bench tasks requiring chain-of-thought; 6511 questions
+GSM8K,GSM8K,2021,Papers with Code / Cobbe et al. arXiv:2110.14168,Yes — GPT-4 / Claude 3 / Gemini 1.0 / Llama 3,Yes,8.5k grade-school math word problems; multi-step arithmetic reasoning
+MATH,MATH,2021,Papers with Code / Hendrycks et al. arXiv:2103.03874,Yes — GPT-4 / Claude 3 / Gemini 1.0 / Llama 3,Yes,12.5k competition math problems across 7 subjects; levels 1–5
+MATH-500,MATH-500,2022,Frontier reports / Lightman et al.,Yes — Claude 4 / Gemini 2.5 / Llama 4,Yes,500-item representative subset of MATH; widely used in 2025 reports
+AIME 2024/2025,AIME,2024,Frontier reports / AMC,Yes — Claude 4 / Gemini 2.5 / Llama 4,Yes,American Invitational Mathematics Exam; 30 problems per year; frontier difficulty
+Humanity's Last Exam,HLE,2025,Frontier reports / Scale AI / CAIS,Yes — Claude 4 / Gemini 2.5,Yes,3000 expert-level questions across 100+ subjects; designed to be near-unsolvable
+MGSM,MGSM,2023,Frontier reports / Shi et al. arXiv:2210.01240,Yes — GPT-4 / Gemini 1.5 / Llama 3,Yes,Multilingual GSM8K; 250 problems × 10 languages
+MMMU,MMMU,2023,Frontier reports / Yue et al. arXiv:2311.16502,Yes — GPT-4o / Gemini 1.5 / Claude 3.5,Yes,11.5k multimodal MCQ across 30 subjects; vision + text
+MathVista,MathVista,2023,Frontier reports / Lu et al. arXiv:2310.02255,Yes — GPT-4o / Gemini 1.5,Yes,6141 mathematical reasoning in visual contexts; 28 tasks
+ARC-AGI 2,ARC-AGI-2,2025,Frontier reports / ARC Prize Foundation,Yes — Claude 4 / Gemini 2.5,Yes,Abstract reasoning and concept generalisation; designed to resist neural network shortcuts
+IFEval,IFEval,2023,Frontier reports / Zhou et al. arXiv:2311.07911,Yes — Claude 4 / Gemini 2.5 / Llama 4,Yes,Verifiable instruction-following; 541 prompts with 25 constraint types; prompt/instruction accuracy
+IFBench,IFBench,2024,Leaderboards / Artificial Analysis,Yes — Gemini 2.5 / Claude 4,Yes,Harder instruction-following; 2818 prompts across 43 constraint types
+MT-Bench,MT-Bench,2023,Papers with Code / Zheng et al. arXiv:2306.05685,Partial — cited in survey papers,Yes,80 multi-turn questions across 8 categories; GPT-4-judged; early C01 proxy
+WritingBench,WritingBench,2025,Literature — Shao et al. NeurIPS 2025,No,Yes,1239 queries across 6 domains and 100 subdomains; query-dependent critic model; C01 gap benchmark
+HelloBench,HelloBench,2024,Literature — Que et al. 2024,No,Yes,Long-form text generation benchmark; task-specific evaluation dimensions; addresses single-sentence prompt limitation
+LongBench-Write,LongBench-Write,2024,Literature — Bai et al. 2024,No,Yes,Six fixed writing dimensions; measures long-form writing quality
+EQ-Bench Creative Writing v3,EQ-Bench-CW,2023,Leaderboards — eqbench.com (Paech),Partial — cited informally,Yes,LLM-judged with Elo + rubric; evaluates humour / romance / spatial / character voice; live leaderboard
+Suri,Suri,2024,Literature — Pham et al. EMNLP 2024,No,Yes,Multi-constraint long-form writing following; 1000+ prompts
+MathDial,MathDial,2023,Literature — Macina et al. EMNLP 2023,No,Yes,2900 student–tutor dialogues over GSM8K problems; foundational tutoring dataset
+Bridge,Bridge,2024,Literature — Wang et al. 2024,No,Yes,Elementary-school remediation; novice vs expert tutor response comparison
+MRBench,MRBench,2025,Literature — Maurya et al. NAACL 2025,No,Yes,192 dialogues × 7 LLM tutors × 8 pedagogical dimensions; Desired Annotation Match Rate metric
+MathTutorBench,MathTutorBench,2025,Literature — Macina et al. 2025,No,Yes,7 pedagogical tasks; scaffolding / mistake localisation / pedagogy-following; pedagogy reward model
+KMP-Bench,KMP-Bench,2026,Literature — 2026,No,Yes,Follow-up questioning / confusion clarification / practice-problem generation beyond remediation
+CriticBench (Tsinghua),CriticBench-T,2024,Literature — Lin et al. ACL 2024 Findings,No,Yes,15 datasets across 5 reasoning domains; critique-and-correct format; most comprehensive C05 benchmark
+CriticBench (Tencent),CriticBench-Tc,2024,Literature — Lan et al. 2024,No,Yes,3k queries across 9 tasks including CodeExec
+CritiqueLLM,CritiqueLLM,2024,Literature — Ke et al. 2024,No,Yes,Scaling critique with LLM-as-critic; broader critique domains
+Auto-J,Auto-J,2024,Literature — Li et al. 2024,No,Yes,Critique-tuned model evaluations; open-ended critique tasks including essay feedback and code review
+Shepherd,Shepherd,2023,Literature — Wang et al. 2023,No,Yes,Natural language feedback generation; human-annotated critique references
+MetaCritique,MetaCritique,2024,Literature — Sun et al. 2024,No,Yes,Meta-level critique evaluation; assesses quality of critiques themselves
+UltraCM,UltraCM,2023,Literature — Cui et al. 2023,No,Yes,Critique model trained on UltraFeedback; open-ended evaluation
+SummEval,SummEval,2020,Papers with Code / Fabbri et al. arXiv:2007.12626,Partial,Yes (C07),Generic summarisation quality; 100 CNN/DM articles × 23 models × 4 dimensions (coherence/consistency/fluency/relevance)
+FABLES,FABLES,2024,Literature — Kim et al. 2024,No,Yes (C07),Long-document narrative faithfulness; book-length summarisation
+SummHay,SummHay,2024,Literature,No,Yes (C07),Summarisation with haystack retrieval; tests grounded summarisation
+BookSum,BookSum,2021,Papers with Code / Kryscinski et al. arXiv:2105.08209,No,Yes (C07),Book-length summarisation; chapters and full books
+GovReport,GovReport,2021,Papers with Code / Huang et al. arXiv:2104.02112,No,Yes (C07),Government report summarisation; long structured documents
+XSum,XSum,2018,Papers with Code / Narayan et al. arXiv:1808.08745,Partial — Google reports,Yes (C07),Extreme summarisation; one-sentence summaries of BBC articles
+CNN/DailyMail,CNN/DM,2015,Papers with Code / Hermann et al.,Partial — older reports,Yes (C07),Multi-sentence news summarisation; abstractive + extractive
+WMT14/16/18/20,WMT,2014,Papers with Code / Bojar et al.,Yes — Google (Gemini) reports,Yes (C06),Annual machine translation competition benchmarks across multiple language pairs
+FLORES-101/200,FLORES,2021,Papers with Code / Goyal et al. arXiv:2106.03193,Yes — Google (Gemini) / Meta (Llama),Yes (C06),Multilingual translation; 101 and 200 languages respectively
+MLQA,MLQA,2020,Papers with Code / Lewis et al. arXiv:1910.07475,Partial,Yes (C06/C03),Multilingual QA across 7 languages; cross-lingual transfer
+Multilingual MMLU,MMMLU,2023,Frontier reports,Yes — Claude 4 / Gemini 2.5 / Llama 4,Yes (C06),MMLU translated into 57 languages; multilingual knowledge assessment
+PersonaChat / ConvAI2,PersonaChat,2018,Papers with Code / Zhang et al. arXiv:1801.07243,No,Yes (C08),10k persona-grounded dialogues; ConvAI2 competition version
+RoleLLM / RoleBench,RoleBench,2024,Literature — Wang et al. ACL 2024 Findings,No,Yes (C08),Role-playing instruction-following across 100 characters; role-conditioned evaluation
+CharacterEval,CharacterEval,2024,Literature — Tu et al. ACL 2024,No,Yes (C08),Chinese-language character role-play; 77 characters × 11k QA pairs
+PingPong,PingPong,2024,Literature — Gusev 2024,No,Yes (C08),Dynamic multi-turn role-play with user-simulator; 40+ models; character consistency/entertainment/fluency
+PersonaGym,PersonaGym,2024,Literature — Samuel et al. 2024,No,Yes (C08),Persona adherence evaluation across diverse persona types
+TAU-bench / τ²-Bench,TAU-bench,2024,Frontier reports / Yao et al.,Yes — Claude 4 / Gemini 2.5,Yes (C08),Tool-augmented agent benchmark; retail and airline domains; multi-turn task completion
+HELM Classic,HELM,2022,Leaderboards — crfm.stanford.edu,Partial,Yes,Holistic evaluation across 42 scenarios and 7 metrics; normalised across tasks
+Open LLM Leaderboard v2,OLLMv2,2024,Leaderboards — HuggingFace,No,Yes,6-benchmark aggregation: IFEval / BBH / MATH Lvl5 / GPQA / MuSR / MMLU-Pro
+Chatbot Arena Elo,Arena,2023,Leaderboards — LMSYS,No,Yes,Pairwise human preference; Bradley-Terry Elo; >1M battles; category sub-leaderboards including Creative Writing and Roleplay
+MedHELM,MedHELM,2024,Leaderboards — HELM,No,Yes,Medical domain evaluation across clinical notes/QA/safety; subset of HELM
+FinanceBench,FinanceBench,2023,Leaderboards — HELM / Pratyush et al.,No,Yes,Financial document QA; 150 questions from SEC filings
+BFCL,BFCL,2024,Leaderboards / Leaderboards — Berkeley,Partial — Llama 3 reports,Yes,Berkeley Function-Calling Leaderboard; tool-use and API-calling evaluation
+OSWorld,OSWorld,2024,Frontier reports — Anthropic (Claude),Yes — Claude reports,Partial,Computer desktop task automation; screenshot-based GUI agent; single-lab signature
+Needle-in-a-Haystack,NIAH,2023,Frontier reports,Yes — Claude 3 / Gemini 1.5 / GPT-4,Yes,Long-context retrieval; single fact buried in random text; tests context window utilisation
+CoNLL-2014 GEC,CoNLL-GEC,2014,Papers with Code,No,Partial (C05 proxy),Grammatical error correction shared task; 28 annotators on 1312 essays
+JFLEG,JFLEG,2016,Papers with Code / Napoles et al.,No,Partial (C05 proxy),Fluency-oriented GEC; 747 sentences with 4 fluency-corrected references
+BEA-2019 GEC,BEA-GEC,2019,Papers with Code,No,Partial (C05 proxy),Grammatical error correction shared task; combined dataset 4000+ essays
+CoQA,CoQA,2019,Papers with Code / Reddy et al. arXiv:1808.07042,Partial,Yes (C03),127k conversational QA; 8 reading domains; measures information-seeking dialogue
+StrategyQA,StrategyQA,2021,Papers with Code / Geva et al. arXiv:2101.02235,Partial,Yes (C03),2780 yes/no questions requiring multi-step implicit reasoning
+OpenBookQA,OBQA,2018,Papers with Code / Mihaylov et al. arXiv:1809.02789,Partial,Yes (C03/C04),500 elementary science questions; open-book format with core science facts
+BoolQ,BoolQ,2019,Papers with Code / Clark et al. arXiv:1905.10044,Yes — GPT-4 (GLUE/SuperGLUE),Yes (C03),15k yes/no reading comprehension questions from Wikipedia passages
+PIQA,PIQA,2019,Papers with Code / Bisk et al. arXiv:1911.11641,Partial,Yes (C03),16k physical commonsense reasoning; everyday physical interactions
+SocialIQa,SIQa,2019,Papers with Code / Sap et al. arXiv:1904.09728,Partial,Yes (C03),38k social commonsense QA; emotional and social understanding
+GLUE,GLUE,2018,Papers with Code / Wang et al. arXiv:1804.07461,Yes — GPT-4 / older Claude,Yes (C03),9-task NLU benchmark suite; largely saturated by 2023
+SuperGLUE,SuperGLUE,2019,Papers with Code / Wang et al. arXiv:1905.00537,Yes — GPT-4 / older Claude,Yes (C03),8-task harder successor to GLUE; also largely saturated
+MuSR,MuSR,2023,Leaderboards — OLLMv2 / Sprague et al.,Yes — OLLMv2,Yes (C03),Multistep soft reasoning; 756 questions requiring logical narrative chaining
+MTEB,MTEB,2022,Leaderboards / Muennighoff et al. arXiv:2210.07316,No (embedding focus),Partial,Massive Text Embedding Benchmark; primarily for retrieval/embedding models; 58 datasets
+Winogender,Winogender,2018,Frontier reports — Anthropic,Yes — Claude reports,Partial (internal),Gender coreference bias; 720 sentences; Anthropic-internal bias evaluation
+Winobias,Winobias,2018,Frontier reports — Anthropic,Yes — Claude reports,Partial (internal),Occupational gender bias; stereotype vs anti-stereotype; Anthropic-internal
+BBQ,BBQ,2022,Frontier reports — Anthropic,Yes — Claude reports,Partial (internal),Bias benchmark for QA; 9 social bias categories; 58k questions
+Nexus / API-Bank,Nexus,2023,Frontier reports — Meta (Llama 3),Yes — Llama 3,Partial,Function-calling evaluation; REST API calling and tool selection
+XLSum,XLSum,2021,Frontier reports — Google,Yes — Gemini reports,Yes (C06),Multilingual summarisation across 44 languages; BBC articles
+Indic-GenBench,IndicGen,2024,Frontier reports — Google,Yes — Gemini reports,Partial (C06),Indian language generation benchmark; 8 languages across diverse tasks
+MTOB Kalamang,MTOB,2024,Frontier reports — Google,Yes — Gemini reports,Partial (C06),Machine translation of a book for low-resource languages; extreme multilingual test
+InCharacter,InCharacter,2024,Literature,No,Partial (C08),Character personality consistency; MBTI-style psychological assessment of role-play characters
+ECHO,ECHO,2024,Literature,No,Partial (C08),Character hallucination in role-play; consistency between stated and enacted persona
+TimeChara,TimeChara,2024,Literature,No,Partial (C08),Temporal consistency in character role-play; time-period appropriate responses
+RPEval / RPBench-Auto,RPBench,2024,Literature,No,Partial (C08),Role-play quality evaluation; automated rubric-based scoring
+GSM8K-Platinum,GSM8K-Plat,2023,Papers with Code,No,Yes (C04 proxy),Verified clean subset of GSM8K removing annotation errors; 250 problems
+MGSM-Plus / GSM-PLUS,GSM-PLUS,2024,Papers with Code / Li et al.,No,Yes (C04 proxy),Harder and more robust GSM8K variant; 100 problem types with perturbations
+NarrativeQA,NarrativeQA,2018,Papers with Code / Kocisky et al. arXiv:1712.07040,Partial,Yes (C03),Books and movie script QA; requires reading full narratives
+NewQA / NewsQA,NewsQA,2016,Papers with Code / Trischler et al.,No,Yes (C03),100k CNN news QA; crowdsourced; harder than SQuAD
+HumanEval / HumanEval+,HumanEval+,2021/2023,v3 selection rationale / arXiv:2107.03374; arXiv:2305.01210,Yes or gap-representative; see benchmark_selection_rationale_v3.md,Yes,Included as B001 for C02; Legacy saturated benchmark; narrow single-function Python; not used as primary Phase 3 gap metric
+BigCodeBench (Hard),BCB-Hard,2024,v3 selection rationale / arXiv:2406.15877,Yes or gap-representative; see benchmark_selection_rationale_v3.md,Yes,Included as B004 for C02; Python-only; library versions may drift; hard subset relatively small
+SWE-Lancer Diamond,SWE-Lancer Diamond,2025,v3 selection rationale / arXiv:2502.12115,Yes or gap-representative; see benchmark_selection_rationale_v3.md,Yes,Included as B005 for C02; New benchmark; access and reproducibility may depend on released task package; economic tasks skew to freelance platforms
+SimpleQA / FACTS Grounding,SimpleQA/FACTS,2024/2025,v3 selection rationale / OpenAI technical blog; arXiv:2501.03200,Yes or gap-representative; see benchmark_selection_rationale_v3.md,Yes,Included as B009 for C03; SimpleQA is narrow factual recall; FACTS uses supplied documents and does not cover full advisory synthesis
+LiveBench,LiveBench,2024,v3 selection rationale / arXiv:2406.19314; ICLR 2025 Spotlight,Yes or gap-representative; see benchmark_selection_rationale_v3.md,Yes,Included as B010 for C03; Multicapability benchmark makes attribution to a single capability less clean
+WildBench,WildBench,2024,v3 selection rationale / arXiv:2406.04770; ICLR 2025,Yes or gap-representative; see benchmark_selection_rationale_v3.md,Yes,Included as B014 for C01; Broadness makes construct attribution less precise; LLM judge dependence
+InfiAgent-DABench,InfiAgent-DABench,2024,v3 selection rationale / arXiv:2401.05507; ICML 2024,Yes or gap-representative; see benchmark_selection_rationale_v3.md,Yes,Included as B015 for C07; CSV-centric; narrower than enterprise analytics; open-ended answers require careful scoring
+DA-Code,DA-Code,2024,v3 selection rationale / arXiv:2410.07331; EMNLP 2024,Yes or gap-representative; see benchmark_selection_rationale_v3.md,Yes,Included as B016 for C07; Environment setup cost; low current model success can make scores sparse
+Spider 2.0,Spider 2.0,2024,v3 selection rationale / arXiv:2411.07763; ICLR 2025 Oral,Yes or gap-representative; see benchmark_selection_rationale_v3.md,Yes,Included as B017 for C07; SQL and BI focused; may underrepresent non-SQL analysis; heavy environment requirements
+MMLongBench-Doc,MMLongBench-Doc,2024,v3 selection rationale / arXiv:2407.01523; NeurIPS 2024 Datasets & Benchmarks Spotlight,Yes or gap-representative; see benchmark_selection_rationale_v3.md,Yes,Included as B018 for C07; PDF-processing pipeline complexity; document QA is not full statistical analysis
+TutorBench,TutorBench,2025,v3 selection rationale / arXiv:2510.02663; Scale AI,Yes or gap-representative; see benchmark_selection_rationale_v3.md,Yes,Included as B021 for C04; Very new; LLM judge dependence; citation/adoption not yet established
+JudgeBench,JudgeBench,2024/2025,v3 selection rationale / arXiv:2410.12784; ICLR 2025,Yes or gap-representative; see benchmark_selection_rationale_v3.md,Yes,Included as B023 for C05; Focuses judging better answers rather than generating actionable feedback; new adoption
+RewardBench 2,RewardBench 2,2025,v3 selection rationale / arXiv:2506.01937,Yes or gap-representative; see benchmark_selection_rationale_v3.md,Yes,Included as B024 for C05; Reward-model perspective is indirect for user-facing review tasks; new release
+CoSER,CoSER,2025,v3 selection rationale / arXiv:2502.09082; ICML 2025,Yes or gap-representative; see benchmark_selection_rationale_v3.md,Yes,Included as B026 for C08; Focused on literary character roleplay; less coverage of emotional support and social practice
+BenchMAX,BenchMAX,2025,v3 selection rationale / Findings of ACL: EMNLP 2025; DOI:10.18653/v1/2025.findings-emnlp.909,Yes or gap-representative; see benchmark_selection_rationale_v3.md,Yes,Included as B027 for C06; Covers multilingual capability broadly rather than translation alone; new adoption
+WMT24++,WMT24++,2025,v3 selection rationale / arXiv:2502.12404; Google / Unbabel,Yes or gap-representative; see benchmark_selection_rationale_v3.md,Yes,Included as B028 for C06; Translation-specific; does not cover broader multilingual instruction following by itself

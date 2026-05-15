@@ -1,1 +1,11 @@
-test_name,test_statistic,p_value,effect_size,confidence_interval,interpretation
+analysis_type,capability_id,test_name,test_statistic,p_value,effect_size,confidence_interval_95,n,interpretation
+Pearson correlation,ALL,Usage frequency vs normalised coverage score,0.6393,0.0878,0.6393,"[-0.1189, 0.9266]",8,Higher-usage capabilities tend to receive more benchmark coverage.
+Chi-square goodness-of-fit,ALL,Benchmark-count distribution vs Anthropic usage distribution,31.9584,0.0,0.3022,"Cramer's V bootstrap [0.2019, 0.5280]",50,Benchmark coverage is not distributed in proportion to observed usage.
+Temporal linear regression,C01,Annual benchmark count vs publication year for Content Generation,0.5143,0.0213,0.7714,"Slope [0.1257, 0.9029]",6,Positive slope indicates increasing benchmark activity over time.
+Temporal linear regression,C02,Annual benchmark count vs publication year for Code Development and Technical Problem Solving,0.7429,0.3796,0.1958,"Slope [-1.3474, 2.8331]",6,Positive slope indicates increasing benchmark activity over time.
+Temporal linear regression,C03,Annual benchmark count vs publication year for Information Retrieval and Advisory,0.6,0.2292,0.3345,"Slope [-0.5748, 1.7748]",6,Positive slope indicates increasing benchmark activity over time.
+Temporal linear regression,C04,Annual benchmark count vs publication year for Learning and Education Support,0.7429,0.0086,0.8521,"Slope [0.3132, 1.1725]",6,Positive slope indicates increasing benchmark activity over time.
+Temporal linear regression,C05,Annual benchmark count vs publication year for Review and Feedback,0.6,0.0344,0.7132,"Slope [0.0718, 1.1282]",6,Positive slope indicates increasing benchmark activity over time.
+Temporal linear regression,C06,Annual benchmark count vs publication year for Translation and Language Processing,0.2857,0.1583,0.4286,"Slope [-0.1723, 0.7437]",6,Positive slope indicates increasing benchmark activity over time.
+Temporal linear regression,C07,Annual benchmark count vs publication year for Data Analysis and Summarisation,0.6,0.4411,0.1543,"Slope [-1.3501, 2.5501]",6,Positive slope indicates increasing benchmark activity over time.
+Temporal linear regression,C08,Annual benchmark count vs publication year for Conversational Interaction and Roleplay,0.3714,0.1164,0.4995,"Slope [-0.1447, 0.8876]",6,Positive slope indicates increasing benchmark activity over time.

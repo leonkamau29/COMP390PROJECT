@@ -1,8 +1,13 @@
 # Large datasets - hosted on Hugging Face instead
 data/phase1/anthropic/aei_raw_1p_api_2025-11-13_to_2025-11-20.csv
 data/phase1/anthropic/aei_raw_claude_ai_2025-11-13_to_2025-11-20.csv
+data/phase1/anthropic/aei_raw_1p_api_2026-02-05_to_2026-02-12.csv
+data/phase1/anthropic/aei_raw_claude_ai_2026-02-05_to_2026-02-12.csv
 data/phase1/onet/onet_task_mappings.csv
 data/phase1/onet/onet_task_statements.csv
+data/phase1/anthropic/aei_pivot.csv
+.claude/settings.local.json
+meeting_summary.md
 
 # Python
 __pycache__/

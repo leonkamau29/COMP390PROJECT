@@ -1,1 +1,29 @@
-benchmark_id,name,abbreviation,year,rationale_for_inclusion
+benchmark_id,name,abbreviation,year,primary_capability,rationale_for_inclusion
+B001,HumanEval / HumanEval+,HumanEval+,2021/2023,C02,Selected in v3 to cover C02 under the Phase 1 FINAL taxonomy. retained as historical saturation anchor only.
+B002,SWE-bench Verified,SWE-bench-V,2024,C02,"Selected in v3 to cover C02 under the Phase 1 FINAL taxonomy. best current real-world coding benchmark, but costly to run."
+B003,LiveCodeBench,LCB,2024,C02,Selected in v3 to cover C02 under the Phase 1 FINAL taxonomy. strong contamination-resistant signal with versioning overhead.
+B004,BigCodeBench (Hard),BCB-Hard,2024,C02,Selected in v3 to cover C02 under the Phase 1 FINAL taxonomy. captures library integration better than puzzle-style code benchmarks.
+B005,SWE-Lancer Diamond,SWE-Lancer Diamond,2025,C02,Selected in v3 to cover C02 under the Phase 1 FINAL taxonomy. first benchmark directly tying LLM coding performance to economic task value.
+B006,MMLU-Pro,MMLU-Pro,2024,C03,"Selected in v3 to cover C03 under the Phase 1 FINAL taxonomy. important broad C03 baseline, but proxy-heavy."
+B007,GPQA Diamond,GPQA Diamond,2023,C03,Selected in v3 to cover C03 under the Phase 1 FINAL taxonomy. strong frontier-difficulty C03 benchmark.
+B008,Humanity's Last Exam,HLE,2025,C03,Selected in v3 to cover C03 under the Phase 1 FINAL taxonomy. current frontier ceiling benchmark for broad expert knowledge.
+B009,SimpleQA / FACTS Grounding,SimpleQA/FACTS,2024/2025,C03,Selected in v3 to cover C03 under the Phase 1 FINAL taxonomy. captures hallucination risk central to advisory tasks.
+B010,LiveBench,LiveBench,2024,C03,Selected in v3 to cover C03 under the Phase 1 FINAL taxonomy. contamination-limited multi-domain signal bridging C03 and C07.
+B011,IFEval,IFEval,2023,C01,"Selected in v3 to cover C01 under the Phase 1 FINAL taxonomy. consensus C01 proxy benchmark, useful mainly for showing proxy limitations."
+B012,WritingBench,WritingBench,2025,C01,Selected in v3 to cover C01 under the Phase 1 FINAL taxonomy. most direct currently documented C01 writing-quality benchmark.
+B013,EQ-Bench Creative Writing v3,EQ-Bench-CW v3,2023/2025,C01,"Selected in v3 to cover C01 under the Phase 1 FINAL taxonomy. captures style, voice and emotional authenticity absent from IFEval."
+B014,WildBench,WildBench,2024,C01,Selected in v3 to cover C01 under the Phase 1 FINAL taxonomy. real-user grounding makes it valuable for C01 gap evidence.
+B015,InfiAgent-DABench,InfiAgent-DABench,2024,C07,Selected in v3 to cover C07 under the Phase 1 FINAL taxonomy. canonical precursor for agentic data-analysis evaluation.
+B016,DA-Code,DA-Code,2024,C07,Selected in v3 to cover C07 under the Phase 1 FINAL taxonomy. high-relevance C07 benchmark with substantial runtime cost.
+B017,Spider 2.0,Spider 2.0,2024,C07,Selected in v3 to cover C07 under the Phase 1 FINAL taxonomy. best fit for C07 business intelligence workflows.
+B018,MMLongBench-Doc,MMLongBench-Doc,2024,C07,Selected in v3 to cover C07 under the Phase 1 FINAL taxonomy. covers document-analysis tasks absent from most frontier reports.
+B019,MathDial,MathDial,2023,C04,Selected in v3 to cover C04 under the Phase 1 FINAL taxonomy. foundational but limited tutoring benchmark.
+B020,MathTutorBench,MathTutorBench,2025,C04,"Selected in v3 to cover C04 under the Phase 1 FINAL taxonomy. shows stronger solvers can be weaker tutors, central to C04 gap."
+B021,TutorBench,TutorBench,2025,C04,Selected in v3 to cover C04 under the Phase 1 FINAL taxonomy. broadens tutoring evaluation beyond mathematics-only settings.
+B022,CriticBench (Tsinghua),CriticBench,2024,C05,Selected in v3 to cover C05 under the Phase 1 FINAL taxonomy. anchor evidence for C05 absence from frontier reports.
+B023,JudgeBench,JudgeBench,2024/2025,C05,Selected in v3 to cover C05 under the Phase 1 FINAL taxonomy. harder and more deployment-relevant than older critique-generation benchmarks.
+B024,RewardBench 2,RewardBench 2,2025,C05,Selected in v3 to cover C05 under the Phase 1 FINAL taxonomy. adds alignment-training perspective to C05 feedback quality.
+B025,PingPong,PingPong,2024/2025,C08,Selected in v3 to cover C08 under the Phase 1 FINAL taxonomy. best dynamic contamination-resistant C08 methodology.
+B026,CoSER,CoSER,2025,C08,Selected in v3 to cover C08 under the Phase 1 FINAL taxonomy. replaces narrower FIREBALL with broader authentic roleplay coverage.
+B027,BenchMAX,BenchMAX,2025,C06,Selected in v3 to cover C06 under the Phase 1 FINAL taxonomy. most comprehensive peer-reviewed multilingual LLM benchmark in v3 scope.
+B028,WMT24++,WMT24++,2025,C06,Selected in v3 to cover C06 under the Phase 1 FINAL taxonomy. gold-standard translation quality coverage for C06.

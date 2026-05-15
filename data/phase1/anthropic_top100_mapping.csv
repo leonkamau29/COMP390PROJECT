@@ -1,1 +1,104 @@
 task,mapped_capability,confidence,justification
+Assist with academic assignments and coursework across multiple disciplines,C04,high,Task is explicitly framed as academic obligation; model supports learning completion → Learning and Education Support
+"Troubleshoot and configure hardware, software, and system technical issues",C02,high,Resolution requires modifying system configuration; output is a technical fix → Code Development and Technical Problem Solving
+"Develop, debug, and modify websites and web applications",C02,high,Model produces executable web code; primary output is a technical artefact → Code Development and Technical Problem Solving
+Develop and manage business software applications across multiple industries,C02,high,Building software systems produces executable code artefacts → Code Development and Technical Problem Solving
+Draft and refine professional workplace emails and business correspondence,C01,high,User wants a new written communication artefact; model is primary author → Content Generation
+"Create marketing content, advertising campaigns, and SEO materials with platform optimization",C01,high,Model generates new promotional copy; primary output is an original marketing artefact → Content Generation
+Develop comprehensive business strategy documents and corporate planning materials,C01,high,Business strategy documents are composed artefacts produced by the model → Content Generation
+Provide medical information and health information across multiple specialties,C03,high,Medical fact delivery to inform user understanding or decision-making → Information Retrieval and Advisory
+"Help research, compare, and select consumer products for purchase",C03,high,Product comparison and recommendation to support a purchasing decision → Information Retrieval and Advisory
+"Create, convert, format, and manipulate documents across multiple file types",C07,high,Processing existing documents into different formats; input is existing content → Data Analysis and Summarisation
+Create and optimize social media content and marketing strategies,C01,high,Model generates new social media copy; output is an original promotional artefact → Content Generation
+Create educational materials and explain concepts across academic subjects,C04,high,Creating educational resources and explaining concepts is pedagogical support → Learning and Education Support
+"Debug, fix, and refactor code across multiple languages and systems",C02,high,Primary output is corrected and improved code → Code Development and Technical Problem Solving
+Provide assistance across multiple practice areas and document types,C01,high,Professional practice documents are composed artefacts produced by the model → Content Generation
+"Assist with video, audio, and script content creation and production",C01,high,Scripts and multimedia content are original composed artefacts → Content Generation
+"Edit, proofread, and reformat documents and written content",C05,high,User provides existing documents for correction; goal is improvement of existing artefact → Review and Feedback
+"Assist with creative fiction writing, editing, and development",C01,high,Creative fiction is an original composed artefact where model acts as co-author → Content Generation
+"Help with programming, software development, and coding across multiple languages",C02,high,Code production and software development produce executable artefacts → Code Development and Technical Problem Solving
+Provide comprehensive career development and job transition assistance,C03,high,Career advisory delivers informational guidance to support user decisions → Information Retrieval and Advisory
+"Create religious content, spiritual guidance, poetry, and creative writing",C01,high,Poetry and spiritual texts are composed artefacts; model acts as author → Content Generation
+"Provide language learning assistance, translation, and grammar help across multiple languages",C06,high,Cross-lingual transformation and language acquisition support → Translation and Language Processing
+"Develop, debug, and optimize machine learning and AI systems",C02,high,ML system development produces executable model pipelines and training code → Code Development and Technical Problem Solving
+"Help with graphic design, UI/UX work, and branding projects",C01,medium,Graphic design assistance produces creative artefacts; classified C01e (technical/specialised output). Note: if purely tooling advice → C03,
+"Extract, analyze, and process content from images and documents",C07,high,User supplies existing documents/images; model extracts and analyses content → Data Analysis and Summarisation
+"Create technical software documentation, diagrams, and architecture content",C01,high,Technical documentation is a composed artefact produced by the model → Content Generation
+Help solve and explain mathematics problems across multiple topics and levels,C04,high,Mathematical explanation with intent to build understanding → Learning and Education Support
+"Create and optimize resumes, cover letters, and job application materials",C01,high,CVs and cover letters are professional written artefacts produced by the model → Content Generation
+"Get help with home maintenance, repairs, vehicles, and household systems",C03,high,Practical how-to guidance delivered as informational text → Information Retrieval and Advisory
+"Translate and format diverse professional, academic, medical, and religious content between languages",C06,high,Cross-lingual document conversion across professional domains → Translation and Language Processing
+"Assist with game development, gaming software, and tabletop RPG content",C02,high,Game development produces executable code; RPG content creation → C01d if purely narrative. Primary = C02 given coding context,
+Assist with advanced scientific research across biomedical and physical sciences,C03,high,Scientific information retrieval and research overview; informational output → Information Retrieval and Advisory
+"Get relationship, dating, parenting, and personal advice across life situations",C08,high,Personal advisory in sustained emotional dialogue; value lies in the conversational exchange → Conversational Interaction and Roleplay
+"Assist with civic information, government services, and institutional research",C03,high,Civic and government information retrieval; factual advisory output → Information Retrieval and Advisory
+"Provide food recipes, cooking advice, nutrition information, and beverage recommendations",C03,high,Practical how-to guidance (recipes) delivered as informational text → Information Retrieval and Advisory
+"Troubleshoot and configure network infrastructure, protocols, and server connections",C02,high,Network troubleshooting produces configuration changes; output is a technical fix → Code Development and Technical Problem Solving
+"Assist with technical and STEM coursework, homework, and assignments",C04,high,STEM coursework assistance is academically framed learning support → Learning and Education Support
+"Provide fitness, nutrition, and sports training information",C03,high,Fitness and nutrition information delivered as advisory guidance → Information Retrieval and Advisory
+Conduct comprehensive business and corporate research analysis,C07,high,Business research analyses existing data sources to generate intelligence → Data Analysis and Summarisation
+Assist with healthcare and mental health clinical documentation and professional writing,C01,high,Clinical documentation is a composed artefact produced for professional use → Content Generation
+Learn and troubleshoot DevOps infrastructure and deployment technologies,C02,high,DevOps troubleshooting produces configuration changes and deployment scripts → Code Development and Technical Problem Solving
+"Assist with data analysis, statistical computing, and database management tasks",C07,high,Statistical computing on user-supplied datasets; analytical output → Data Analysis and Summarisation
+"Implement and troubleshoot authentication, authorization, and security systems for web applications",C02,high,Security system implementation produces executable code artefacts → Code Development and Technical Problem Solving
+Debug and fix technical issues in web/mobile applications,C02,high,Debugging produces corrected code; primary output is a technical fix → Code Development and Technical Problem Solving
+"Develop, debug, and publish mobile applications",C02,high,Mobile app development produces executable application code → Code Development and Technical Problem Solving
+"Help with SQL database design, queries, debugging, and concepts",C02,high,Database design and query work produces executable SQL artefacts → Code Development and Technical Problem Solving
+Automate business processes and data management systems,C02,high,Automation produces executable scripts and workflow configurations → Code Development and Technical Problem Solving
+Grade student work and create educational assessments,C05,high,Grading evaluates existing student artefacts; assessment is review of existing work → Review and Feedback
+Develop financial software and perform financial analysis tasks,C02,high,Financial software development produces executable code artefacts → Code Development and Technical Problem Solving
+"Provide investment information, stock analysis, and financial market information",C03,high,Financial advisory delivers informational guidance to support investment decisions → Information Retrieval and Advisory
+Create and format professional presentation slides and materials,C01,high,Slide content creation is originative writing; composed artefact → Content Generation
+Provide personal finance information and perform financial calculations,C03,high,Personal finance guidance and calculations delivered as informational advisory → Information Retrieval and Advisory
+"Provide lifestyle guidance on wellness, productivity, and personal care",C03,high,Wellness advisory guidance delivered as informational text → Information Retrieval and Advisory
+"Assist with graduate-level academic writing, research, and assignments across disciplines",C04,high,Graduate-level academic work is educationally framed; learning-oriented → Learning and Education Support
+Practice job interviews and roleplay professional scenarios,C08,high,Interactive interview practice valued for the conversational exchange itself → Conversational Interaction and Roleplay
+"Develop and debug automated trading systems, bots, and indicators",C02,high,Automated trading system development produces executable code → Code Development and Technical Problem Solving
+Manage and operate e-commerce business operations and customer service,C01,medium,E-commerce operations involves composing customer communications and operational documents → Content Generation
+"Plan travel itineraries and book accommodations, flights, and activities",C03,high,Travel planning delivers informational itinerary guidance; practical how-to advisory → Information Retrieval and Advisory
+Provide technical assistance with electrical engineering and power systems,C03,high,Electrical engineering advisory delivers factual technical guidance → Information Retrieval and Advisory
+"Debug and implement backend APIs, integrations, and messaging systems",C02,high,Backend API implementation produces executable code artefacts → Code Development and Technical Problem Solving
+"Debug and troubleshoot software errors, performance issues, and memory problems",C02,high,Software debugging produces corrected code; technical artefact output → Code Development and Technical Problem Solving
+"Recommend entertainment media and provide information about movies, music, books, and TV shows",C03,high,Entertainment recommendations are informational advisory; product/service recommendations → Information Retrieval and Advisory
+"Create data visualizations, dashboards, and knowledge maps",C07,high,Visualisation is analytical output derived from existing data → Data Analysis and Summarisation
+"Assist with git, version control, and repository management tasks",C02,high,Git and version control work produces configuration commands and repository operations → Code Development and Technical Problem Solving
+"Create prediction tools for gaming, sports analysis, and divination readings",C02,high,Prediction tool creation produces executable code; software development artefact → Code Development and Technical Problem Solving
+Edit and revise academic writing on AI and research topics,C05,high,Academic writing revision improves an existing scholarly artefact → Review and Feedback
+Draft and revise formal legal correspondence and court documents,C01,high,Legal documents are composed professional artefacts; drafting = originative authorship → Content Generation
+"Assist with B2B sales, fundraising, and business development outreach",C01,high,Sales and fundraising outreach materials are composed professional artefacts → Content Generation
+"Assist with earth sciences, environmental research, and natural science tasks",C03,high,Scientific research assistance delivers factual information and literature overview → Information Retrieval and Advisory
+"Analyze political media, misinformation, and high-profile criminal investigations",C07,high,Political media analysis processes existing content to extract insights → Data Analysis and Summarisation
+Draft personal text messages and occasion-specific written communications,C01,high,Personal messages written from scratch are original composed artefacts → Content Generation
+Build and test conversational AI systems and chatbots,C02,high,Chatbot system development produces executable code artefacts → Code Development and Technical Problem Solving
+"Provide mental health, behavioral health, and ADHD support resources",C08,high,Mental health support is sustained interactive dialogue; value in the exchange itself → Conversational Interaction and Roleplay
+Assist with advanced academic research and professional technical projects,C04,high,Advanced academic research support is educationally framed → Learning and Education Support
+"Resolve payment, billing, subscription, and account access issues",C03,high,Billing and account resolution delivers informational guidance → Information Retrieval and Advisory
+Extract and structure data from multiple sources into organized formats,C07,high,Data extraction structures existing content into organised formats → Data Analysis and Summarisation
+Help with programming fundamentals including regex and data structures,C04,high,Programming fundamentals instruction is skill-building; pedagogical intent → Learning and Education Support
+"Assist with cybersecurity, data privacy compliance, and network security configuration",C02,high,Cybersecurity configuration produces technical artefacts; network security implementation → Code Development and Technical Problem Solving
+Provide tax information and business regulatory compliance information,C03,high,Tax and regulatory information is factual advisory delivery → Information Retrieval and Advisory
+Draft and refine graduate school and academic job application materials,C01,high,Application materials are composed professional artefacts produced by the model → Content Generation
+Research real estate properties and locations for relocation or investment,C03,high,Real estate research delivers informational advisory for a purchase decision → Information Retrieval and Advisory
+Analyze business data and generate forecasting reports and insights,C07,high,Forecasting reports are analytical outputs derived from existing business data → Data Analysis and Summarisation
+Build recruitment software and resume processing systems,C02,high,Recruitment software development produces executable code artefacts → Code Development and Technical Problem Solving
+"Help with robotics programming, control systems, and academic work",C02,high,Robotics programming produces executable control system code → Code Development and Technical Problem Solving
+Develop and use AI systems for tax document processing and consultation,C02,high,AI system development for document processing produces executable code → Code Development and Technical Problem Solving
+"Create software tests, test coverage, and testing documentation",C02,high,Test code creation produces executable testing artefacts → Code Development and Technical Problem Solving
+"Help with physics education, problems, and theory across mechanics and cosmology",C04,high,Physics education is concept explanation for learning purposes → Learning and Education Support
+Diagnose and troubleshoot database performance and connectivity issues,C02,high,Database troubleshooting produces diagnostic fixes and configuration changes → Code Development and Technical Problem Solving
+Build and manage subscription billing and membership systems,C02,high,Subscription system development produces executable code artefacts → Code Development and Technical Problem Solving
+Analyze and extract structured data from cryptocurrency social media and news content,C07,high,Cryptocurrency data extraction processes existing content to produce structured output → Data Analysis and Summarisation
+Predict future sports outcomes and process sports content,C07,medium,Sports prediction processes existing data; classified C07d (forecasting). If interactive entertainment context → C08d,
+"Provide advice and information about pet health, behavior, and care",C03,high,Pet health and care advisory delivers factual informational guidance → Information Retrieval and Advisory
+Help with computer vision and object detection model development,C02,high,Computer vision model development produces executable ML code artefacts → Code Development and Technical Problem Solving
+Respond to peer reviewers and revise manuscripts for journal submission,C05,high,Peer review response improves an existing manuscript artefact → Review and Feedback
+Debug and fix automated cryptocurrency and forex trading bot systems,C02,high,Trading bot debugging produces corrected executable code → Code Development and Technical Problem Solving
+Configure and troubleshoot smart home automation and IoT devices,C02,high,IoT configuration produces device settings and automation scripts → Code Development and Technical Problem Solving
+Debug and fix machine learning and AI system errors,C02,high,ML system debugging produces corrected executable code → Code Development and Technical Problem Solving
+"Provide information about sports schedules, results, broadcasts, and recent winners",C03,high,Sports results information is factual retrieval; informational output → Information Retrieval and Advisory
+Get technical help deploying and running large language models locally or via APIs,C02,high,LLM deployment assistance produces configuration and setup artefacts → Code Development and Technical Problem Solving
+Debug and modify scientific computing simulation code in physics and engineering,C02,high,Scientific simulation debugging produces corrected executable code → Code Development and Technical Problem Solving
+"Develop and debug blockchain applications, smart contracts, and cryptocurrency infrastructure",C02,high,Blockchain development produces executable smart contract and application code → Code Development and Technical Problem Solving
+"Help detect fraud, investigate scams, and analyze deception",C07,high,Fraud detection analysis processes existing data to extract patterns and insights → Data Analysis and Summarisation
+Assist with quantum mechanics and quantum computing topics,C03,high,Quantum physics information delivery; factual and explanatory advisory → Information Retrieval and Advisory
+"Provide current soccer standings, predictions, transfers, and live match information",C03,high,Live sports information is factual retrieval; informational output → Information Retrieval and Advisory
