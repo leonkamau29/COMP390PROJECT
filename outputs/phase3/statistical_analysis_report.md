@@ -1,8 +1,7 @@
 # Phase 3 Statistical Analysis Report
 
-**Project:** Benchmark Coverage Gap: A Systematic Analysis of Real-World AI Capabilities and Evaluation Practices
-**Date generated:** 2026-05-14
-**Methodological basis:** Phase 3 instructions in `CLAUDE.md`, using the Phase 1 taxonomy and updated 28-row Phase 2 benchmark database.
+
+**Methodological basis:** Phase 3 instructions , using the Phase 1 taxonomy and updated 28-row Phase 2 benchmark database.
 
 ## Data Inputs
 
@@ -19,31 +18,35 @@
 
 ## Gap Score Ranking
 
-| Rank | Capability | Usage frequency | Coverage score | Benchmark count | Average quality | Gap score | Severity |
-| --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
-| 1 | C02 Code Development and Technical Problem Solving | 0.3019 | 0.2357 | 10 | 3.3000 | 0.2307 | High |
-| 2 | C01 Content Generation | 0.2568 | 0.1429 | 6 | 3.3333 | 0.2202 | High |
-| 3 | C03 Information Retrieval and Advisory | 0.1754 | 0.1714 | 7 | 3.4286 | 0.1453 | High |
-| 4 | C04 Learning and Education Support | 0.1113 | 0.1714 | 8 | 3.0000 | 0.0922 | High |
-| 5 | C07 Data Analysis and Summarisation | 0.0751 | 0.2000 | 7 | 4.0000 | 0.0601 | Medium |
-| 6 | C05 Review and Feedback | 0.0308 | 0.1286 | 5 | 3.6000 | 0.0269 | Medium |
-| 7 | C06 Translation and Language Processing | 0.0271 | 0.0714 | 2 | 5.0000 | 0.0252 | Medium |
-| 8 | C08 Conversational Interaction and Roleplay | 0.0215 | 0.1286 | 5 | 3.6000 | 0.0188 | Low |
+
+| Rank | Capability                                         | Usage frequency | Coverage score | Benchmark count | Average quality | Gap score | Severity |
+| ---- | -------------------------------------------------- | --------------- | -------------- | --------------- | --------------- | --------- | -------- |
+| 1    | C02 Code Development and Technical Problem Solving | 0.3019          | 0.2357         | 10              | 3.3000          | 0.2307    | High     |
+| 2    | C01 Content Generation                             | 0.2568          | 0.1429         | 6               | 3.3333          | 0.2202    | High     |
+| 3    | C03 Information Retrieval and Advisory             | 0.1754          | 0.1714         | 7               | 3.4286          | 0.1453    | High     |
+| 4    | C04 Learning and Education Support                 | 0.1113          | 0.1714         | 8               | 3.0000          | 0.0922    | High     |
+| 5    | C07 Data Analysis and Summarisation                | 0.0751          | 0.2000         | 7               | 4.0000          | 0.0601    | Medium   |
+| 6    | C05 Review and Feedback                            | 0.0308          | 0.1286         | 5               | 3.6000          | 0.0269    | Medium   |
+| 7    | C06 Translation and Language Processing            | 0.0271          | 0.0714         | 2               | 5.0000          | 0.0252    | Medium   |
+| 8    | C08 Conversational Interaction and Roleplay        | 0.0215          | 0.1286         | 5               | 3.6000          | 0.0188    | Low      |
+
 
 ## Statistical Tests
 
-| Analysis | Capability | Statistic | p-value | Effect size | 95% CI | Interpretation |
-| --- | --- | ---: | ---: | ---: | --- | --- |
-| Pearson correlation | ALL | 0.6393 | 0.0878 | 0.6393 | [-0.1189, 0.9266] | Higher-usage capabilities tend to receive more benchmark coverage. |
-| Chi-square goodness-of-fit | ALL | 31.9584 | 0.0 | 0.3022 | Cramer's V bootstrap [0.2019, 0.5280] | Benchmark coverage is not distributed in proportion to observed usage. |
-| Temporal linear regression | C01 | 0.5143 | 0.0213 | 0.7714 | Slope [0.1257, 0.9029] | Positive slope indicates increasing benchmark activity over time. |
-| Temporal linear regression | C02 | 0.7429 | 0.3796 | 0.1958 | Slope [-1.3474, 2.8331] | Positive slope indicates increasing benchmark activity over time. |
-| Temporal linear regression | C03 | 0.6 | 0.2292 | 0.3345 | Slope [-0.5748, 1.7748] | Positive slope indicates increasing benchmark activity over time. |
-| Temporal linear regression | C04 | 0.7429 | 0.0086 | 0.8521 | Slope [0.3132, 1.1725] | Positive slope indicates increasing benchmark activity over time. |
-| Temporal linear regression | C05 | 0.6 | 0.0344 | 0.7132 | Slope [0.0718, 1.1282] | Positive slope indicates increasing benchmark activity over time. |
-| Temporal linear regression | C06 | 0.2857 | 0.1583 | 0.4286 | Slope [-0.1723, 0.7437] | Positive slope indicates increasing benchmark activity over time. |
-| Temporal linear regression | C07 | 0.6 | 0.4411 | 0.1543 | Slope [-1.3501, 2.5501] | Positive slope indicates increasing benchmark activity over time. |
-| Temporal linear regression | C08 | 0.3714 | 0.1164 | 0.4995 | Slope [-0.1447, 0.8876] | Positive slope indicates increasing benchmark activity over time. |
+
+| Analysis                   | Capability | Statistic | p-value | Effect size | 95% CI                                | Interpretation                                                         |
+| -------------------------- | ---------- | --------- | ------- | ----------- | ------------------------------------- | ---------------------------------------------------------------------- |
+| Pearson correlation        | ALL        | 0.6393    | 0.0878  | 0.6393      | [-0.1189, 0.9266]                     | Higher-usage capabilities tend to receive more benchmark coverage.     |
+| Chi-square goodness-of-fit | ALL        | 31.9584   | 0.0     | 0.3022      | Cramer's V bootstrap [0.2019, 0.5280] | Benchmark coverage is not distributed in proportion to observed usage. |
+| Temporal linear regression | C01        | 0.5143    | 0.0213  | 0.7714      | Slope [0.1257, 0.9029]                | Positive slope indicates increasing benchmark activity over time.      |
+| Temporal linear regression | C02        | 0.7429    | 0.3796  | 0.1958      | Slope [-1.3474, 2.8331]               | Positive slope indicates increasing benchmark activity over time.      |
+| Temporal linear regression | C03        | 0.6       | 0.2292  | 0.3345      | Slope [-0.5748, 1.7748]               | Positive slope indicates increasing benchmark activity over time.      |
+| Temporal linear regression | C04        | 0.7429    | 0.0086  | 0.8521      | Slope [0.3132, 1.1725]                | Positive slope indicates increasing benchmark activity over time.      |
+| Temporal linear regression | C05        | 0.6       | 0.0344  | 0.7132      | Slope [0.0718, 1.1282]                | Positive slope indicates increasing benchmark activity over time.      |
+| Temporal linear regression | C06        | 0.2857    | 0.1583  | 0.4286      | Slope [-0.1723, 0.7437]               | Positive slope indicates increasing benchmark activity over time.      |
+| Temporal linear regression | C07        | 0.6       | 0.4411  | 0.1543      | Slope [-1.3501, 2.5501]               | Positive slope indicates increasing benchmark activity over time.      |
+| Temporal linear regression | C08        | 0.3714    | 0.1164  | 0.4995      | Slope [-0.1447, 0.8876]               | Positive slope indicates increasing benchmark activity over time.      |
+
 
 ## Interpretation
 
@@ -53,10 +56,5 @@ The chi-square test should be interpreted as a distributional diagnostic rather 
 
 The temporal regressions use only six annual observations (2020-2025), so slopes should be read as descriptive signals. They are most useful for identifying where recent benchmark activity is accelerating, not for forecasting long-term research investment.
 
-## Visualisations Produced
 
-- `outputs/phase3/charts/coverage_heatmap.png`
-- `outputs/phase3/charts/gap_scores.png`
-- `outputs/phase3/charts/usage_vs_coverage_scatter.png`
-- `outputs/phase3/charts/temporal_trends.png`
-- `outputs/phase3/charts/quality_radar.png`
+
