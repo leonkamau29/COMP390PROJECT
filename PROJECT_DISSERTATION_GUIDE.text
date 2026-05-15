@@ -1,0 +1,134 @@
+Dissertation Structure
+Your dissertation should be self-contained. You should be clear and concise, but please cover everything you want to say, since this is your final opportunity to describe your project. The reader should be able to understand what you have done, and why you have done it, without referring to any other documents or submissions for previous assessments. This will probably be one of the largest pieces of writing you've ever undertaken. Writing coherently over the course of many sections is a skill that you might not be familiar with, so seek advice from your supervisor. A good dissertation can help to rescue a project that didn't go to plan, provided you can explain why with some critical self-reflection.
+
+This guidance splits design and implementation into separate sections, which makes sense for some projects and helps you to understand what to include. However, you might feel more comfortable if you cover the design and implementation together in one bigger section (perhaps with sub-sections to help readability). There is nothing wrong with this approach. Modern software development takes place in a more agile way, with aspects of design and implementation happening at the same time.
+
+We know that some students can become stressed about fitting their project into the defined sections below. The important thing is to tell the story of how your software was developed, including how it was designed and implemented, and the overall process you went through to complete it. This guidance is designed to help you produce a well-structured dissertation, but there is no right or wrong way to present what you did. Take the opportunity to discuss how to structure things with your supervisor, and please don't worry if it looks like your friends are doing something different. Your project and your experience are unique to you.
+
+Format & Presentation
+Your dissertation should be a formal piece of writing, so you should use proper academic language. Take care to proof-read your work and pay attention to spelling and grammar. English proficiency is one of the marking criteria. Markers will also be looking for a well-structured and well-presented layout, but the details are up to you. There are no standard requirements for page layout, margins, fonts, line spacing and so on.
+
+The title page must follow a set format, so we've provided a Word (.docx) template. If you're using another word processor you should try to recreate this page as closely as possible. You need to include the university logo, the module code, your project title, your name and student ID, your degree title (eg. "BSc Computer Science"), and the name of the school.
+
+Personal Data & Section Layout
+You will probably want to have an acknowledgements section where you thank people. You might want to dedicate your project to someone. It's important to structure your dissertation so that all personal information is in the first few pages.
+
+Title Page
+Dedication
+Acknowledgements
+We've provided a small example so you can see what these first few pages might look like. From this point onwards you should not include any personal information, not even your own name and student ID in headers or footers. Data from testing and evaluation should be presented anonymously. Example database tables, screenshots of the software, and any other information should not contain any real personal data.
+
+Make it easy for us to remove the first few pages (containing all the personal details) and leave the rest of the document as a stand-alone, anonymous piece of work. Follow the personal pages with a second title page that doesn't include your details, as shown in the example.
+
+Anonymous Title Page
+Abstract
+Statement of Ethical Compliance
+Table of Contents
+Table of Figures (optional)
+Introduction & Background
+Requirements Analysis (optional)
+Design & Implementation (structured however you like)
+Testing & Evaluation
+Project Ethics
+Conclusion & Future Work
+BCS Criteria & Self-Reflection
+References
+Appendices
+
+The exact dissertation structure will be different for each project, but in general we would expect to see detailed coverage of the design and implementation of your software. You might have an extra section for background research if there is a lot of material to cover, or split your implementation into multiple sections if your project has several components. The choice is up to you. Seek guidance from your supervisor if you're unsure.
+
+Dedication & Acknowledgements
+These pages are the one place where you can write in the first person and speak with some emotion. Authors use these pages for different reasons, but typically they dedicate their work to family or friends, and acknowledge the contribution of proof-readers, supervisors, friends, or anyone who helped with the project.
+
+Abstract
+The abstract should be a clear, informative and concise summary of your project. Two or three paragraphs is the norm, and it should definitely fit on one page maximum. You will probably write this after the main bulk of the dissertation is finished, so create the page as a placeholder and then return to fill it in. You should describe what you did and how you did it, including any major recommendations or conclusions. The purpose of the abstract is to allow any future readers to decide whether your dissertation would be useful without having to read the entire thing.
+
+Statement of Ethical Compliance
+Your dissertation should have a statement of ethical compliance within the first few pages. The best place for it would be just after the abstract. This should state the data and participant categories for your project (a letter and a digit) with a sentence to confirm that you followed our ethical guidance.
+
+Table of Contents
+The table of contents should list all the major sections in your dissertation to one level of nesting. Include the page number for each section. Modern word processors can automatically generate this table if you've used heading styles. Alternatively you can type the table manually when you've finished the rest of the document.
+
+A table of figures is also useful if you have lots of diagrams and illustrations, but it isn't compulsory. Number your figures consecutively, even if they are different types. Screenshots, diagrams, illustrations, tables and code snippets are all 'figures' in this context. Paying attention to these small details really helps to make your work look more polished.
+
+Reusing the Detailed Proposal
+A great deal of the background material in your introduction will have already been covered in your detailed proposal. It's okay to copy text and reuse your own material in the dissertation, although you might want to expand on it and discuss things in more depth. You can find some extra words by discussing why things changed as the project progressed.
+
+Avoid Text Book Content
+A common mistake in undergraduate dissertations is a reliance on text book content to pad out the word count. You don't need to tell the reader things they should already know. It's fine to say that you followed the waterfall model, but you don't need to use lots of words to explain what that means. Similarly, you might have UML diagrams, ERDs and so on. You can assume the reader already knows what these are, so don't waste space explaining the syntax. Instead you should discuss the content of diagrams. In general, focus on the original aspects of your own work.
+
+Introduction & Background
+The purpose of the introduction is to give the reader sufficient knowledge and understanding to tackle the rest of the dissertation. Put your work in context and refer to previous studies or similar software. Clearly state the problem you are trying to address and the motivation for making the software. Discuss background material and show how it is relevant, using correct citations. State your aims and requirements as a series of bullet points, or number them if you want to refer to them later in the dissertation. The main body of the dissertation should show how your software design and implementation met these requirements.
+
+If your dissertation uses any specific terminology or acronyms that might be unfamiliar to a general computer science audience, explain them. Consider using a glossary of terms. You can assume that the reader will be able to program and understand code, although they might not be familiar with the language you used.
+
+If you're not sure what to put in the introduction, leave it until towards the end. Write the other sections first and then note down all the assumptions you made about the reader's knowledge and background. Go back and provide this knowledge in the introduction, clearly covering anything that's obscure, technical or non-standard.
+
+Requirements Analysis
+If you conducted a requirements analysis activity with human participants, describe how you chose them and what the activity involved. Include an example participant consent form in an appendix. The requirements should already have been listed in the introduction, so make sure nobody can be individually identified. You don't need to include this section if you did not conduct a requirements analysis with other people.
+
+Design
+The majority of projects will involve the creation of a piece of original software. This section should provide a detailed design for your software or system, using accepted notation and techniques. Every design will be unique, but consider including information about the following items.
+
+The components of the system and how they are organised.
+The data structures and algorithms used by the system.
+The design of the user interface, including screen mockups, sketches and screenshots.
+The flow of navigation from one part of the UI to another (particularly important for mobile apps and websites).
+You will probably want to use UML diagrams or some other design notation. The exact format of the design is up to you. Consider use case diagrams, interaction diagrams, class diagrams, pseudocode, data dictionaries, data flow diagrams, screen layouts, and anything else that you feel is relevant. You should include paragraphs of text to help explain your design. Provide enough detail to show that your system is well-designed and built on solid foundations, but don't overwhelm the reader.
+If your project has more of a research focus and applies existing software to a particular problem, this section should cover the design of your experimental process, including how you controlled for variables (in a non-coding sense), how your results were measured, and how you can be sure the research is robust and replicable. You might have developed your own software to carry out the research, in which case you'll also need to cover its design (as explained above).
+
+Implementation (Realisation)
+Each dissertation is unique, so there are no formal requirements for what to cover in the main part of the document. However, you will need to talk about the implementation of your software (or the realisation of the experimental plan). If your software is particularly complex or has multiple parts, you might split this across several sub-sections.
+
+This section should cover how you tackled the development, any technical achievements you want to highlight, problems encountered, and so on. You should clearly describe what you have developed and how it all works. If you kept a project logbook you can use it to refresh your memory. Include the things that didn't work, and any dead ends you encountered, as well as things that went well. Don't simply present a sanitised version of the final product. Including the less successful aspects helps to demonstrate the reality of the development process.
+
+Illustrations, tables and diagrams help to add visual appeal to your dissertation. Large chunks of text can be boring. Try to structure your document so there is at least one section heading, table, diagram, or other visual distraction (such as a code snippet) on each page. You won’t always be able to escape a page of plain text, so make sure it keeps the reader interested.
+
+Testing & Evaluation
+You should describe the steps you took to test your software components as they were developed. This might include a schedule of unit tests and their results. Evaluation is a separate activity and involves looking at the software as a whole to see if it meets your original aims and requirements. Your dissertation should cover both of these aspects. Many students perform the evaluation without involving anyone else, and this is perfectly okay.
+
+If you asked other people to use your software and give you feedback, you should describe how you chose them and what you asked them to do. Include an example participant consent form in an appendix. If you used a questionnaire or interview, include the original questions in an appendix and present the results in aggregated form in this section. If you obtained text comments or feedback from participants, include an anonymised summary. If you updated or changed your software after getting feedback, explain what you did. In most cases you won't have time to implement changes, so explain what you would do if you had more time.
+
+Please be aware that evaluation is not the same as self-reflection. Your evaluation should cover how well your software does what it was designed to do, whereas your self-reflection covers how well you approached the project and development process. Self-reflection should not be mixed in with your evaluation. It has its own section towards the end of the dissertation (see below).
+
+Project Ethics
+You must include a section on project ethics somewhere in your dissertation, but you can put it wherever it makes most sense, which will usually be towards the end or near the evaluation section. Remember our ethical guidance and think about what you've already written in your detailed proposal concerning data sources, project ethics and human participants. Your dissertation should cover these topics in greater detail. You can reuse your previous text, expanding and amending it to reflect what actually took place during the project. Be mindful that the markers will be looking for evidence that you followed our ethical guidance. If your project genuinely has no ethical considerations, simply include a sentence to explain why the ethical guidance does not apply.
+
+Conclusion & Future Work
+The introduction and conclusion are two halves of the same thing. Together they establish what you have done, why you have done it, and whether or not you were successful. Think of them as a pair of brackets. Whatever you opened in the introduction you should close in the conclusion. Show how you met your aims and requirements, referring back to earlier sections of the dissertation.
+
+You should try to leave the reader fulfilled and in a positive mood. Even if you didn't achieve everything you hoped, you can still discuss the reasons why in a positive manner. Very few projects are complete pieces of work. There will always be something extra you could have done, or something you might do differently with hindsight. Discussing these will help to show that you recognise the wider context of your project.
+
+BCS Project Criteria & Self-Reflection
+You should show that your project has met the six outcomes expected by the Chartered Institute for IT. The first four of these will likely be covered elsewhere in the dissertation, so you can simply list them and refer back to the relevant section. You can write more if you wish.
+
+An ability to apply practical and analytical skills gained during the degree programme.
+Innovation and/or creativity.
+Synthesis of information, ideas and practices to provide a quality solution together with an evaluation of that solution.
+That your project meets a real need in a wider context.
+An ability to self-manage a significant piece of work.
+Critical self-evaluation of the process.
+The last two criteria ask you to consider your ability to manage the project and look at your own strengths and weaknesses. You should aim to fill at least one page with a critical reflection on your project, including good and bad aspects. It makes sense to use the first person in this part of the dissertation.
+References
+List references to articles, websites, videos, datasets, journals, and any other background reading you carried out while writing the dissertation and implementing your project. Be sure to cite every quotation, every idea that was expressed by someone else before you, and anything which is not in your own words. Remember to reference diagrams if you have copied them from another source.
+
+Make sure you properly cite and reference any code that isn't yours, as well as any graphics or music (or anything else) that was made by someone else. It's okay to use the work of other people, provided you have permission to do so and make this clear in the dissertation. If someone else's work forms a big part of your project, mention it in the acknowledgements as well as referencing it in this section.
+
+References should be cited properly in the main body of the document. You should use the Harvard or IEEE referencing style. Guidance is available on the university library website. References should be listed in sufficient detail that the reader can locate the source if they want to follow anything up. Most references will come from online sources, in which case you should also provide relevant links. Almost all academic papers (and some other types of publication) will have a DOI (Digital Object Identifier). You should always provide the DOI if one exists, since it is more permanent than a normal web link.
+
+You might have used other resources to help you in your project, but not cited within the main body. Likely examples include programming text books and online tutorials. You can include these in your list of references, but it's not essential. You might decide to mention the most useful or important ones.
+
+References should be genuine and will be checked. There is no need to worry if you don’t have many references. Each project is different and your supervisor will advise if they think you have missed anything useful. Using generative AI to make your reference list look longer will be treated as academic misconduct.
+
+Appendices
+Appendices are used for bulky or unwieldy content that would break the flow of the main body, and they are not included in the word count. They shouldn't contain anything new, so everything should be mentioned or discussed in the main body. Some examples are listed below.
+
+Instruction sheets or questionnaires given to people who helped test and evaluate your software.
+An example of the kind of feedback received (anonymised to remove personal details).
+Output from data analysis, trial runs or training data that you want to refer to in the main body.
+A user manual, if it makes sense to have one for your software.
+Instructions for installing your software.
+Listings of any long sections of code that are discussed in the main body.
+Any tables and diagrams that need to be included but are too big to put in the main body.
+Your dissertation should still make sense even if the appendices are missing. If this is not the case, you might like to move portions of the appendices into the main body. Getting the balance right is tricky, but the key thing is to use appendices to help keep the main body flowing smoothly.
+Do not include all source code as an appendix. Only include code if you want to refer to it and discuss a particular aspect in the dissertation. Where possible, include code snippets in the main body, and only place it in an appendix if it's too big to go anywhere else.

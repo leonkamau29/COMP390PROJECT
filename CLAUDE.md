@@ -1,4 +1,4 @@
-**DATORY INSTRUCTION FOR ALL CLAUDE CODE SESSIONS** 
+**DATORY INSTRUCTION FOR ALL CLAUDE CODE SESSIONS**
 
 > You MUST read this file in full at the start of every session before writing a single line of code, generating any output, or performing any analysis. This document is the single source of truth for this project. Every decision — architectural, analytical, or methodological — must be traceable back to a section of this file. If you are unsure whether an action is appropriate, check this file first. Do not deviate from the methodology described here without explicit instruction from the researcher (Leon Kamau Kiunga, Student ID: 201759400).
 
@@ -7,30 +7,29 @@
 ## TABLE OF CONTENTS
 
 1. [Project Identity](https://claude.ai/chat/ea69af48-96e5-4cfa-8d10-53ec05bdb4c1#1-project-identity)
-2. [Core Problem & Motivation](https://claude.ai/chat/ea69af48-96e5-4cfa-8d10-53ec05bdb4c1#2-core-problem--motivation)
+2. [Core Problem &amp; Motivation](https://claude.ai/chat/ea69af48-96e5-4cfa-8d10-53ec05bdb4c1#2-core-problem--motivation)
 3. [Research Objectives](https://claude.ai/chat/ea69af48-96e5-4cfa-8d10-53ec05bdb4c1#3-research-objectives)
 4. [Methodology Overview](https://claude.ai/chat/ea69af48-96e5-4cfa-8d10-53ec05bdb4c1#4-methodology-overview)
-5. [Data Sources & Access Rules](https://claude.ai/chat/ea69af48-96e5-4cfa-8d10-53ec05bdb4c1#5-data-sources--access-rules)
+5. [Data Sources &amp; Access Rules](https://claude.ai/chat/ea69af48-96e5-4cfa-8d10-53ec05bdb4c1#5-data-sources--access-rules)
 6. [Phase 1: Capability Framework Development (Weeks 1–4)](https://claude.ai/chat/ea69af48-96e5-4cfa-8d10-53ec05bdb4c1#6-phase-1-capability-framework-development-weeks-14)
 7. [Phase 2: Benchmark Inventory (Weeks 5–9)](https://claude.ai/chat/ea69af48-96e5-4cfa-8d10-53ec05bdb4c1#7-phase-2-benchmark-inventory-weeks-59)
 8. [Phase 3: Coverage Analysis (Weeks 10–13)](https://claude.ai/chat/ea69af48-96e5-4cfa-8d10-53ec05bdb4c1#8-phase-3-coverage-analysis-weeks-1013)
 9. [Phase 4: Expert Validation (Weeks 14–16)](https://claude.ai/chat/ea69af48-96e5-4cfa-8d10-53ec05bdb4c1#9-phase-4-expert-validation-weeks-1416)
-10. [Phase 5: Recommendations & Toolkit (Weeks 17–20)](https://claude.ai/chat/ea69af48-96e5-4cfa-8d10-53ec05bdb4c1#10-phase-5-recommendations--toolkit-weeks-1720)
-11. [Writing & Thesis (Weeks 21–24)](https://claude.ai/chat/ea69af48-96e5-4cfa-8d10-53ec05bdb4c1#11-writing--thesis-weeks-2124)
-12. [Technical Environment & Standards](https://claude.ai/chat/ea69af48-96e5-4cfa-8d10-53ec05bdb4c1#12-technical-environment--standards)
-13. [File & Folder Structure](https://claude.ai/chat/ea69af48-96e5-4cfa-8d10-53ec05bdb4c1#13-file--folder-structure)
-14. [Quality Standards & Success Criteria](https://claude.ai/chat/ea69af48-96e5-4cfa-8d10-53ec05bdb4c1#14-quality-standards--success-criteria)
-15. [Risk Flags & Escalation Rules](https://claude.ai/chat/ea69af48-96e5-4cfa-8d10-53ec05bdb4c1#15-risk-flags--escalation-rules)
-16. [Key Literature & Citation Standards](https://claude.ai/chat/ea69af48-96e5-4cfa-8d10-53ec05bdb4c1#16-key-literature--citation-standards)
+10. [Phase 5: Recommendations &amp; Toolkit (Weeks 17–20)](https://claude.ai/chat/ea69af48-96e5-4cfa-8d10-53ec05bdb4c1#10-phase-5-recommendations--toolkit-weeks-1720)
+11. [Writing &amp; Thesis (Weeks 21–24)](https://claude.ai/chat/ea69af48-96e5-4cfa-8d10-53ec05bdb4c1#11-writing--thesis-weeks-2124)
+12. [Technical Environment &amp; Standards](https://claude.ai/chat/ea69af48-96e5-4cfa-8d10-53ec05bdb4c1#12-technical-environment--standards)
+13. [File &amp; Folder Structure](https://claude.ai/chat/ea69af48-96e5-4cfa-8d10-53ec05bdb4c1#13-file--folder-structure)
+14. [Quality Standards &amp; Success Criteria](https://claude.ai/chat/ea69af48-96e5-4cfa-8d10-53ec05bdb4c1#14-quality-standards--success-criteria)
+15. [Risk Flags &amp; Escalation Rules](https://claude.ai/chat/ea69af48-96e5-4cfa-8d10-53ec05bdb4c1#15-risk-flags--escalation-rules)
+16. [Key Literature &amp; Citation Standards](https://claude.ai/chat/ea69af48-96e5-4cfa-8d10-53ec05bdb4c1#16-key-literature--citation-standards)
 17. [Glossary](https://claude.ai/chat/ea69af48-96e5-4cfa-8d10-53ec05bdb4c1#17-glossary)
 
 ---
 
 ## 1. PROJECT IDENTITY
 
-
-| Field               | Value                                                                                                |
-| ------------------- | ---------------------------------------------------------------------------------------------------- |
+| Field                     | Value                                                                                                |
+| ------------------------- | ---------------------------------------------------------------------------------------------------- |
 | **Full Title**      | Benchmark Coverage Gap: A Systematic Analysis of Real-World AI Capabilities and Evaluation Practices |
 | **Student**         | Leon Kamau Kiunga                                                                                    |
 | **Student ID**      | 201759400                                                                                            |
@@ -39,7 +38,6 @@
 | **Total Duration**  | 24 weeks (~470 hours)                                                                                |
 | **Degree**          | Honours Research Project (BCS-aligned)                                                               |
 | **Project Type**    | Research-focused (not software product); primary deliverable is the thesis                           |
-
 
 ---
 
@@ -84,19 +82,17 @@ A systematic, empirically grounded framework that:
 
 Execute ALL of the following. None are optional unless explicitly scoped down by Leon.
 
-
-| #   | Objective                                                                                                                                            | Deliverable                                                                                           |
-| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| O1  | Build empirically grounded capability taxonomy from real usage data                                                                                  | Taxonomy document with formal definitions, decision rules, sub-categories, 5+ examples per capability |
-| O2  | Compile standardised inventory of 15–20 major LLM benchmarks (originally 40–50; scoped to 15–20 across 4–5 capability areas per supervisor feedback) | Structured database (Excel/CSV) with all metadata fields                                              |
-| O3  | Map benchmarks to capabilities via coverage matrix                                                                                                   | Coverage matrix with quality ratings; heatmaps and charts                                             |
-| O4  | Quantify gaps using usage-weighted gap scores                                                                                                        | Gap score rankings with statistical analysis                                                          |
-| O5  | Conduct qualitative deep-dive case analysis                                                                                                          | 3–4 case studies (3–5 pages each)                                                                     |
-| O6  | Validate framework via expert survey                                                                                                                 | Survey instrument, response data, revision log                                                        |
-| O7  | Produce 3–5 new benchmark design specifications                                                                                                      | Specification documents (5–8 pages each)                                                              |
-| O8  | Build Assessment Toolkit                                                                                                                             | Excel workbook + PDF documentation (10–15 pages)                                                      |
-| O9  | Write and submit thesis                                                                                                                              | Complete thesis document                                                                              |
-
+| #  | Objective                                                                                                                                                | Deliverable                                                                                           |
+| -- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| O1 | Build empirically grounded capability taxonomy from real usage data                                                                                      | Taxonomy document with formal definitions, decision rules, sub-categories, 5+ examples per capability |
+| O2 | Compile standardised inventory of 15–20 major LLM benchmarks (originally 40–50; scoped to 15–20 across 4–5 capability areas per supervisor feedback) | Structured database (Excel/CSV) with all metadata fields                                              |
+| O3 | Map benchmarks to capabilities via coverage matrix                                                                                                       | Coverage matrix with quality ratings; heatmaps and charts                                             |
+| O4 | Quantify gaps using usage-weighted gap scores                                                                                                            | Gap score rankings with statistical analysis                                                          |
+| O5 | Conduct qualitative deep-dive case analysis                                                                                                              | 3–4 case studies (3–5 pages each)                                                                   |
+| O6 | Validate framework via expert survey                                                                                                                     | Survey instrument, response data, revision log                                                        |
+| O7 | Produce 3–5 new benchmark design specifications                                                                                                         | Specification documents (5–8 pages each)                                                             |
+| O8 | Build Assessment Toolkit                                                                                                                                 | Excel workbook + PDF documentation (10–15 pages)                                                     |
+| O9 | Write and submit thesis                                                                                                                                  | Complete thesis document                                                                              |
 
 > **SCOPE NOTE** : The benchmark inventory was revised from 40–50 benchmarks to **15–20 benchmarks across 4–5 capability areas** following critical feedback rating the initial proposal 7.5/10. Do not revert to the larger scope unless Leon explicitly instructs you to.
 
@@ -133,9 +129,8 @@ Each phase **must** be completed before the next begins. Do not skip ahead.
 
 ### Primary Empirical Sources (No Ethics Required)
 
-
-| Source                                            | Description                                                                          | Use in Project                                                   |
-| ------------------------------------------------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------- |
+| Source                                                  | Description                                                                          | Use in Project                                                   |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------- |
 | **Anthropic Economic Index (Handa et al., 2025)** | 4M Claude conversations mapped to O*NET tasks; top 100 tasks with usage percentages  | PRIMARY: capability taxonomy validation, usage frequency weights |
 | **WILDCHAT Dataset**                              | Anonymised public ChatGPT conversations; use a sample of ~1,000                      | SECONDARY: cross-validation of capability taxonomy               |
 | **O*NET Occupational Database**                   | US Dept of Labor; Detailed Work Activities across occupations                        | Cross-reference for task categorisation                          |
@@ -143,14 +138,11 @@ Each phase **must** be completed before the next begins. Do not skip ahead.
 | **GitHub Repositories**                           | Public benchmark codebases                                                           | Verification of benchmark characteristics                        |
 | **Papers with Code**                              | Benchmarking catalogue                                                               | Systematic benchmark discovery                                   |
 
-
 ### Primary Research Data (Ethics Approval Required — Week 12+)
 
-
-| Source                       | Description                                                                | Restrictions                                                                                                                                   |
-| ---------------------------- | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Source                             | Description                                                                  | Restrictions                                                                                                                                   |
+| ---------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Expert Validation Survey** | 15–20 invitations; target 5–10 responses; AI researchers and practitioners | Do NOT deploy survey until ethics approval confirmed. Data stored on university Google Drive. Anonymised as P1, P2, etc. Deleted post-marking. |
-
 
 ### Data Management Rules
 
@@ -175,20 +167,24 @@ Produce a validated capability taxonomy that covers ≥95% of documented real-wo
  **Instructions** :
 
 1. Review the following sources systematically:
-  - Handa et al. (2025) — extract all mentioned tasks/activities
-  - WILDCHAT dataset — sample 1,000 conversations, extract task types
-  - O*NET Detailed Work Activities — extract AI-relevant tasks
-  - 10–20 academic papers on AI usage and adoption
+
+- Handa et al. (2025) — extract all mentioned tasks/activities
+- WILDCHAT dataset — sample 1,000 conversations, extract task types
+- O*NET Detailed Work Activities — extract AI-relevant tasks
+- 10–20 academic papers on AI usage and adoption
+
 2. Record every task in a structured spreadsheet with these EXACT fields:
-  - `source` (citation)
-  - `task_description` (verbatim or close paraphrase)
-  - `domain` (e.g., writing, coding, research)
-  - `frequency` (if reported; otherwise leave blank)
-  - `context` (occupational/personal/educational)
-  - `source_type` (empirical study / survey / usage log)
+
+- `source` (citation)
+- `task_description` (verbatim or close paraphrase)
+- `domain` (e.g., writing, coding, research)
+- `frequency` (if reported; otherwise leave blank)
+- `context` (occupational/personal/educational)
+- `source_type` (empirical study / survey / usage log)
+
 3. Target: **100–200 task instances documented** before moving to Week 2.
 4. Save as: `data/phase1/task_instances_raw.csv`
-  *Output** : `data/phase1/task_instances_raw.csv`
+   *Output** : `data/phase1/task_instances_raw.csv`
 
 ---
 
@@ -233,7 +229,7 @@ Produce a validated capability taxonomy that covers ≥95% of documented real-wo
 4. For any task that does not map cleanly, record it in `data/phase1/unmapped_tasks.csv` and revise the taxonomy accordingly (add sub-category, refine definition, or add new capability if justified).
 5. **Inter-coder reliability** : Select 10% of coded data (10 tasks from each source = ~20 tasks). Have a second coder (colleague or supervisor) independently code these. Calculate Cohen's κ using the formula: κ = (P_o - P_e) / (1 - P_e).
 6. Save reliability results as `data/phase1/intercoder_reliability.csv`.
-  *Output Files** :
+   *Output Files** :
 
 - `data/phase1/anthropic_top100_mapping.csv`
 - `data/phase1/unmapped_tasks.csv`
@@ -249,15 +245,17 @@ Produce a validated capability taxonomy that covers ≥95% of documented real-wo
 
 1. Incorporate all revisions from Week 3 validation into the taxonomy.
 2. Final taxonomy document must include:
-  - **Formal capability definitions** (precise, unambiguous)
-  - **Decision rules** for classification (if/then format)
-  - **Hierarchical structure** with sub-categories labelled
-  - **Minimum 5 examples per capability** drawn from real task instances
-  - **Edge cases and ambiguities** explicitly addressed with resolutions
-  - **Validation summary** : coverage %, Cohen's κ achieved
+
+- **Formal capability definitions** (precise, unambiguous)
+- **Decision rules** for classification (if/then format)
+- **Hierarchical structure** with sub-categories labelled
+- **Minimum 5 examples per capability** drawn from real task instances
+- **Edge cases and ambiguities** explicitly addressed with resolutions
+- **Validation summary** : coverage %, Cohen's κ achieved
+
 3. Save final version as `outputs/phase1/capability_taxonomy_FINAL.md`
 4. Export taxonomy as structured CSV for use in Phase 3: `outputs/phase1/capability_taxonomy_FINAL.csv` (columns: `capability_id`, `capability_name`, `definition`, `sub_categories`, `decision_rule`, `examples`)
-  *Phase 1 Completion Criterion** : Taxonomy covers ≥95% of Anthropic top 100 tasks AND Cohen's κ > 0.8.
+   *Phase 1 Completion Criterion** : Taxonomy covers ≥95% of Anthropic top 100 tasks AND Cohen's κ > 0.8.
 
 ---
 
@@ -283,7 +281,7 @@ Compile a standardised, verified inventory of **15–20 LLM benchmarks** spannin
 - Google Gemini technical report
 - Llama 2 / Llama 3 technical report
 - DeepSeek R1 technical report
-Record in same spreadsheet with column `found_in_report`.
+  Record in same spreadsheet with column `found_in_report`.
 
 1. **Google Scholar** : Search "LLM benchmark" OR "language model evaluation" filtered to 2020–2025. Screen by citation count ≥50. Add to spreadsheet.
 2. **Snowball Sampling** : Check references in Handa et al. (2025), Xu et al. (2025), and Singh et al. (2025). Add newly found benchmarks.
@@ -315,9 +313,8 @@ Record in same spreadsheet with column `found_in_report`.
 
  **For each benchmark, complete ALL fields in the database** :
 
-
-| Field                    | Instructions                                                     |
-| ------------------------ | ---------------------------------------------------------------- |
+| Field                      | Instructions                                                     |
+| -------------------------- | ---------------------------------------------------------------- |
 | `benchmark_id`           | B001, B002, etc.                                                 |
 | `name`                   | Full official name                                               |
 | `abbreviation`           | Common abbreviation (e.g., MMLU)                                 |
@@ -331,22 +328,21 @@ Record in same spreadsheet with column `found_in_report`.
 | `dataset_size`           | Number of items in test set                                      |
 | `dataset_source`         | How dataset was constructed                                      |
 | `evaluation_metric`      | Primary metric (accuracy, BLEU, pass@k, etc.)                    |
-| `human_involvement`      | Yes/No/Partial — human judges in loop?                           |
+| `human_involvement`      | Yes/No/Partial — human judges in loop?                          |
 | `primary_capability`     | Map to Phase 1 taxonomy (capability_id)                          |
 | `secondary_capabilities` | Additional capabilities tested (capability_ids, comma-separated) |
 | `known_limitations`      | Documented issues (contamination, bias, etc.)                    |
-| `contamination_risk`     | High/Medium/Low — with justification                             |
+| `contamination_risk`     | High/Medium/Low — with justification                            |
 | `update_frequency`       | Static / Periodic / Continuous                                   |
 | `public_availability`    | Fully public / Partial / Closed                                  |
 | `github_url`             | Link to benchmark repository if available                        |
 | `paper_url`              | arXiv or DOI link                                                |
-| `quality_coherence`      | 1–5 rating (task consistency and logic)                          |
-| `quality_accuracy`       | 1–5 rating (ground truth reliability)                            |
-| `quality_clarity`        | 1–5 rating (instruction clarity)                                 |
-| `quality_relevance`      | 1–5 rating (real-world applicability)                            |
-| `quality_efficiency`     | 1–5 rating (cost/complexity of evaluation)                       |
+| `quality_coherence`      | 1–5 rating (task consistency and logic)                         |
+| `quality_accuracy`       | 1–5 rating (ground truth reliability)                           |
+| `quality_clarity`        | 1–5 rating (instruction clarity)                                |
+| `quality_relevance`      | 1–5 rating (real-world applicability)                           |
+| `quality_efficiency`     | 1–5 rating (cost/complexity of evaluation)                      |
 | `quality_notes`          | Justification for ratings (required)                             |
-
 
  **Quality Rating Scale** :
 
@@ -363,7 +359,7 @@ Record in same spreadsheet with column `found_in_report`.
 3. Search Google Scholar for follow-up papers, critiques, replications
 4. Complete all fields above
 5. Record any access issues in `data/phase2/access_log.md`
-  *Output Files** :
+   *Output Files** :
 
 - `data/phase2/benchmark_database.csv` (master database, all benchmarks, all fields)
 - `data/phase2/access_log.md` (any paywalls, access failures, notes)
@@ -378,14 +374,16 @@ Record in same spreadsheet with column `found_in_report`.
 
 1. Audit database for completeness: every field must be filled for every benchmark. Missing data must be documented in `quality_notes` as "not reported" or "not available" — do not leave blanks.
 2. Run descriptive analysis using Python (pandas):
-  - Distribution of benchmarks by year (bar chart)
-  - Distribution by primary capability (bar chart)
-  - Distribution by publication venue (bar chart)
-  - Distribution of quality ratings across 5 dimensions (radar chart or grouped bar)
-  - Contamination risk summary (pie chart)
+
+- Distribution of benchmarks by year (bar chart)
+- Distribution by primary capability (bar chart)
+- Distribution by publication venue (bar chart)
+- Distribution of quality ratings across 5 dimensions (radar chart or grouped bar)
+- Contamination risk summary (pie chart)
+
 3. Save all charts to `outputs/phase2/charts/`
 4. Write a 1–2 page summary of the benchmark landscape: `outputs/phase2/inventory_summary.md`
-  *Output Files** :
+   *Output Files** :
 
 - `outputs/phase2/benchmark_database_FINAL.csv`
 - `outputs/phase2/charts/` (all visualisations)
@@ -409,20 +407,24 @@ Build a coverage matrix, quantify gaps using usage-weighted scores, and conduct 
 
 1. Create matrix: rows = benchmarks (from Phase 2), columns = capabilities (from Phase 1).
 2. For each cell, determine:
-  - **0** : Capability not tested by this benchmark
-  - **1–5** : Quality rating for how well the benchmark tests this capability (use the same scale as Phase 2 quality ratings)
+
+- **0** : Capability not tested by this benchmark
+- **1–5** : Quality rating for how well the benchmark tests this capability (use the same scale as Phase 2 quality ratings)
+
 3. Ratings must be justified. For each non-zero cell, record a justification in a companion notes file: `data/phase3/coverage_matrix_notes.csv` (fields: `benchmark_id`, `capability_id`, `rating`, `justification`)
 4. Also record for each benchmark:
-  - Primary capability tested (forced choice — pick ONE even if multiple apply)
-  - Secondary capabilities (all others with rating ≥2)
+
+- Primary capability tested (forced choice — pick ONE even if multiple apply)
+- Secondary capabilities (all others with rating ≥2)
+
 5. Save matrix as `data/phase3/coverage_matrix.csv`
 6. Compute per-capability aggregate metrics:
-  - `total_coverage_score` = Σ(quality ratings across all benchmarks) / max possible
-  - `benchmark_count` = number of benchmarks testing this capability (rating ≥1)
-  - `average_quality` = mean rating across benchmarks that test this capability (rating ≥1)
+
+- `total_coverage_score` = Σ(quality ratings across all benchmarks) / max possible
+- `benchmark_count` = number of benchmarks testing this capability (rating ≥1)
+- `average_quality` = mean rating across benchmarks that test this capability (rating ≥1)
   Save as `data/phase3/capability_coverage_metrics.csv`
   *Output Files** :
-
 - `data/phase3/coverage_matrix.csv`
 - `data/phase3/coverage_matrix_notes.csv`
 - `data/phase3/capability_coverage_metrics.csv`
@@ -455,15 +457,13 @@ Save all statistical results as `data/phase3/statistical_analysis_results.csv` a
 
 #### Visualisations — Produce ALL of the following:
 
-
-| Chart                     | Description                                                                                                          | Save As                                               |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| Coverage Heatmap          | Matrix with capabilities on y-axis, benchmarks on x-axis, coloured by quality rating (0–5)                           | `outputs/phase3/charts/coverage_heatmap.png`          |
+| Chart                     | Description                                                                                                          | Save As                                                 |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| Coverage Heatmap          | Matrix with capabilities on y-axis, benchmarks on x-axis, coloured by quality rating (0–5)                          | `outputs/phase3/charts/coverage_heatmap.png`          |
 | Gap Score Bar Chart       | Capabilities ranked by gap score, horizontal bars, colour-coded by severity                                          | `outputs/phase3/charts/gap_scores.png`                |
 | Usage vs Coverage Scatter | x = usage frequency, y = coverage score, one point per capability, annotated with capability names                   | `outputs/phase3/charts/usage_vs_coverage_scatter.png` |
-| Temporal Trend            | Line chart showing benchmark count per capability over years 2020–2025                                               | `outputs/phase3/charts/temporal_trends.png`           |
+| Temporal Trend            | Line chart showing benchmark count per capability over years 2020–2025                                              | `outputs/phase3/charts/temporal_trends.png`           |
 | Quality Dimension Radar   | Radar/spider chart showing average quality across 5 dimensions (coherence, accuracy, clarity, relevance, efficiency) | `outputs/phase3/charts/quality_radar.png`             |
-
 
 Use `matplotlib` and `seaborn`. Ensure all charts have: title, labelled axes, legend, and source attribution. Export at 300 DPI minimum.
 
@@ -486,7 +486,7 @@ Use `matplotlib` and `seaborn`. Ensure all charts have: title, labelled axes, le
 2. **Well-Covered Capability** — e.g., "Information Retrieval" (the capability with the highest coverage)
 3. **Moderate Coverage Capability** — e.g., "Text Generation" (mid-range gap score)
 4. **Niche Gap Capability** — e.g., "Data Structuring" (low usage but disproportionately low coverage)
-  *For each deep dive, write sections covering ALL of the following** :
+   *For each deep dive, write sections covering ALL of the following** :
 5. Current evaluation landscape (which benchmarks exist, what they measure, aggregate quality assessment)
 6. Technical and practical challenges to evaluation (why is this hard to benchmark?)
 7. Real-world importance with ≥3 concrete examples of use (drawn from usage data)
@@ -504,19 +504,23 @@ Save each as: `outputs/phase3/deep_dive_[capability_name].md`
  **Procedure** :
 
 1. Conduct systematic literature search for documented deployment failures:
-  - Search Google Scholar: "LLM deployment failure", "benchmark performance gap", "AI evaluation mismatch"
-  - Search industry reports, conference proceedings
-  - Include examples from key papers in this project (TheAgentCompany, medical LLM failures)
+
+- Search Google Scholar: "LLM deployment failure", "benchmark performance gap", "AI evaluation mismatch"
+- Search industry reports, conference proceedings
+- Include examples from key papers in this project (TheAgentCompany, medical LLM failures)
+
 2. For each case study, document ALL of the following:
-  - Model name and benchmark performance (specific scores if available)
-  - Real-world deployment context
-  - Specific failure mode observed
-  - Capability gap implicated (map to taxonomy)
-  - Consequences (severity, scope)
-  - Source documentation (full citation)
+
+- Model name and benchmark performance (specific scores if available)
+- Real-world deployment context
+- Specific failure mode observed
+- Capability gap implicated (map to taxonomy)
+- Consequences (severity, scope)
+- Source documentation (full citation)
+
 3. Target: 5–10 cases. Minimum acceptable: 3 well-documented cases.
 4. Save as `outputs/phase3/case_studies.md`
-  *Phase 3 Completion Criterion** : Coverage matrix complete with justified ratings; gap scores computed for all capabilities; ≥5 statistical tests run and reported; all visualisations produced; 4 deep dives written; ≥3 case studies documented.
+   *Phase 3 Completion Criterion** : Coverage matrix complete with justified ratings; gap scores computed for all capabilities; ≥5 statistical tests run and reported; all visualisations produced; 4 deep dives written; ≥3 case studies documented.
 
 ---
 
@@ -524,101 +528,7 @@ Save each as: `outputs/phase3/deep_dive_[capability_name].md`
 
 ### Goal
 
-Validate framework and findings through structured surveys with 5–10 AI researchers and practitioners.
-
-> **⚠️ CRITICAL** : Do NOT deploy survey, recruit participants, or contact potential respondents until ethics approval from the Departmental Research Ethics Committee is confirmed. Ethics application must be submitted by Week 12.
-
-### Participant Criteria
-
-**Inclusion criteria** (at least ONE must be met):
-
-- Published ≥1 paper on LLM evaluation, OR
-- Professional role in AI deployment (industry practitioner)
-
- **Sampling approach** : Purposive sampling targeting diversity in:
-
-- Academic vs. industry background
-- Domain expertise (NLP, HCI, Software Engineering)
-- Geographic location
-
- **Recruitment channels** :
-
-1. Cold email to authors of cited papers
-2. Supervisor network introductions
-
----
-
-### Survey Instrument
-
- **Platform** : Google Forms (university-approved)
- **Duration** : 15–20 minutes
- **Pilot** : Test with 2 colleagues before deployment (Week 14)
-
- **Section A — Capability Framework Assessment** :
-
-- Likert scales (1–5) on: clarity of definitions, comprehensiveness of taxonomy, practical usefulness
-- Open-ended: What would you change or add?
-- Open-ended: Are there capabilities missing that you encounter in your work?
-
- **Section B — Coverage Analysis Validation** :
-
-- Likert scales (1–5): agreement with gap priority rankings
-- Likert scales (1–5): accuracy of benchmark quality ratings
-- Open-ended: Which gaps do you find most critical?
-- Open-ended: What considerations are missing from the coverage analysis?
-
- **Section C — Recommendations Feedback** :
-
-- Likert scales (1–5): feasibility of proposed benchmark designs
-- Likert scales (1–5): usefulness of the assessment toolkit
-- Open-ended: How would you improve the proposed benchmark designs?
-
-**Informed Consent** (must appear before survey begins):
-
-- Explanation of study purpose
-- Statement that participation is voluntary
-- Description of data use and anonymisation
-- Contact information for questions
-
----
-
-### Analysis
-
- **Quantitative** :
-
-- Aggregate Likert responses: mean and standard deviation per question
-- Calculate inter-rater agreement: Fleiss' κ across all respondents
-- Target: Fleiss' κ > 0.65 for key framework items
-
- **Qualitative** :
-
-- Apply thematic analysis (Braun & Clarke, 2006) to open-ended responses
-- Identify: points of consensus, points of disagreement requiring consideration, specific actionable suggestions
-
- **Integration** :
-
-- Revise framework based on feedback
-- Document ALL changes made in response to expert feedback in `data/phase4/revision_log.md`
-- Changes must be justified: record the expert feedback that prompted each change
-
- **Data Files** :
-
-- `data/phase4/survey_responses_anonymised.csv` (P1, P2, etc. — NO names)
-- `data/phase4/quantitative_summary.csv`
-- `data/phase4/qualitative_themes.md`
-- `data/phase4/revision_log.md`
-- `outputs/phase4/validation_report.md`
-
-**Privacy Rules** (NON-NEGOTIABLE):
-
-- No names, email addresses, or identifying information stored in any data file
-- Participants coded as P1, P2, P3... in all files
-- Data stored ONLY on university Google Drive (access: Leon + supervisor only)
-- All survey data deleted after thesis marking is complete
-
- **Contingency** : If fewer than 5 complete responses received, supplement with detailed literature-based validation showing framework alignment with published taxonomies. Document this substitution and its limitations in the thesis.
-
- **Phase 4 Completion Criterion** : ≥5 complete survey responses OR documented literature-based validation. All revisions logged with justification.
+Validate framework and findings through detailed literature based validation ie published papers and research.
 
 ---
 
@@ -659,9 +569,8 @@ Save each specification as: `outputs/phase5/benchmark_spec_[capability_name].md`
 
 #### Excel Workbook: `outputs/phase5/assessment_toolkit.xlsx`
 
-
-| Tab                    | Contents                                                                                                                          |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Tab                      | Contents                                                                                                                          |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
 | `Instructions`         | Step-by-step guide to using the toolkit; prerequisites; glossary of terms                                                         |
 | `Capability_Checklist` | Dropdown-based checklist for users to identify which capabilities are relevant to their use case; linked to taxonomy from Phase 1 |
 | `Benchmark_Profiles`   | Condensed data from Phase 2 database: one row per benchmark, key fields only                                                      |
@@ -669,7 +578,6 @@ Save each specification as: `outputs/phase5/benchmark_spec_[capability_name].md`
 | `Coverage_Calculator`  | User inputs their capability priorities (weights); auto-calculates weighted coverage score for their context using Phase 3 data   |
 | `Worked_Examples`      | Minimum 3 worked case studies showing toolkit in action for different use-case scenarios                                          |
 | `Interpretation_Guide` | Guidance on reading results: what scores mean, how to act on findings, limitations                                                |
-
 
  **Excel formulas must be** :
 
@@ -703,7 +611,7 @@ Length: 10–15 pages. Must include:
 4. **Improvement Suggestions for Existing Benchmarks** : for each of the 15–20 benchmarks in the inventory, suggest specific improvements where warranted
 5. **Implementation Roadmap** : realistic timeline for the research community to address top gaps (short-term 0–1 year, medium-term 1–3 years, long-term 3+ years)
 6. **Cost-Benefit Analysis** : rough estimates of implementation cost vs. expected improvement in evaluation validity for the top 3 proposed benchmarks
-  *Phase 5 Completion Criterion** : 3–5 complete benchmark specifications; toolkit pilot-tested by 2 non-expert colleagues successfully; recommendations synthesis document complete.
+   *Phase 5 Completion Criterion** : 3–5 complete benchmark specifications; toolkit pilot-tested by 2 non-expert colleagues successfully; recommendations synthesis document complete.
 
 ---
 
@@ -717,9 +625,8 @@ Produce a complete, submission-ready thesis demonstrating first-class honours qu
 
 Write chapters in this order (earlier phases provide content for earlier chapters):
 
-
-| Chapter                              | Content Source                                        | Target Length     |
-| ------------------------------------ | ----------------------------------------------------- | ----------------- |
+| Chapter                              | Content Source                                        | Target Length      |
+| ------------------------------------ | ----------------------------------------------------- | ------------------ |
 | Abstract                             | Summary of all phases                                 | 300–500 words     |
 | Introduction                         | Problem statement, research objectives, contributions | 1,500–2,000 words |
 | Literature Review                    | Phase 1 background + additional literature            | 4,000–5,000 words |
@@ -731,9 +638,8 @@ Write chapters in this order (earlier phases provide content for earlier chapter
 | Phase 5: Recommendations             | Phase 5 outputs                                       | 2,500–3,500 words |
 | Discussion                           | Synthesis, implications, limitations                  | 2,000–3,000 words |
 | Conclusion                           | Summary, future work                                  | 800–1,200 words   |
-| References                           | All cited sources                                     | APA 7th format    |
-| Appendices                           | Survey instrument, full taxonomy, full database       | As needed         |
-
+| References                           | All cited sources                                     | APA 7th format     |
+| Appendices                           | Survey instrument, full taxonomy, full database       | As needed          |
 
 ### Writing Standards
 
@@ -889,16 +795,14 @@ project_root/
 
 ### Phase-Level Success Criteria
 
-
-| Phase   | Success Criterion                                                               | Measurement                             |
-| ------- | ------------------------------------------------------------------------------- | --------------------------------------- |
-| Phase 1 | Taxonomy covers ≥95% of Anthropic top 100 tasks AND Cohen's κ > 0.8             | Coverage % + κ calculation              |
-| Phase 2 | All 15–20 benchmarks fully documented; recall ≥90% vs. major model reports      | Field completion check; cross-reference |
+| Phase   | Success Criterion                                                                | Measurement                             |
+| ------- | -------------------------------------------------------------------------------- | --------------------------------------- |
+| Phase 1 | Taxonomy covers ≥95% of Anthropic top 100 tasks AND Cohen's κ > 0.8            | Coverage % + κ calculation             |
+| Phase 2 | All 15–20 benchmarks fully documented; recall ≥90% vs. major model reports     | Field completion check; cross-reference |
 | Phase 3 | All statistical analyses run; all 5 visualisations produced; ≥3 case studies    | Checklist review                        |
 | Phase 4 | ≥5 complete expert responses OR documented literature-based validation          | Response count                          |
 | Phase 5 | 3–5 benchmark specs complete; toolkit pilot-tested by 2 colleagues successfully | Pilot feedback                          |
-| Thesis  | Supervisor positive feedback; first-class honours target                        | Supervisor comments                     |
-
+| Thesis  | Supervisor positive feedback; first-class honours target                         | Supervisor comments                     |
 
 ### Universal Quality Rules
 
@@ -914,10 +818,9 @@ project_root/
 
 When any of the following conditions occur,  **stop immediately and flag to Leon before proceeding** :
 
-
 | Condition                                                    | Action                                                                       |
 | ------------------------------------------------------------ | ---------------------------------------------------------------------------- |
-| Cohen's κ < 0.8 after coding                                 | Refine decision rules; re-code; do not proceed to Week 3 validation          |
+| Cohen's κ < 0.8 after coding                                | Refine decision rules; re-code; do not proceed to Week 3 validation          |
 | Taxonomy coverage < 95%                                      | Revise taxonomy; do not finalise until target met or alternative justified   |
 | Benchmark recall < 90%                                       | Add missing benchmarks before proceeding to Phase 3                          |
 | Expert response rate < 5                                     | Activate literature-based validation contingency; document substitution      |
@@ -925,25 +828,22 @@ When any of the following conditions occur,  **stop immediately and flag to Leon
 | Ethics approval not received by start of Week 14             | Do not recruit or contact participants; activate contingency validation plan |
 | Any personally identifiable information found in a data file | Remove immediately; do not commit to Git; notify Leon                        |
 
-
 ---
 
 ## 16. KEY LITERATURE & CITATION STANDARDS
 
 ### Core References (cite these accurately — do not paraphrase their findings without verification)
 
-
 | Short Name              | Full Citation                                                                                                                          |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | Handa et al. (2025)     | Handa, K. et al. (2025). Which Economic Tasks are Performed with AI? Evidence from Millions of Claude Conversations. arXiv:2503.04761. |
 | Xu et al. (2025)        | Xu, F.F. et al. (2025). TheAgentCompany: Benchmarking LLM Agents on Consequential Real World Tasks. arXiv:2412.14161.                  |
-| Braun & Clarke (2006)   | Braun, V. and Clarke, V. (2006). Using thematic analysis in psychology. Qualitative Research in Psychology, 3(2), pp. 77–101.          |
+| Braun & Clarke (2006)   | Braun, V. and Clarke, V. (2006). Using thematic analysis in psychology. Qualitative Research in Psychology, 3(2), pp. 77–101.         |
 | Hendrycks et al. (2021) | Hendrycks, D. et al. (2021). Measuring Massive Multitask Language Understanding. arXiv:2009.03300.                                     |
 | Jain et al. (2024)      | Jain, N. et al. (2024). LiveCodeBench: Holistic and Contamination Free Evaluation of Large Language Models for Code. arXiv:2403.07974. |
 | Singh et al. (2025)     | Singh, S. et al. (2025). The Leaderboard Illusion. arXiv:2504.20879.                                                                   |
 | Balloccu et al. (2024)  | Balloccu, S. et al. (2024). Leak, Cheat, Repeat: Data Contamination and Evaluation Malpractices in Closed-Source LLMs. ACL.            |
 | Pezeshkpour & Hruschka  | Pezeshkpour, P. and Hruschka, E. Large Language Models Sensitivity to The Order of Options in Multiple-Choice Questions.               |
-
 
 ### Citation Standards
 
@@ -957,16 +857,15 @@ When any of the following conditions occur,  **stop immediately and flag to Leon
 
 ## 17. GLOSSARY
 
-
-| Term                      | Definition                                                                                                                                         |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Term                            | Definition                                                                                                                                         |
+| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Capability**            | A distinct mode of LLM interaction identified through thematic analysis of real-world usage data (e.g., "reviewing work", "information retrieval") |
 | **Benchmark**             | A standardised evaluation framework for assessing LLM performance on specific tasks                                                                |
-| **Coverage Score**        | A measure of how well existing benchmarks collectively test a given capability (scale 0–1)                                                         |
-| **Gap Score**             | Usage-weighted measure of evaluation coverage shortfall: Gap = Usage_Frequency × (1 − Normalized_Coverage_Score)                                   |
+| **Coverage Score**        | A measure of how well existing benchmarks collectively test a given capability (scale 0–1)                                                        |
+| **Gap Score**             | Usage-weighted measure of evaluation coverage shortfall: Gap = Usage_Frequency × (1 − Normalized_Coverage_Score)                                 |
 | **Usage Frequency**       | The proportion of LLM interactions involving a given capability, derived from empirical usage data                                                 |
-| **Cohen's κ**             | A statistical measure of inter-coder agreement (target: >0.8 for strong agreement)                                                                 |
-| **Fleiss' κ**             | Extension of Cohen's κ for >2 raters (target: >0.65 for expert validation)                                                                         |
+| **Cohen's κ**            | A statistical measure of inter-coder agreement (target: >0.8 for strong agreement)                                                                 |
+| **Fleiss' κ**            | Extension of Cohen's κ for >2 raters (target: >0.65 for expert validation)                                                                        |
 | **Braun & Clarke (2006)** | The six-phase thematic analysis methodology used for capability taxonomy development                                                               |
 | **O*NET**                 | US Department of Labor occupational task database used for cross-referencing AI task categories                                                    |
 | **WILDCHAT**              | Publicly available anonymised corpus of ChatGPT conversations                                                                                      |
@@ -974,5 +873,3 @@ When any of the following conditions occur,  **stop immediately and flag to Leon
 | **Data Contamination**    | When benchmark test data appears in a model's training data, inflating benchmark scores artificially                                               |
 | **Goodhart's Law**        | When a measure becomes a target, it ceases to be a good measure (applied here: benchmark scores become targets, losing validity)                   |
 | **Usage-Weighted**        | Analysis that accounts for the relative frequency of real-world usage, giving higher importance to commonly used capabilities                      |
-
-
